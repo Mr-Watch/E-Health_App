@@ -1,0 +1,9 @@
+C:\Users\Admin\source\repos\healthtest2\healthtest2.Core\bin\Debug\netstandard2.0\healthtest2.Core.deps.json
+C:\Users\Admin\source\repos\healthtest2\healthtest2.Core\bin\Debug\netstandard2.0\healthtest2.Core.dll
+C:\Users\Admin\source\repos\healthtest2\healthtest2.Core\bin\Debug\netstandard2.0\healthtest2.Core.pdb
+C:\Users\Admin\source\repos\healthtest2\healthtest2.Core\obj\Debug\netstandard2.0\healthtest2.Core.csprojAssemblyReference.cache
+C:\Users\Admin\source\repos\healthtest2\healthtest2.Core\obj\Debug\netstandard2.0\healthtest2.Core.AssemblyInfoInputs.cache
+C:\Users\Admin\source\repos\healthtest2\healthtest2.Core\obj\Debug\netstandard2.0\healthtest2.Core.AssemblyInfo.cs
+C:\Users\Admin\source\repos\healthtest2\healthtest2.Core\obj\Debug\netstandard2.0\healthtest2.Core.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\healthtest2\healthtest2.Core\obj\Debug\netstandard2.0\healthtest2.Core.dll
+C:\Users\Admin\source\repos\healthtest2\healthtest2.Core\obj\Debug\netstandard2.0\healthtest2.Core.pdb
