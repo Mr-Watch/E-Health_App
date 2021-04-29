@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "47nf4OY5UyRbCqjsMknCD2193CAHq1YSVcgpG/XCCD0syLAd3rnVhADHwLGW3aGFWN4DQCEaOcFTqnhIYVvwAA==",
+  "dgSpecHash": "mD9X4nsM6Ql0PQ0dYDFT/rqd+jqraXlmby863ZwgUzaRjRxyWVFNLlrhowG7BNz9ieIN2tVYzxhf5IT54tXtaA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Admin\\source\\repos\\healthtest2\\healthtest2\\healthtest2.csproj",
   "expectedPackageFiles": [
@@ -124,7 +124,8 @@
     "C:\\Users\\Admin\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Users\\Admin\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\windows.mvvm\\0.3.7\\windows.mvvm.0.3.7.nupkg.sha512"
   ],
   "logs": []
 }

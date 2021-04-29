@@ -58,8 +58,32 @@
     <AppxPackagedFile Include="C:\Users\Admin\.nuget\packages\system.security.permissions\4.7.0\lib\netstandard2.0\System.Security.Permissions.dll">
       <PackagePath>System.Security.Permissions.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\.nuget\packages\windows.mvvm\0.3.7\lib\.NETCore50\Windows.Mvvm.Application.dll">
+      <PackagePath>Windows.Mvvm.Application.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\.nuget\packages\windows.mvvm\0.3.7\lib\.NETCore50\Windows.Mvvm.Configuration.dll">
+      <PackagePath>Windows.Mvvm.Configuration.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\.nuget\packages\windows.mvvm\0.3.7\lib\.NETCore50\Windows.Mvvm.Reactive.dll">
+      <PackagePath>Windows.Mvvm.Reactive.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\.nuget\packages\windows.mvvm\0.3.7\lib\.NETCore50\Windows.Mvvm.Services.Application.dll">
+      <PackagePath>Windows.Mvvm.Services.Application.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\.nuget\packages\windows.mvvm\0.3.7\lib\.NETCore50\Windows.Mvvm.Services.Dialog.dll">
+      <PackagePath>Windows.Mvvm.Services.Dialog.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\.nuget\packages\windows.mvvm\0.3.7\lib\.NETCore50\Windows.Mvvm.Services.Navigation.dll">
+      <PackagePath>Windows.Mvvm.Services.Navigation.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\.nuget\packages\windows.mvvm\0.3.7\lib\.NETCore50\Windows.Mvvm.UI.dll">
+      <PackagePath>Windows.Mvvm.UI.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Admin\source\repos\healthtest2\healthtest2.Core\bin\Debug\netstandard2.0\healthtest2.Core.dll">
       <PackagePath>healthtest2.Core.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\.nuget\packages\windows.mvvm\0.3.7\lib\.NETCore50\Windows.winmd">
+      <PackagePath>Windows.winmd</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
@@ -132,6 +156,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Admin\source\repos\healthtest2\healthtest2\bin\x86\Debug\Views\MapPage.xbf">
       <PackagePath>Views\MapPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\source\repos\healthtest2\healthtest2\bin\x86\Debug\Views\resultpage.xbf">
+      <PackagePath>Views\resultpage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Admin\source\repos\healthtest2\healthtest2\bin\x86\Debug\Views\SearchHistory.xbf">
       <PackagePath>Views\SearchHistory.xbf</PackagePath>

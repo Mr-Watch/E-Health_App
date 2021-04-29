@@ -6,6 +6,11 @@ using Windows.UI.Xaml.Controls;
 using System.Net;
 using System.IO;
 using System.Windows;
+using System.Diagnostics;
+using Newtonsoft.Json.Linq;
+using System.Linq;
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Navigation;
 
 namespace healthtest2.Views
 {
@@ -14,11 +19,13 @@ namespace healthtest2.Views
         public MainPage()
         {
             InitializeComponent();
+
         }
+        public string test { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private void Set<T>(ref T storage, T value, [CallerMemberName]string propertyName = null)
+        private void Set<T>(ref T storage, T value, [CallerMemberName] string propertyName = null)
         {
             if (Equals(storage, value))
             {
@@ -38,14 +45,34 @@ namespace healthtest2.Views
             StreamReader reader = new StreamReader(response.GetResponseStream());
 
             string illnamejason = reader.ReadToEnd();
-            illname nameill = Newtonsoft.Json.JsonConvert.DeserializeObject<illname>(illnamejason);
-            testtext.change
+            JObject json = JObject.Parse(illnamejason);
+            foreach (var pair in json)
+            {
+                Debug.WriteLine(pair.Value);
+                illnesslist.Items.Add(pair.Value);
+                testtext.Text = (string)pair.Value;
+
+
+            }
+
         }
-    }
+        private void navigatebutton(object sender, RoutedEventArgs args)
+        {
+            MainPage ma = new MainPage() {test = testtext.Text };
+           Frame.Navigate(typeof(resultpage), ma);
 
-    public class illname
-    {
-        public string translation { get; set; }
-    }
+        }
 
+
+        public class testcontentpass
+        {
+            public object data { set; get; }
+        }
+        public class illname
+        {
+            public string translation { get; set; }
+        }
+
+    }
 }
+

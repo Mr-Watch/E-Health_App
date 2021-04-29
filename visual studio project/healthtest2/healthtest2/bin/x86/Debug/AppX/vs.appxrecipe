@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>C:\Users\Admin\source\repos\healthtest2\healthtest2\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>5FD7B08E1323C4563DC3AFB76ED36DC1D916F54FEE7A126B8D99FD3BDA1E9BDA</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>0E1D2BAC936BC7A06CBBC34EC1E7211CE37078BDB48679482193901375C0714E</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>617B1198-41C7-47AB-9F0C-21FBDA84A0AB_1.0.0.0_x86__5gyrq6psz227t</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>617B1198-41C7-47AB-9F0C-21FBDA84A0AB_5gyrq6psz227t!App</RegisteredUserModeAppID>
     <RegisteredPackageID>617B1198-41C7-47AB-9F0C-21FBDA84A0AB</RegisteredPackageID>
@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Admin\source\repos\healthtest2\healthtest2\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2021-04-26T17:09:15.174</Modified>
+      <Modified>2021-04-29T11:30:18.565</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Admin\source\repos\healthtest2\healthtest2\bin\x86\Debug\healthtest2.exe">
       <PackagePath>entrypoint\healthtest2.exe</PackagePath>
-      <Modified>2021-04-26T17:09:14.150</Modified>
+      <Modified>2021-04-29T11:30:17.852</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Admin\source\repos\healthtest2\healthtest2\bin\x86\Debug\healthtest2.exe.config">
       <PackagePath>healthtest2.exe.config</PackagePath>
@@ -78,9 +78,41 @@
       <PackagePath>System.Security.Permissions.dll</PackagePath>
       <Modified>2019-11-15T06:37:44.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\.nuget\packages\windows.mvvm\0.3.7\lib\.NETCore50\Windows.Mvvm.Application.dll">
+      <PackagePath>Windows.Mvvm.Application.dll</PackagePath>
+      <Modified>2016-06-28T16:38:42.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\.nuget\packages\windows.mvvm\0.3.7\lib\.NETCore50\Windows.Mvvm.Configuration.dll">
+      <PackagePath>Windows.Mvvm.Configuration.dll</PackagePath>
+      <Modified>2016-06-28T16:38:42.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\.nuget\packages\windows.mvvm\0.3.7\lib\.NETCore50\Windows.Mvvm.Reactive.dll">
+      <PackagePath>Windows.Mvvm.Reactive.dll</PackagePath>
+      <Modified>2016-06-28T16:38:42.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\.nuget\packages\windows.mvvm\0.3.7\lib\.NETCore50\Windows.Mvvm.Services.Application.dll">
+      <PackagePath>Windows.Mvvm.Services.Application.dll</PackagePath>
+      <Modified>2016-06-28T16:38:42.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\.nuget\packages\windows.mvvm\0.3.7\lib\.NETCore50\Windows.Mvvm.Services.Dialog.dll">
+      <PackagePath>Windows.Mvvm.Services.Dialog.dll</PackagePath>
+      <Modified>2016-06-28T16:38:42.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\.nuget\packages\windows.mvvm\0.3.7\lib\.NETCore50\Windows.Mvvm.Services.Navigation.dll">
+      <PackagePath>Windows.Mvvm.Services.Navigation.dll</PackagePath>
+      <Modified>2016-06-28T16:38:42.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\.nuget\packages\windows.mvvm\0.3.7\lib\.NETCore50\Windows.Mvvm.UI.dll">
+      <PackagePath>Windows.Mvvm.UI.dll</PackagePath>
+      <Modified>2016-06-28T16:38:42.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Admin\source\repos\healthtest2\healthtest2.Core\bin\Debug\netstandard2.0\healthtest2.Core.dll">
       <PackagePath>healthtest2.Core.dll</PackagePath>
-      <Modified>2021-04-26T09:43:23.118</Modified>
+      <Modified>2021-04-29T11:18:02.928</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\.nuget\packages\windows.mvvm\0.3.7\lib\.NETCore50\Windows.winmd">
+      <PackagePath>Windows.winmd</PackagePath>
+      <Modified>2016-06-28T16:38:42.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.19041.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
@@ -134,59 +166,63 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Admin\source\repos\healthtest2\healthtest2\bin\x86\Debug\healthtest2.xr.xml">
       <PackagePath>healthtest2.xr.xml</PackagePath>
-      <Modified>2021-04-26T16:45:37.934</Modified>
+      <Modified>2021-04-29T09:35:35.529</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Admin\source\repos\healthtest2\healthtest2\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2021-04-26T17:09:14.036</Modified>
+      <Modified>2021-04-29T11:30:17.746</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Admin\source\repos\healthtest2\healthtest2\bin\x86\Debug\Styles\Page.xbf">
       <PackagePath>Styles\Page.xbf</PackagePath>
-      <Modified>2021-04-26T17:09:14.035</Modified>
+      <Modified>2021-04-29T11:30:17.745</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Admin\source\repos\healthtest2\healthtest2\bin\x86\Debug\Styles\_Colors.xbf">
       <PackagePath>Styles\_Colors.xbf</PackagePath>
-      <Modified>2021-04-26T17:09:14.036</Modified>
+      <Modified>2021-04-29T11:30:17.745</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Admin\source\repos\healthtest2\healthtest2\bin\x86\Debug\Styles\_FontSizes.xbf">
       <PackagePath>Styles\_FontSizes.xbf</PackagePath>
-      <Modified>2021-04-26T17:09:14.036</Modified>
+      <Modified>2021-04-29T11:30:17.746</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Admin\source\repos\healthtest2\healthtest2\bin\x86\Debug\Styles\_Thickness.xbf">
       <PackagePath>Styles\_Thickness.xbf</PackagePath>
-      <Modified>2021-04-26T17:09:14.036</Modified>
+      <Modified>2021-04-29T11:30:17.746</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Admin\source\repos\healthtest2\healthtest2\bin\x86\Debug\Styles\TextBlock.xbf">
       <PackagePath>Styles\TextBlock.xbf</PackagePath>
-      <Modified>2021-04-26T17:09:14.036</Modified>
+      <Modified>2021-04-29T11:30:17.746</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Admin\source\repos\healthtest2\healthtest2\bin\x86\Debug\Views\About.xbf">
       <PackagePath>Views\About.xbf</PackagePath>
-      <Modified>2021-04-26T17:09:14.036</Modified>
+      <Modified>2021-04-29T11:30:17.746</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Admin\source\repos\healthtest2\healthtest2\bin\x86\Debug\Views\Help.xbf">
       <PackagePath>Views\Help.xbf</PackagePath>
-      <Modified>2021-04-26T17:09:14.036</Modified>
+      <Modified>2021-04-29T11:30:17.746</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Admin\source\repos\healthtest2\healthtest2\bin\x86\Debug\Views\MainPage.xbf">
       <PackagePath>Views\MainPage.xbf</PackagePath>
-      <Modified>2021-04-26T17:09:14.037</Modified>
+      <Modified>2021-04-29T11:30:17.746</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Admin\source\repos\healthtest2\healthtest2\bin\x86\Debug\Views\MapPage.xbf">
       <PackagePath>Views\MapPage.xbf</PackagePath>
-      <Modified>2021-04-26T17:09:14.037</Modified>
+      <Modified>2021-04-29T11:30:17.747</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Admin\source\repos\healthtest2\healthtest2\bin\x86\Debug\Views\resultpage.xbf">
+      <PackagePath>Views\resultpage.xbf</PackagePath>
+      <Modified>2021-04-29T11:30:17.747</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Admin\source\repos\healthtest2\healthtest2\bin\x86\Debug\Views\SearchHistory.xbf">
       <PackagePath>Views\SearchHistory.xbf</PackagePath>
-      <Modified>2021-04-26T17:09:14.038</Modified>
+      <Modified>2021-04-29T11:30:17.747</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Admin\source\repos\healthtest2\healthtest2\bin\x86\Debug\Views\SettingsPage.xbf">
       <PackagePath>Views\SettingsPage.xbf</PackagePath>
-      <Modified>2021-04-26T17:09:14.038</Modified>
+      <Modified>2021-04-29T11:30:17.747</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Admin\source\repos\healthtest2\healthtest2\bin\x86\Debug\Views\ShellPage.xbf">
       <PackagePath>Views\ShellPage.xbf</PackagePath>
-      <Modified>2021-04-26T17:09:14.038</Modified>
+      <Modified>2021-04-29T11:30:17.747</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -202,11 +238,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Admin\source\repos\healthtest2\healthtest2\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2021-04-26T17:04:22.779</Modified>
+      <Modified>2021-04-29T11:18:09.241</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Admin\source\repos\healthtest2\healthtest2\bin\x86\Debug\Core\healthtest2.exe">
       <PackagePath>healthtest2.exe</PackagePath>
-      <Modified>2021-04-26T17:09:15.171</Modified>
+      <Modified>2021-04-29T11:30:18.563</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

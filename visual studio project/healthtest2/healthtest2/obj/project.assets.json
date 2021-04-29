@@ -1227,6 +1227,29 @@
           }
         }
       },
+      "Windows.Mvvm/0.3.7": {
+        "type": "package",
+        "compile": {
+          "lib/.NETCore50/Windows.Mvvm.Application.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Configuration.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Reactive.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Application.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Dialog.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Navigation.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.UI.dll": {},
+          "lib/.NETCore50/Windows.winmd": {}
+        },
+        "runtime": {
+          "lib/.NETCore50/Windows.Mvvm.Application.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Configuration.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Reactive.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Application.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Dialog.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Navigation.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.UI.dll": {},
+          "lib/.NETCore50/Windows.winmd": {}
+        }
+      },
       "healthtest2.Core/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -2916,6 +2939,29 @@
         },
         "runtime": {
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
+        }
+      },
+      "Windows.Mvvm/0.3.7": {
+        "type": "package",
+        "compile": {
+          "lib/.NETCore50/Windows.Mvvm.Application.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Configuration.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Reactive.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Application.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Dialog.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Navigation.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.UI.dll": {},
+          "lib/.NETCore50/Windows.winmd": {}
+        },
+        "runtime": {
+          "lib/.NETCore50/Windows.Mvvm.Application.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Configuration.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Reactive.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Application.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Dialog.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Navigation.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.UI.dll": {},
+          "lib/.NETCore50/Windows.winmd": {}
         }
       },
       "healthtest2.Core/1.0.0": {
@@ -4652,6 +4698,29 @@
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Windows.Mvvm/0.3.7": {
+        "type": "package",
+        "compile": {
+          "lib/.NETCore50/Windows.Mvvm.Application.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Configuration.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Reactive.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Application.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Dialog.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Navigation.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.UI.dll": {},
+          "lib/.NETCore50/Windows.winmd": {}
+        },
+        "runtime": {
+          "lib/.NETCore50/Windows.Mvvm.Application.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Configuration.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Reactive.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Application.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Dialog.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Navigation.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.UI.dll": {},
+          "lib/.NETCore50/Windows.winmd": {}
+        }
+      },
       "healthtest2.Core/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -6386,6 +6455,29 @@
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Windows.Mvvm/0.3.7": {
+        "type": "package",
+        "compile": {
+          "lib/.NETCore50/Windows.Mvvm.Application.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Configuration.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Reactive.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Application.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Dialog.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Navigation.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.UI.dll": {},
+          "lib/.NETCore50/Windows.winmd": {}
+        },
+        "runtime": {
+          "lib/.NETCore50/Windows.Mvvm.Application.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Configuration.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Reactive.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Application.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Dialog.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Navigation.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.UI.dll": {},
+          "lib/.NETCore50/Windows.winmd": {}
+        }
+      },
       "healthtest2.Core/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -8075,6 +8167,29 @@
         },
         "runtime": {
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
+        }
+      },
+      "Windows.Mvvm/0.3.7": {
+        "type": "package",
+        "compile": {
+          "lib/.NETCore50/Windows.Mvvm.Application.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Configuration.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Reactive.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Application.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Dialog.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Navigation.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.UI.dll": {},
+          "lib/.NETCore50/Windows.winmd": {}
+        },
+        "runtime": {
+          "lib/.NETCore50/Windows.Mvvm.Application.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Configuration.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Reactive.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Application.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Dialog.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Navigation.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.UI.dll": {},
+          "lib/.NETCore50/Windows.winmd": {}
         }
       },
       "healthtest2.Core/1.0.0": {
@@ -9811,6 +9926,29 @@
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Windows.Mvvm/0.3.7": {
+        "type": "package",
+        "compile": {
+          "lib/.NETCore50/Windows.Mvvm.Application.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Configuration.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Reactive.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Application.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Dialog.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Navigation.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.UI.dll": {},
+          "lib/.NETCore50/Windows.winmd": {}
+        },
+        "runtime": {
+          "lib/.NETCore50/Windows.Mvvm.Application.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Configuration.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Reactive.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Application.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Dialog.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Navigation.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.UI.dll": {},
+          "lib/.NETCore50/Windows.winmd": {}
+        }
+      },
       "healthtest2.Core/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -11500,6 +11638,29 @@
         },
         "runtime": {
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
+        }
+      },
+      "Windows.Mvvm/0.3.7": {
+        "type": "package",
+        "compile": {
+          "lib/.NETCore50/Windows.Mvvm.Application.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Configuration.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Reactive.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Application.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Dialog.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Navigation.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.UI.dll": {},
+          "lib/.NETCore50/Windows.winmd": {}
+        },
+        "runtime": {
+          "lib/.NETCore50/Windows.Mvvm.Application.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Configuration.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Reactive.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Application.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Dialog.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Navigation.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.UI.dll": {},
+          "lib/.NETCore50/Windows.winmd": {}
         }
       },
       "healthtest2.Core/1.0.0": {
@@ -13234,6 +13395,29 @@
         },
         "runtime": {
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
+        }
+      },
+      "Windows.Mvvm/0.3.7": {
+        "type": "package",
+        "compile": {
+          "lib/.NETCore50/Windows.Mvvm.Application.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Configuration.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Reactive.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Application.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Dialog.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Navigation.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.UI.dll": {},
+          "lib/.NETCore50/Windows.winmd": {}
+        },
+        "runtime": {
+          "lib/.NETCore50/Windows.Mvvm.Application.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Configuration.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Reactive.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Application.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Dialog.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.Services.Navigation.dll": {},
+          "lib/.NETCore50/Windows.Mvvm.UI.dll": {},
+          "lib/.NETCore50/Windows.winmd": {}
         }
       },
       "healthtest2.Core/1.0.0": {
@@ -21635,6 +21819,40 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "Windows.Mvvm/0.3.7": {
+      "sha512": "v42FDdc7kcTAAPfyaew3bOWlPcf7GQEHaiKIP3+SEZRFnNxQdYuQ3rKrfBL42DyJFyLvDs/uB+K2ro7Ur298jQ==",
+      "type": "package",
+      "path": "windows.mvvm/0.3.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.txt",
+        "lib/.NETCore50/Windows.Mvvm.Application.XML",
+        "lib/.NETCore50/Windows.Mvvm.Application.dll",
+        "lib/.NETCore50/Windows.Mvvm.Application.pdb",
+        "lib/.NETCore50/Windows.Mvvm.Configuration.XML",
+        "lib/.NETCore50/Windows.Mvvm.Configuration.dll",
+        "lib/.NETCore50/Windows.Mvvm.Configuration.pdb",
+        "lib/.NETCore50/Windows.Mvvm.Reactive.XML",
+        "lib/.NETCore50/Windows.Mvvm.Reactive.dll",
+        "lib/.NETCore50/Windows.Mvvm.Reactive.pdb",
+        "lib/.NETCore50/Windows.Mvvm.Services.Application.XML",
+        "lib/.NETCore50/Windows.Mvvm.Services.Application.dll",
+        "lib/.NETCore50/Windows.Mvvm.Services.Application.pdb",
+        "lib/.NETCore50/Windows.Mvvm.Services.Dialog.XML",
+        "lib/.NETCore50/Windows.Mvvm.Services.Dialog.dll",
+        "lib/.NETCore50/Windows.Mvvm.Services.Dialog.pdb",
+        "lib/.NETCore50/Windows.Mvvm.Services.Navigation.XML",
+        "lib/.NETCore50/Windows.Mvvm.Services.Navigation.dll",
+        "lib/.NETCore50/Windows.Mvvm.Services.Navigation.pdb",
+        "lib/.NETCore50/Windows.Mvvm.UI.XML",
+        "lib/.NETCore50/Windows.Mvvm.UI.dll",
+        "lib/.NETCore50/Windows.Mvvm.UI.pdb",
+        "lib/.NETCore50/Windows.winmd",
+        "windows.mvvm.0.3.7.nupkg.sha512",
+        "windows.mvvm.nuspec"
+      ]
+    },
     "healthtest2.Core/1.0.0": {
       "type": "project",
       "path": "../healthtest2.Core/healthtest2.Core.csproj",
@@ -21647,6 +21865,7 @@
       "Microsoft.UI.Xaml >= 2.4.3",
       "Microsoft.Xaml.Behaviors.Uwp.Managed >= 2.0.1",
       "Newtonsoft.Json >= 13.0.1",
+      "Windows.Mvvm >= 0.3.7",
       "healthtest2.Core >= 1.0.0"
     ]
   },
@@ -21712,6 +21931,10 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[13.0.1, )"
+          },
+          "Windows.Mvvm": {
+            "target": "Package",
+            "version": "[0.3.7, )"
           }
         },
         "imports": [

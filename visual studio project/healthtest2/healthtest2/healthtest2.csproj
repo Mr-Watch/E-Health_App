@@ -128,6 +128,9 @@
     <PackageReference Include="Newtonsoft.Json">
       <Version>13.0.1</Version>
     </PackageReference>
+    <PackageReference Include="Windows.Mvvm">
+      <Version>0.3.7</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <PRIResource Include="Strings\en-us\Resources.resw" />
@@ -158,6 +161,9 @@
     </Compile>
     <Compile Include="Views\MapPage.xaml.cs">
       <DependentUpon>MapPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\resultpage.xaml.cs">
+      <DependentUpon>resultpage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\SearchHistory.xaml.cs">
       <DependentUpon>SearchHistory.xaml</DependentUpon>
@@ -209,6 +215,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\MapPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\resultpage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
