@@ -40,19 +40,26 @@ namespace healthtest2.Views
 
         private void searchbutton_click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
-            WebRequest request = HttpWebRequest.Create("http://127.0.0.1:5000/ath/api/v0.1/biomedlexicon/" + searchbar1.Text);
-            WebResponse response = request.GetResponse();
-            StreamReader reader = new StreamReader(response.GetResponseStream());
-
-            string illnamejason = reader.ReadToEnd();
-            JObject json = JObject.Parse(illnamejason);
-            foreach (var pair in json)
+            try
             {
-                Debug.WriteLine(pair.Value);
-                illnesslist.Items.Add(pair.Value);
-                testtext.Text = (string)pair.Value;
+                WebRequest request = HttpWebRequest.Create("http://127.0.0.1:5000/ath/api/v0.1/biomedlexicon/" + searchbar1.Text);
+                WebResponse response = request.GetResponse();
+                StreamReader reader = new StreamReader(response.GetResponseStream());
+
+                string illnamejason = reader.ReadToEnd();
+                JObject json = JObject.Parse(illnamejason);
+                foreach (var pair in json)
+                {
+                    Debug.WriteLine(pair.Value);
+                    illnesslist.Items.Add(pair.Value);
+                    testtext.Text = (string)pair.Value;
 
 
+                }
+                response.Close();
+            }
+            catch
+            {
             }
 
         }
