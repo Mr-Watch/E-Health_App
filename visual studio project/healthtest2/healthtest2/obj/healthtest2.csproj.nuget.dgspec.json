@@ -1,27 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\source\\repos\\healthtest2\\healthtest2\\healthtest2.csproj": {}
+    "C:\\Users\\Akman\\Documents\\GitHub\\Ehealthapp\\E-Health_App\\visual studio project\\healthtest2\\healthtest2\\healthtest2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\source\\repos\\healthtest2\\healthtest2.Core\\healthtest2.Core.csproj": {
+    "C:\\Users\\Akman\\Documents\\GitHub\\Ehealthapp\\E-Health_App\\visual studio project\\healthtest2\\healthtest2.Core\\healthtest2.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\healthtest2\\healthtest2.Core\\healthtest2.Core.csproj",
+        "projectUniqueName": "C:\\Users\\Akman\\Documents\\GitHub\\Ehealthapp\\E-Health_App\\visual studio project\\healthtest2\\healthtest2.Core\\healthtest2.Core.csproj",
         "projectName": "healthtest2.Core",
-        "projectPath": "C:\\Users\\Admin\\source\\repos\\healthtest2\\healthtest2.Core\\healthtest2.Core.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\source\\repos\\healthtest2\\healthtest2.Core\\obj\\",
+        "projectPath": "C:\\Users\\Akman\\Documents\\GitHub\\Ehealthapp\\E-Health_App\\visual studio project\\healthtest2\\healthtest2.Core\\healthtest2.Core.csproj",
+        "packagesPath": "C:\\Users\\Akman\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Akman\\Documents\\GitHub\\Ehealthapp\\E-Health_App\\visual studio project\\healthtest2\\healthtest2.Core\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Akman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -79,26 +73,22 @@
         }
       }
     },
-    "C:\\Users\\Admin\\source\\repos\\healthtest2\\healthtest2\\healthtest2.csproj": {
+    "C:\\Users\\Akman\\Documents\\GitHub\\Ehealthapp\\E-Health_App\\visual studio project\\healthtest2\\healthtest2\\healthtest2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\healthtest2\\healthtest2\\healthtest2.csproj",
+        "projectUniqueName": "C:\\Users\\Akman\\Documents\\GitHub\\Ehealthapp\\E-Health_App\\visual studio project\\healthtest2\\healthtest2\\healthtest2.csproj",
         "projectName": "healthtest2",
-        "projectPath": "C:\\Users\\Admin\\source\\repos\\healthtest2\\healthtest2\\healthtest2.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\source\\repos\\healthtest2\\healthtest2\\obj\\",
+        "projectPath": "C:\\Users\\Akman\\Documents\\GitHub\\Ehealthapp\\E-Health_App\\visual studio project\\healthtest2\\healthtest2\\healthtest2.csproj",
+        "packagesPath": "C:\\Users\\Akman\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Akman\\Documents\\GitHub\\Ehealthapp\\E-Health_App\\visual studio project\\healthtest2\\healthtest2\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Akman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "uap10.0.18362"
@@ -110,8 +100,8 @@
         "frameworks": {
           "uap10.0.18362": {
             "projectReferences": {
-              "C:\\Users\\Admin\\source\\repos\\healthtest2\\healthtest2.Core\\healthtest2.Core.csproj": {
-                "projectPath": "C:\\Users\\Admin\\source\\repos\\healthtest2\\healthtest2.Core\\healthtest2.Core.csproj"
+              "C:\\Users\\Akman\\Documents\\GitHub\\Ehealthapp\\E-Health_App\\visual studio project\\healthtest2\\healthtest2.Core\\healthtest2.Core.csproj": {
+                "projectPath": "C:\\Users\\Akman\\Documents\\GitHub\\Ehealthapp\\E-Health_App\\visual studio project\\healthtest2\\healthtest2.Core\\healthtest2.Core.csproj"
               }
             }
           }

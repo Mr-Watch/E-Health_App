@@ -14,7 +14,7 @@
         <maps:MapControl x:ConnectionId='2'
             x:Name="mapControl"
                                                        
-                                                  Margin="375,225,400,145" />
+                                                  Margin="10,10,10,10" />
     </Grid>
 </Page>
 
