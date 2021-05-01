@@ -50,6 +50,8 @@
   <Capabilities>
     <Capability Name="internetClientServer" />
     <Capability Name="internetClient" />
+    <uap:Capability Name="removableStorage"/>
+    <Capability Name="codeGeneration"/>
     <DeviceCapability Name="location" />
   </Capabilities>
 
