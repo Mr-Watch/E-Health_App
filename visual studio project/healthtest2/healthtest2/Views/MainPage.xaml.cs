@@ -21,6 +21,16 @@ namespace healthtest2.Views
             InitializeComponent();
 
         }
+       
+        private void checkbox_1_click(object sender, RoutedEventArgs e)
+        {
+            
+            foreach (var testil in list2.SelectedItems.)
+            {
+                illnesslist.Items.Add(testil);
+            }
+        }
+
         private void Button_Clickarm(object sender, RoutedEventArgs e)
         {
             if (handsTestSplit.IsPaneOpen == false)
@@ -115,6 +125,21 @@ namespace healthtest2.Views
 
         private void OnPropertyChanged(string propertyName) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 
+        private void Addbutton_click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            try
+            {
+                
+                {
+
+
+                }
+            }
+            catch
+            {
+            }
+
+        }
         private void searchbutton_click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
             try

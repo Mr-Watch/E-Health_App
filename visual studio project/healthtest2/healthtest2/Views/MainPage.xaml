@@ -35,7 +35,7 @@
             <TextBox x:Name="testtext" HorizontalAlignment="Left" Margin="1175,235,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="245"/>
             <TextBlock x:Name="testblock" HorizontalAlignment="Left" Margin="1270,350,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
             <Button Content="Button" Margin="1260,705,0,0" VerticalAlignment="Top" Width="175" Height="72" Click="navigatebutton"/>
-            <SplitView x:Name="handsTestSplit" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="600" Margin="0,0,10,0" FontSize="36">
+            <SplitView x:Name="handsTestSplit" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="600" Margin="0,0,10,0" FontSize="36" d:IsHidden="True">
                 <SplitView.Pane>
                     <ScrollViewer>
                     <StackPanel Background="GhostWhite">
@@ -44,11 +44,11 @@
                             <TextBlock Text="Shoulder Symptoms" FontSize="42" VerticalAlignment="Center"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <Button  Height="50" Width="50" Content="" Background="Transparent" />
+                            <Button x:Name="test1"  Height="50" Width="50" Content="" Background="Transparent" />
                             <TextBlock Text="lump in shoulder" FontSize="24" VerticalAlignment="Center"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <Button  Height="50" Width="50" Content="" Background="Transparent" />
+                            <Button x:Name="test2" Height="50" Width="50" Content="" Background="Transparent" />
                             <TextBlock Text="shoulder girdle muscle weakness" FontSize="24" VerticalAlignment="Center"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
@@ -234,34 +234,55 @@
                     </ScrollViewer>
                 </SplitView.Pane>
             </SplitView>
-            <SplitView x:Name="chestTestSplit" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="400" Margin="0,0,10,0" FontSize="36">
+            <SplitView x:Name="chestTestSplit" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="500" Margin="0,0,10,0" FontSize="36">
                 <SplitView.Pane>
+ 
                     <StackPanel Background="gray">
-
                         <StackPanel Orientation="Horizontal">
-                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
-                            <TextBlock Text="chest1" FontSize="36" VerticalAlignment="Center"/>
+                            <ListBox x:Name="list2">
+                                <ListBoxItem>
+                                    <CheckBox Height="50" Width="500" Content="chest1" FontSize="24" VerticalAlignment="Center"/>
+                                </ListBoxItem>
+                                <ListBoxItem>
+                                    <CheckBox Height="50" Width="500" Content="chest2" FontSize="24" VerticalAlignment="Center"/>
+                                </ListBoxItem>
+                                <ListBoxItem>
+                                    <CheckBox Height="50" Width="500" Content="chest3" FontSize="24" VerticalAlignment="Center"/>
+                                </ListBoxItem>
+                                <ListBoxItem>
+                                    <CheckBox Height="50" Width="500" Content="chest4" FontSize="24" VerticalAlignment="Center"/>
+                                </ListBoxItem>
+                                <ListBoxItem>
+                                    <CheckBox Height="50" Width="500" Content="chest5" FontSize="24" VerticalAlignment="Center"/>
+                                </ListBoxItem>
+                            </ListBox>
+                            
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button Height="50" Width="50" Content="send" Background="Transparent" Click="checkbox_1_click"/>
+                            
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <CheckBox Height="50" Width="500" Content="chest2" FontSize="24" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <CheckBox Height="50" Width="500" Content="chest3" FontSize="24" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <CheckBox Height="50" Width="500" Content="chest4" FontSize="24" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <CheckBox Height="50" Width="500" Content="chest5" FontSize="24" VerticalAlignment="Center"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
                             <Button  Height="100" Width="100" Content="" Background="Transparent" />
                             <TextBlock Text="chest2" FontSize="36" VerticalAlignment="Center"/>
                         </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
-                            <TextBlock Text="chest3" FontSize="36" VerticalAlignment="Center"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
-                            <TextBlock Text="chest4" FontSize="36" VerticalAlignment="Center"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
-                            <TextBlock Text="chest5" FontSize="36" VerticalAlignment="Center"/>
-                        </StackPanel>
+                    
                     </StackPanel>
                 </SplitView.Pane>
             </SplitView>
-            <SplitView x:Name="legsTestSplit" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="400" Margin="0,0,10,0" FontSize="36">
+            <SplitView x:Name="legsTestSplit" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="400" Margin="0,0,10,0" FontSize="36" d:IsHidden="True">
                 <SplitView.Pane>
                     <StackPanel Background="gray">
 
@@ -288,7 +309,7 @@
                     </StackPanel>
                 </SplitView.Pane>
             </SplitView>
-            <SplitView x:Name="pelvisTestSplit" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="400" Margin="0,0,10,0" FontSize="36">
+            <SplitView x:Name="pelvisTestSplit" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="400" Margin="0,0,10,0" FontSize="36" d:IsHidden="True">
                 <SplitView.Pane>
                     <StackPanel Background="gray">
 
@@ -315,7 +336,7 @@
                     </StackPanel>
                 </SplitView.Pane>
             </SplitView>
-            <SplitView x:Name="neckTestSplit" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="400" Margin="0,0,10,0" FontSize="36">
+            <SplitView x:Name="neckTestSplit" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="400" Margin="0,0,10,0" FontSize="36" d:IsHidden="True">
                 <SplitView.Pane>
                     <StackPanel Background="gray">
 
@@ -342,7 +363,7 @@
                     </StackPanel>
                 </SplitView.Pane>
             </SplitView>
-            <SplitView x:Name="headTestSplit" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="400" Margin="0,0,10,0" FontSize="36">
+            <SplitView x:Name="headTestSplit" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="400" Margin="0,0,10,0" FontSize="36" d:IsHidden="True">
                 <SplitView.Pane>
                     <StackPanel Background="gray">
 
@@ -369,7 +390,7 @@
                     </StackPanel>
                 </SplitView.Pane>
             </SplitView>
-            <SplitView x:Name="abdomenTestSplit" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="400" Margin="0,0,10,0" FontSize="36">
+            <SplitView x:Name="abdomenTestSplit" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="400" Margin="0,0,10,0" FontSize="36" d:IsHidden="True">
                 <SplitView.Pane>
                     <StackPanel Background="gray">
 
