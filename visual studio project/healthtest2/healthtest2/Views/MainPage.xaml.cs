@@ -21,6 +21,83 @@ namespace healthtest2.Views
             InitializeComponent();
 
         }
+        private void Button_Clickarm(object sender, RoutedEventArgs e)
+        {
+            if (handsTestSplit.IsPaneOpen == false)
+            {
+                handsTestSplit.IsPaneOpen = true;
+            }
+            else
+            {
+                handsTestSplit.IsPaneOpen = false;
+            }
+        }
+        private void Button_Clickchest(object sender, RoutedEventArgs e)
+        {
+            if (chestTestSplit.IsPaneOpen == false)
+            {
+                chestTestSplit.IsPaneOpen = true;
+            }
+            else
+            {
+                chestTestSplit.IsPaneOpen = false;
+            }
+        }
+        private void Button_Clicklegs(object sender, RoutedEventArgs e)
+        {
+            if (legsTestSplit.IsPaneOpen == false)
+            {
+                legsTestSplit.IsPaneOpen = true;
+            }
+            else
+            {
+                legsTestSplit.IsPaneOpen = false;
+            }
+        }
+        private void Button_Clickneck(object sender, RoutedEventArgs e)
+        {
+            if (neckTestSplit.IsPaneOpen == false)
+            {
+                neckTestSplit.IsPaneOpen = true;
+            }
+            else
+            {
+                neckTestSplit.IsPaneOpen = false;
+            }
+        }
+        private void Button_Clickhead(object sender, RoutedEventArgs e)
+        {
+            if (headTestSplit.IsPaneOpen == false)
+            {
+                headTestSplit.IsPaneOpen = true;
+            }
+            else
+            {
+                headTestSplit.IsPaneOpen = false;
+            }
+        }
+        private void Button_Clickpelvis(object sender, RoutedEventArgs e)
+        {
+            if (pelvisTestSplit.IsPaneOpen == false)
+            {
+                pelvisTestSplit.IsPaneOpen = true;
+            }
+            else
+            {
+                pelvisTestSplit.IsPaneOpen = false;
+            }
+        }
+        private void Button_Clickabdomen(object sender, RoutedEventArgs e)
+        {
+            if (abdomenTestSplit.IsPaneOpen == false)
+            {
+                abdomenTestSplit.IsPaneOpen = true;
+            }
+            else
+            {
+                abdomenTestSplit.IsPaneOpen = false;
+            }
+        }
         public string test { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;

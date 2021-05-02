@@ -7,8 +7,7 @@
     Style="{StaticResource PageStyle}"
     mc:Ignorable="d">
     <Grid x:Name="ContentArea" Margin="0,0,5,0">
-        <Grid
-            Background="White">
+        <Grid Background="White">
             <ListView x:Name="illnesslist" Margin="91,240,0,130" Background="White" BorderThickness="2" BorderBrush="Black" HorizontalAlignment="Left" Width="383">
                 <ListViewItem x:Name="la1">
 
@@ -17,17 +16,17 @@
 
             <Border BorderThickness="1" BorderBrush="Black" Margin="541,240,0,50" HorizontalAlignment="Left" Width="623">
                 <Grid HorizontalAlignment="Left" Margin="3,-1,0,-1" Width="618">
-                    <Button x:Name="abdomen" Content="" Margin="250,265,0,0" VerticalAlignment="Top" Height="70" Width="95"/>
-                    <Button x:Name="arm_r" Content="" Margin="360,210,0,0" VerticalAlignment="Top" Width="195" Height="30"/>
-                    <Button x:Name="arm_l" Content="" Margin="45,208,0,0" VerticalAlignment="Top" Height="32" Width="195"/>
-                    <Button x:Name="chest" Content="" Margin="240,190,0,0" VerticalAlignment="Top" Height="75" Width="120"/>
-                    <Button x:Name="neck" Content="" Margin="280,155,0,0" VerticalAlignment="Top" Width="40" Height="35"/>
-                    <Button x:Name="head" Content="" Margin="270,93,0,0" VerticalAlignment="Top" Height="62" Width="60"/>
+                    <Button x:Name="abdomen" Content="" Margin="250,265,0,0" VerticalAlignment="Top" Height="70" Width="95" Click="Button_Clickabdomen"/>
+                    <Button x:Name="arm_r" Content="" Margin="360,210,0,0" VerticalAlignment="Top" Width="195" Height="30" Click="Button_Clickarm"/>
+                    <Button x:Name="arm_l" Content="" Margin="45,208,0,0" VerticalAlignment="Top" Height="32" Width="195" Click="Button_Clickarm"/>
+                    <Button x:Name="chest" Content="" Margin="240,190,0,0" VerticalAlignment="Top" Height="75" Width="120" Click="Button_Clickchest"/>
+                    <Button x:Name="neck" Content="" Margin="280,155,0,0" VerticalAlignment="Top" Width="40" Height="35" Click="Button_Clickneck"/>
+                    <Button x:Name="head" Content="" Margin="270,93,0,0" VerticalAlignment="Top" Height="62" Width="60" Click="Button_Clickhead"/>
                     <Button Content="" Margin="10,208,0,0" VerticalAlignment="Top" Height="32" Width="35"/>
                     <Button Content="" Margin="555,210,0,0" VerticalAlignment="Top" Height="32" Width="35"/>
-                    <Button x:Name="pelvis" Content="" Margin="245,0,0,0" Height="40" Width="105"/>
-                    <Button x:Name="leg_l" Content="" Margin="235,375,0,0" VerticalAlignment="Top" Height="280" Width="50"/>
-                    <Button x:Name="leg_r" Content="" Margin="315,375,0,0" VerticalAlignment="Top" Height="275" Width="50"/>
+                    <Button x:Name="pelvis" Content="" Margin="245,0,0,0" Height="40" Width="105" Click="Button_Clickpelvis"/>
+                    <Button x:Name="leg_l" Content="" Margin="235,375,0,0" VerticalAlignment="Top" Height="280" Width="50" Click="Button_Clicklegs"/>
+                    <Button x:Name="leg_r" Content="" Margin="315,375,0,0" VerticalAlignment="Top" Height="275" Width="50" Click="Button_Clicklegs"/>
                 </Grid>
             </Border>
             <TextBlock HorizontalAlignment="Center" Height="65" Text="What are your symptoms?" TextWrapping="Wrap" VerticalAlignment="Top" Width="569" Margin="0,45,0,0" FontSize="48"/>
@@ -36,6 +35,367 @@
             <TextBox x:Name="testtext" HorizontalAlignment="Left" Margin="1175,235,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="245"/>
             <TextBlock x:Name="testblock" HorizontalAlignment="Left" Margin="1270,350,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
             <Button Content="Button" Margin="1260,705,0,0" VerticalAlignment="Top" Width="175" Height="72" Click="navigatebutton"/>
+            <SplitView x:Name="handsTestSplit" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="600" Margin="0,0,10,0" FontSize="36">
+                <SplitView.Pane>
+                    <ScrollViewer>
+                    <StackPanel Background="GhostWhite">
+                        
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Shoulder Symptoms" FontSize="42" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="50" Width="50" Content="" Background="Transparent" />
+                            <TextBlock Text="lump in shoulder" FontSize="24" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="50" Width="50" Content="" Background="Transparent" />
+                            <TextBlock Text="shoulder girdle muscle weakness" FontSize="24" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="50" Width="50" Content="" Background="Transparent" />
+                            <TextBlock Text="shoulder muscle pain" FontSize="24" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="50" Width="50" Content="" Background="Transparent" />
+                            <TextBlock Text="shoulder muscle twitching" FontSize="24" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="50" Width="50" Content="" Background="Transparent" />
+                            <TextBlock Text="shoulder tender to touch" FontSize="24" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="50" Width="50" Content="" Background="Transparent" />
+                            <TextBlock Text="subacromial bursal tenderness" FontSize="24" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Armpit Symptoms" FontSize="42" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="50" Width="50" Content="" Background="Transparent" />
+                            <TextBlock Text="axillary lymph node enlargement" FontSize="24" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="50" Width="50" Content="" Background="Transparent" />
+                            <TextBlock Text="axillary lymph node tenderness" FontSize="24" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="50" Width="50" Content="" Background="Transparent" />
+                            <TextBlock Text="darkening skin on armpit" FontSize="24" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="50" Width="50" Content="" Background="Transparent" />
+                            <TextBlock Text="firm lump in arm pit" FontSize="24" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="50" Width="50" Content="" Background="Transparent" />
+                            <TextBlock Text="losing armpit hair" FontSize="24" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="50" Width="50" Content="" Background="Transparent" />
+                            <TextBlock Text="lump in armpit that doesn't move" FontSize="24" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="50" Width="50" Content="" Background="Transparent" />
+                            <TextBlock Text="painful nodules in armpits" FontSize="24" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="50" Width="50" Content="" Background="Transparent" />
+                            <TextBlock Text="rash limited to armpit" FontSize="24" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="50" Width="50" Content="" Background="Transparent" />
+                            <TextBlock Text="very little armpit hair" FontSize="24" VerticalAlignment="Center"/>
+                        </StackPanel>
+                       
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Upper Arm Symptoms" FontSize="42" VerticalAlignment="Center"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="50" Width="50" Content="" Background="Transparent" />
+                            <TextBlock Text="bicep shaking" FontSize="24" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                                <Button  Height="50" Width="50" Content="" Background="Transparent" />
+                            <TextBlock Text="biceps and triceps hyperreflexia" FontSize="24" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="50" Width="50" Content="" Background="Transparent" />
+                            <TextBlock Text="biceps hyporeflexia" FontSize="24" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                                <Button  Height="50" Width="50" Content="" Background="Transparent" />
+                            <TextBlock Text="humeral swelling, lower " FontSize="24" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                                <Button  Height="50" Width="50" Content="" Background="Transparent" />
+                            <TextBlock Text="triceps hyporeflexia" FontSize="24" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                                <Button  Height="50" Width="50" Content="" Background="Transparent" />
+                            <TextBlock Text="upper arm pain" FontSize="24" VerticalAlignment="Center"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Elbow Symptoms" FontSize="42" VerticalAlignment="Center"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                                <Button  Height="50" Width="50" Content="" Background="Transparent" />
+                            <TextBlock Text="darkened skin on elbow" FontSize="24" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                                <Button  Height="50" Width="50" Content="" Background="Transparent" />
+                            <TextBlock Text="elbow bones out of place" FontSize="24" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                                <Button  Height="50" Width="50" Content="" Background="Transparent" />
+                            <TextBlock Text="elbow pain" FontSize="24" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                                <Button  Height="50" Width="50" Content="" Background="Transparent" />
+                            <TextBlock Text="flaky bump(s) limited to elbows or knees" FontSize="24" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                                <Button  Height="50" Width="50" Content="" Background="Transparent" />
+                            <TextBlock Text="red bump(s) on elbow" FontSize="24" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                                <Button Height="50" Width="50" Content="" Background="Transparent" />
+                            <TextBlock Text="single flaky raised skin patch on elbows or knees" FontSize="24" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                                <Button  Height="50" Width="50" Content="" Background="Transparent" />
+                            <TextBlock Text="stiff elbow" FontSize="24" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                                <Button  Height="50" Width="50" Content="" Background="Transparent" />
+                            <TextBlock Text="tenderness lateral epicondyle" FontSize="24" VerticalAlignment="Center"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Forearm Symptoms" FontSize="42" VerticalAlignment="Center"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                                <Button  Height="50" Width="50" Content="" Background="Transparent" />
+                            <TextBlock Text="forearm feels more sensitive" FontSize="24" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                                <Button  Height="50" Width="50" Content="" Background="Transparent" />
+                            <TextBlock Text="forearm hurts" FontSize="24" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                                <Button Height="50" Width="50" Content="" Background="Transparent" />
+                            <TextBlock Text="forearm itches" FontSize="24" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                                <Button  Height="50" Width="50" Content="" Background="Transparent" />
+                            <TextBlock Text="lump on forearm" FontSize="24" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                                <Button  Height="50" Width="50" Content="" Background="Transparent" />
+                            <TextBlock Text="tingling or prickling in forearm" FontSize="24" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Wrist Symptoms" FontSize="42" VerticalAlignment="Center"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                                <Button  Height="50" Width="50" Content="" Background="Transparent" />
+                            <TextBlock Text="crackling sound when moving wrist" FontSize="24" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                                <Button  Height="50" Width="50" Content="" Background="Transparent" />
+                            <TextBlock Text="wrist hurts when moved" FontSize="24" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                                <Button  Height="50" Width="50" Content="" Background="Transparent" />
+                            <TextBlock Text="wrist pain" FontSize="24" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                                <Button  Height="50" Width="50" Content="" Background="Transparent" />
+                            <TextBlock Text="wrist stiffness" FontSize="24" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                                <Button  Height="50" Width="50" Content="" Background="Transparent" />
+                            <TextBlock Text="wrist swelling" FontSize="24" VerticalAlignment="Center"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Palm Symptoms" FontSize="42" VerticalAlignment="Center"/>
+                        </StackPanel>
+
+                        
+                    </StackPanel>
+                    </ScrollViewer>
+                </SplitView.Pane>
+            </SplitView>
+            <SplitView x:Name="chestTestSplit" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="400" Margin="0,0,10,0" FontSize="36">
+                <SplitView.Pane>
+                    <StackPanel Background="gray">
+
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
+                            <TextBlock Text="chest1" FontSize="36" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
+                            <TextBlock Text="chest2" FontSize="36" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
+                            <TextBlock Text="chest3" FontSize="36" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
+                            <TextBlock Text="chest4" FontSize="36" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
+                            <TextBlock Text="chest5" FontSize="36" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </StackPanel>
+                </SplitView.Pane>
+            </SplitView>
+            <SplitView x:Name="legsTestSplit" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="400" Margin="0,0,10,0" FontSize="36">
+                <SplitView.Pane>
+                    <StackPanel Background="gray">
+
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
+                            <TextBlock Text="legs1" FontSize="36" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
+                            <TextBlock Text="legs2" FontSize="36" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
+                            <TextBlock Text="legs3" FontSize="36" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
+                            <TextBlock Text="legs4" FontSize="36" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
+                            <TextBlock Text="legs5" FontSize="36" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </StackPanel>
+                </SplitView.Pane>
+            </SplitView>
+            <SplitView x:Name="pelvisTestSplit" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="400" Margin="0,0,10,0" FontSize="36">
+                <SplitView.Pane>
+                    <StackPanel Background="gray">
+
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
+                            <TextBlock Text="pelvis1" FontSize="36" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
+                            <TextBlock Text="pelvis2" FontSize="36" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
+                            <TextBlock Text="pelvis3" FontSize="36" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
+                            <TextBlock Text="pelvis4" FontSize="36" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
+                            <TextBlock Text="pelvis5" FontSize="36" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </StackPanel>
+                </SplitView.Pane>
+            </SplitView>
+            <SplitView x:Name="neckTestSplit" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="400" Margin="0,0,10,0" FontSize="36">
+                <SplitView.Pane>
+                    <StackPanel Background="gray">
+
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
+                            <TextBlock Text="neck1" FontSize="36" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
+                            <TextBlock Text="neck2" FontSize="36" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
+                            <TextBlock Text="neck3" FontSize="36" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
+                            <TextBlock Text="neck4" FontSize="36" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
+                            <TextBlock Text="neck5" FontSize="36" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </StackPanel>
+                </SplitView.Pane>
+            </SplitView>
+            <SplitView x:Name="headTestSplit" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="400" Margin="0,0,10,0" FontSize="36">
+                <SplitView.Pane>
+                    <StackPanel Background="gray">
+
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
+                            <TextBlock Text="head1" FontSize="36" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
+                            <TextBlock Text="head2" FontSize="36" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
+                            <TextBlock Text="head3" FontSize="36" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
+                            <TextBlock Text="head4" FontSize="36" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
+                            <TextBlock Text="head5" FontSize="36" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </StackPanel>
+                </SplitView.Pane>
+            </SplitView>
+            <SplitView x:Name="abdomenTestSplit" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="400" Margin="0,0,10,0" FontSize="36">
+                <SplitView.Pane>
+                    <StackPanel Background="gray">
+
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
+                            <TextBlock Text="abdomen1" FontSize="36" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
+                            <TextBlock Text="abdomen2" FontSize="36" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
+                            <TextBlock Text="abdomen3" FontSize="36" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
+                            <TextBlock Text="abdomen4" FontSize="36" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
+                            <TextBlock Text="abdomen5" FontSize="36" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </StackPanel>
+                </SplitView.Pane>
+            </SplitView>
             <!--
                 The SystemControlPageBackgroundChromeLowBrush background represents where you should place your content. 
                 Place your content here.
