@@ -11,6 +11,8 @@ using Newtonsoft.Json.Linq;
 using System.Linq;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Navigation;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace healthtest2.Views
 {
@@ -19,17 +21,73 @@ namespace healthtest2.Views
         public MainPage()
         {
             InitializeComponent();
+            this.DataContext = this;
+            Dictionary<String, string> colors = new Dictionary<string, string>();
 
+            // Put some key value pairs into the dictionary
+            colors.Add("SILVER", "#C0C0C0");
+            colors.Add("RED", "#FF0000");
+            colors.Add("GREEN", "#008000");
+            colors.Add("AQUA", "#00FFFF");
+            colors.Add("PURPLE", "#800080");
+            colors.Add("LIME", "#00FF00");
+
+            // Finally, Specify the ComboBox items source
+            ComboBox1.ItemsSource = colors;
+
+            // Specify the ComboBox items text and value
+            ComboBox1.SelectedValuePath = "Value";
+            ComboBox1.DisplayMemberPath = "Key";
+
+            Items = new List<ItemVM>
+                {
+                    new ItemVM {IsSelected = false, Name = "Firefox"},
+                    new ItemVM {IsSelected = false, Name = "Chrome"},
+                    new ItemVM {IsSelected = false, Name = "IE"}
+                };
         }
-       
-        private void checkbox_1_click(object sender, RoutedEventArgs e)
+
+        private void ComboBox1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            
-            foreach (var testil in list2.SelectedItems.)
-            {
-                illnesslist.Items.Add(testil);
+            // Get the ComboBox instance
+            ComboBox comboBox = sender as ComboBox;
+
+            // Get the ComboBox selected item value and display on TextBlock
+            testblock.Text += "Value : " + comboBox.SelectedValue.ToString();
+            string help1 = comboBox.SelectedValue.ToString();
+            foreach (var help2 in help1) {
+                illnesslist.Items.Add(help2);
             }
         }
+
+
+        public IEnumerable<ItemVM> Items { get; set; }
+        private IEnumerable<ItemVM> _selectedItems;
+        public class ItemVM
+        {
+            public string Name { get; set; }
+            public bool IsSelected { get; set; }
+
+        }
+        public IEnumerable<ItemVM> SelectedItems
+        {
+            get { return _selectedItems; }
+            set
+            {
+                _selectedItems = value;
+                if (PropertyChanged != null)
+                    this.PropertyChanged(this, new PropertyChangedEventArgs("SelectedItems"));
+            }
+        }
+
+        private void EvaluateSelectedItems(object sender, RoutedEventArgs e)
+        {
+            
+            SelectedItems = Items.Where(item => item.IsSelected);
+            
+        }
+
+      
 
         private void Button_Clickarm(object sender, RoutedEventArgs e)
         {
