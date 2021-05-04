@@ -13,17 +13,20 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Navigation;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace healthtest2.Views
 {
     public sealed partial class MainPage : Page, INotifyPropertyChanged
     {
+        private ObservableCollection<Symptom> DataSource = new ObservableCollection<Symptom>();
         public MainPage()
         {
             InitializeComponent();
             this.DataContext = this;
             Dictionary<String, string> colors = new Dictionary<string, string>();
 
+            DataSource = GetSymptomData();
             // Put some key value pairs into the dictionary
             colors.Add("SILVER", "#C0C0C0");
             colors.Add("RED", "#FF0000");
@@ -82,7 +85,7 @@ namespace healthtest2.Views
 
         private void EvaluateSelectedItems(object sender, RoutedEventArgs e)
         {
-            
+
             SelectedItems = Items.Where(item => item.IsSelected);
             
         }
@@ -239,7 +242,33 @@ namespace healthtest2.Views
         {
             public string translation { get; set; }
         }
+        
+        private ObservableCollection<Symptom> GetSymptomData() {
+            var list = new ObservableCollection<Symptom>();
+            Symptom symptomCategory = new Symptom() {
+                Name = "Shoulder Symptoms",
+                Children = {
+                    new Symptom() { Name = "lump in shoulder" },
+                    new Symptom() { Name = "shoulder girdle muscle weakness" },
+                    new Symptom() { Name = "shoulder muscle pain" },
+                    new Symptom() { Name = "shoulder muscle twitching" },
+                    new Symptom() { Name = "shoulder tender to touch" },
+                    new Symptom() { Name = "subacromial bursal tenderness" }
+            }
+            };
+            list.Add(symptomCategory);
+            return list;
+        }
+    }
+    public class Symptom
+    {
+        public string Name { get; set; }
+        public ObservableCollection<Symptom> Children { get; set; } = new ObservableCollection<Symptom>();
 
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }
 
