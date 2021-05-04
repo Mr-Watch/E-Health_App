@@ -10,6 +10,9 @@
     xmlns:local="using:healthtest2.Views"
     Style="{StaticResource PageStyle}"
     mc:Ignorable="d">
+    <Page.Resources>
+        
+    </Page.Resources>
     <Grid x:Name="ContentArea" Margin="0,0,5,0">
         <Grid Background="White">
             <ListView x:Name="illnesslist" DisplayMemberPath="Name" Background="Red" Margin="91,240,0,130" BorderThickness="2" BorderBrush="Black" HorizontalAlignment="left" Width="383">
@@ -41,81 +44,14 @@
                 <SplitView.Pane>
                     <ScrollViewer>
                     <StackPanel Background="GhostWhite">
-                            <TreeView Name="myTreeViewEvent" ItemsSource="{x:Bind DataSource}">
+                            <TreeView Name="ArmsTree" CanDragItems="False" ItemsSource="{x:Bind DataSource}" ItemInvoked="ArmsTree_ItemInvoked">
                                 <x1:TreeView.ItemTemplate>
-                                    <DataTemplate d:DataType="local:Symptom">
-                                        <x1:TreeViewItem ItemsSource="{x1:Binding Children}" Content="{x1:Binding Name}"/>
+                                    <DataTemplate x:Name="ItemTemplate" d:DataType="local:Symptom">
+                                        <TreeViewItem ItemsSource="{x1:Binding Children}" Content="{x1:Binding Name}"/>
                                     </DataTemplate>
                                 </x1:TreeView.ItemTemplate>
                             </TreeView>
-                            <!--<StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Shoulder Symptoms" FontSize="42" VerticalAlignment="Center"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <Button x:Name="test1"  Height="50" Width="50" Content="" Background="Transparent" />
-                            <TextBlock Text="lump in shoulder" FontSize="24" VerticalAlignment="Center"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <Button x:Name="test2" Height="50" Width="50" Content="" Background="Transparent" />
-                            <TextBlock Text="shoulder girdle muscle weakness" FontSize="24" VerticalAlignment="Center"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <Button  Height="50" Width="50" Content="" Background="Transparent" />
-                            <TextBlock Text="shoulder muscle pain" FontSize="24" VerticalAlignment="Center"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <Button  Height="50" Width="50" Content="" Background="Transparent" />
-                            <TextBlock Text="shoulder muscle twitching" FontSize="24" VerticalAlignment="Center"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <Button  Height="50" Width="50" Content="" Background="Transparent" />
-                            <TextBlock Text="shoulder tender to touch" FontSize="24" VerticalAlignment="Center"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <Button  Height="50" Width="50" Content="" Background="Transparent" />
-                            <TextBlock Text="subacromial bursal tenderness" FontSize="24" VerticalAlignment="Center"/>
-                        </StackPanel>
-                        
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Armpit Symptoms" FontSize="42" VerticalAlignment="Center"/>
-                        </StackPanel>
-                        
-                        <StackPanel Orientation="Horizontal">
-                            <Button  Height="50" Width="50" Content="" Background="Transparent" />
-                            <TextBlock Text="axillary lymph node enlargement" FontSize="24" VerticalAlignment="Center"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <Button  Height="50" Width="50" Content="" Background="Transparent" />
-                            <TextBlock Text="axillary lymph node tenderness" FontSize="24" VerticalAlignment="Center"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <Button  Height="50" Width="50" Content="" Background="Transparent" />
-                            <TextBlock Text="darkening skin on armpit" FontSize="24" VerticalAlignment="Center"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <Button  Height="50" Width="50" Content="" Background="Transparent" />
-                            <TextBlock Text="firm lump in arm pit" FontSize="24" VerticalAlignment="Center"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <Button  Height="50" Width="50" Content="" Background="Transparent" />
-                            <TextBlock Text="losing armpit hair" FontSize="24" VerticalAlignment="Center"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <Button  Height="50" Width="50" Content="" Background="Transparent" />
-                            <TextBlock Text="lump in armpit that doesn't move" FontSize="24" VerticalAlignment="Center"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <Button  Height="50" Width="50" Content="" Background="Transparent" />
-                            <TextBlock Text="painful nodules in armpits" FontSize="24" VerticalAlignment="Center"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <Button  Height="50" Width="50" Content="" Background="Transparent" />
-                            <TextBlock Text="rash limited to armpit" FontSize="24" VerticalAlignment="Center"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <Button  Height="50" Width="50" Content="" Background="Transparent" />
-                            <TextBlock Text="very little armpit hair" FontSize="24" VerticalAlignment="Center"/>
-                        </StackPanel>
+                            <!--
                        
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="Upper Arm Symptoms" FontSize="42" VerticalAlignment="Center"/>

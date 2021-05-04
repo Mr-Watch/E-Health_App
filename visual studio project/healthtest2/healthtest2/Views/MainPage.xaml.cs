@@ -245,7 +245,7 @@ namespace healthtest2.Views
         
         private ObservableCollection<Symptom> GetSymptomData() {
             var list = new ObservableCollection<Symptom>();
-            Symptom symptomCategory = new Symptom() {
+            Symptom ShoulderCategory = new Symptom() {
                 Name = "Shoulder Symptoms",
                 Children = {
                     new Symptom() { Name = "lump in shoulder" },
@@ -256,8 +256,30 @@ namespace healthtest2.Views
                     new Symptom() { Name = "subacromial bursal tenderness" }
             }
             };
-            list.Add(symptomCategory);
+            Symptom ArmpitCategory = new Symptom()
+            {
+                Name = "Armpit Symptoms",
+                Children = {
+                    new Symptom() { Name = "axillary lymph node enlargement" },
+                    new Symptom() { Name = "axillary lymph node tenderness" },
+                    new Symptom() { Name = "darkening skin on armpit" },
+                    new Symptom() { Name = "firm lump in arm pit" },
+                    new Symptom() { Name = "losing armpit hair" },
+                    new Symptom() { Name = "lump in armpit that doesn't move" },
+                    new Symptom() { Name = "painful nodules in armpits" },
+                    new Symptom() { Name = "rash limited to armpit"},
+                    new Symptom() { Name = "very little armpit hair" }
+            }
+            };
+            list.Add(ShoulderCategory);
+            list.Add(ArmpitCategory);
             return list;
+        }
+
+        private void ArmsTree_ItemInvoked(TreeView sender, TreeViewItemInvokedEventArgs args)
+        {
+                illnesslist.Items.Add(args.InvokedItem);
+                Debug.WriteLine(args.InvokedItem);
         }
     }
     public class Symptom
