@@ -13,7 +13,7 @@
     <Grid x:Name="ContentArea" Margin="0,0,5,0">
         <Grid Background="White">
             <ListView x:Name="illnesslist" DisplayMemberPath="Name" Background="Red" Margin="91,240,0,130" BorderThickness="2" BorderBrush="Black" HorizontalAlignment="left" Width="383">
-                
+
             </ListView>
 
             <Border BorderThickness="1" BorderBrush="Black" Margin="541,240,0,50" HorizontalAlignment="Left" Width="623">
@@ -40,7 +40,7 @@
             <SplitView x:Name="handsTestSplit" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="600" Margin="0,0,10,0" FontSize="36" d:IsHidden="True">
                 <SplitView.Pane>
                     <ScrollViewer>
-                    <StackPanel Background="GhostWhite">
+                        <StackPanel Background="GhostWhite">
                             <TreeView Name="myTreeViewEvent" ItemsSource="{x:Bind DataSource}">
                                 <x1:TreeView.ItemTemplate>
                                     <DataTemplate d:DataType="local:Symptom">
@@ -237,20 +237,20 @@
                             <TextBlock Text="Palm Symptoms" FontSize="42" VerticalAlignment="Center"/>
                         </StackPanel>-->
 
-                        
-                    </StackPanel> 
+
+                        </StackPanel>
                     </ScrollViewer>
                 </SplitView.Pane>
             </SplitView>
             <SplitView x:Name="chestTestSplit" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="500" Margin="0,0,10,0" FontSize="36">
                 <SplitView.Pane>
- 
+
                     <StackPanel Background="gray">
-                        
+
                         <ComboBox x:Name="ComboBox1"  Header="Select A Color" SelectionChanged="ComboBox1_SelectionChanged" >
                         </ComboBox>
-                        
-                        
+
+
                         <ListBox ItemsSource="{Binding Items}">
                             <ListBox.ItemTemplate>
                                 <DataTemplate>
@@ -259,7 +259,7 @@
                             </ListBox.ItemTemplate>
                         </ListBox>
                         <Button Click="EvaluateSelectedItems">Show Selected</Button>
-                        
+
                     </StackPanel>
                 </SplitView.Pane>
             </SplitView>
