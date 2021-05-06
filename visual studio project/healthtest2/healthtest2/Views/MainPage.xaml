@@ -40,13 +40,13 @@
             <TextBox x:Name="testtext" HorizontalAlignment="Left" Margin="1175,235,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="245"/>
             <TextBlock x:Name="testblock" HorizontalAlignment="Left" Margin="1270,350,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
             <Button Content="Button" Margin="1260,705,0,0" VerticalAlignment="Top" Width="175" Height="72" Click="navigatebutton"/>
-            <SplitView x:Name="handsTestSplit" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="600" Margin="0,0,10,0" FontSize="36" d:IsHidden="True">
+            <SplitView x:Name="handsSplit" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="600" Margin="0,0,10,0" FontSize="36" d:IsHidden="True">
                 <SplitView.Pane>
                     <ScrollViewer>
                     <StackPanel Background="GhostWhite">
-                            <TreeView Name="ArmsTree" CanDragItems="False" ItemsSource="{x:Bind DataSource}" ItemInvoked="ArmsTree_ItemInvoked">
+                            <TreeView Name="ArmsTree" CanDragItems="False" ItemsSource="{x:Bind DataSource}" ItemInvoked="Tree_ItemInvoked">
                                 <x1:TreeView.ItemTemplate>
-                                    <DataTemplate x:Name="ItemTemplate" d:DataType="local:Symptom">
+                                    <DataTemplate d:DataType="local:Symptom">
                                         <TreeViewItem ItemsSource="{x1:Binding Children}" Content="{x1:Binding Name}"/>
                                     </DataTemplate>
                                 </x1:TreeView.ItemTemplate>
@@ -61,160 +61,94 @@
                     </ScrollViewer>
                 </SplitView.Pane>
             </SplitView>
-            <SplitView x:Name="chestTestSplit" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="500" Margin="0,0,10,0" FontSize="36">
+            <SplitView x:Name="chestSplit" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="500" Margin="0,0,10,0" FontSize="36">
                 <SplitView.Pane>
- 
-                    <StackPanel Background="gray">
-                        
-                        <ComboBox x:Name="ComboBox1"  Header="Select A Color" SelectionChanged="ComboBox1_SelectionChanged" >
-                        </ComboBox>
-                        
-                        
-                        <ListBox ItemsSource="{Binding Items}">
-                            <ListBox.ItemTemplate>
-                                <DataTemplate>
-                                    <CheckBox Height="50" Width="500" Content="{Binding Name}" IsChecked="{Binding IsSelected}"/>
-                                </DataTemplate>
-                            </ListBox.ItemTemplate>
-                        </ListBox>
-                        <Button Click="EvaluateSelectedItems">Show Selected</Button>
-                        
-                    </StackPanel>
+                    <ScrollViewer>
+                        <StackPanel Background="GhostWhite">
+                            <TreeView Name="ChestTree" CanDragItems="False" ItemsSource="{x:Bind DataSourceChest}" ItemInvoked="Tree_ItemInvoked">
+                                <x1:TreeView.ItemTemplate>
+                                    <DataTemplate d:DataType="local:Symptom">
+                                        <TreeViewItem ItemsSource="{x1:Binding Children}" Content="{x1:Binding Name}"/>
+                                    </DataTemplate>
+                                </x1:TreeView.ItemTemplate>
+                            </TreeView>
+                        </StackPanel>
+                    </ScrollViewer>
                 </SplitView.Pane>
             </SplitView>
-            <SplitView x:Name="legsTestSplit" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="400" Margin="0,0,10,0" FontSize="36" d:IsHidden="True">
+            <SplitView x:Name="legsSplit" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="400" Margin="0,0,10,0" FontSize="36" d:IsHidden="True">
                 <SplitView.Pane>
-                    <StackPanel Background="gray">
-
-                        <StackPanel Orientation="Horizontal">
-                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
-                            <TextBlock Text="legs1" FontSize="36" VerticalAlignment="Center"/>
+                    <ScrollViewer>
+                        <StackPanel Background="GhostWhite">
+                            <TreeView Name="LegTree" CanDragItems="False" ItemsSource="{x:Bind DataSourceLeg}" ItemInvoked="Tree_ItemInvoked">
+                                <x1:TreeView.ItemTemplate>
+                                    <DataTemplate d:DataType="local:Symptom">
+                                        <TreeViewItem ItemsSource="{x1:Binding Children}" Content="{x1:Binding Name}"/>
+                                    </DataTemplate>
+                                </x1:TreeView.ItemTemplate>
+                            </TreeView>
                         </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
-                            <TextBlock Text="legs2" FontSize="36" VerticalAlignment="Center"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
-                            <TextBlock Text="legs3" FontSize="36" VerticalAlignment="Center"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
-                            <TextBlock Text="legs4" FontSize="36" VerticalAlignment="Center"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
-                            <TextBlock Text="legs5" FontSize="36" VerticalAlignment="Center"/>
-                        </StackPanel>
-                    </StackPanel>
+                    </ScrollViewer>
                 </SplitView.Pane>
             </SplitView>
-            <SplitView x:Name="pelvisTestSplit" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="400" Margin="0,0,10,0" FontSize="36" d:IsHidden="True">
+            <SplitView x:Name="pelvisSplit" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="400" Margin="0,0,10,0" FontSize="36" d:IsHidden="True">
                 <SplitView.Pane>
-                    <StackPanel Background="gray">
-
-                        <StackPanel Orientation="Horizontal">
-                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
-                            <TextBlock Text="pelvis1" FontSize="36" VerticalAlignment="Center"/>
+                    <ScrollViewer>
+                        <StackPanel Background="GhostWhite">
+                            <TreeView Name="PelvisTree" CanDragItems="False" ItemsSource="{x:Bind DataSourcePelvis}" ItemInvoked="Tree_ItemInvoked">
+                                <x1:TreeView.ItemTemplate>
+                                    <DataTemplate d:DataType="local:Symptom">
+                                        <TreeViewItem ItemsSource="{x1:Binding Children}" Content="{x1:Binding Name}"/>
+                                    </DataTemplate>
+                                </x1:TreeView.ItemTemplate>
+                            </TreeView>
                         </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
-                            <TextBlock Text="pelvis2" FontSize="36" VerticalAlignment="Center"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
-                            <TextBlock Text="pelvis3" FontSize="36" VerticalAlignment="Center"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
-                            <TextBlock Text="pelvis4" FontSize="36" VerticalAlignment="Center"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
-                            <TextBlock Text="pelvis5" FontSize="36" VerticalAlignment="Center"/>
-                        </StackPanel>
-                    </StackPanel>
+                    </ScrollViewer>
                 </SplitView.Pane>
             </SplitView>
-            <SplitView x:Name="neckTestSplit" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="400" Margin="0,0,10,0" FontSize="36" d:IsHidden="True">
+            <SplitView x:Name="neckSplit" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="400" Margin="0,0,10,0" FontSize="36" d:IsHidden="True">
                 <SplitView.Pane>
-                    <StackPanel Background="gray">
-
-                        <StackPanel Orientation="Horizontal">
-                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
-                            <TextBlock Text="neck1" FontSize="36" VerticalAlignment="Center"/>
+                    <ScrollViewer>
+                        <StackPanel Background="GhostWhite">
+                            <TreeView Name="neckTree" CanDragItems="False" ItemsSource="{x:Bind DataSourceNeck}" ItemInvoked="Tree_ItemInvoked">
+                                <x1:TreeView.ItemTemplate>
+                                    <DataTemplate d:DataType="local:Symptom">
+                                        <TreeViewItem ItemsSource="{x1:Binding Children}" Content="{x1:Binding Name}"/>
+                                    </DataTemplate>
+                                </x1:TreeView.ItemTemplate>
+                            </TreeView>
                         </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
-                            <TextBlock Text="neck2" FontSize="36" VerticalAlignment="Center"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
-                            <TextBlock Text="neck3" FontSize="36" VerticalAlignment="Center"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
-                            <TextBlock Text="neck4" FontSize="36" VerticalAlignment="Center"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
-                            <TextBlock Text="neck5" FontSize="36" VerticalAlignment="Center"/>
-                        </StackPanel>
-                    </StackPanel>
+                    </ScrollViewer>
                 </SplitView.Pane>
             </SplitView>
-            <SplitView x:Name="headTestSplit" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="400" Margin="0,0,10,0" FontSize="36" d:IsHidden="True">
+            <SplitView x:Name="headSplit" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="400" Margin="0,0,10,0" FontSize="36" d:IsHidden="True">
                 <SplitView.Pane>
-                    <StackPanel Background="gray">
-
-                        <StackPanel Orientation="Horizontal">
-                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
-                            <TextBlock Text="head1" FontSize="36" VerticalAlignment="Center"/>
+                    <ScrollViewer>
+                        <StackPanel Background="GhostWhite">
+                            <TreeView Name="headTree" CanDragItems="False" ItemsSource="{x:Bind DataSourceHead}" ItemInvoked="Tree_ItemInvoked">
+                                <x1:TreeView.ItemTemplate>
+                                    <DataTemplate d:DataType="local:Symptom">
+                                        <TreeViewItem ItemsSource="{x1:Binding Children}" Content="{x1:Binding Name}"/>
+                                    </DataTemplate>
+                                </x1:TreeView.ItemTemplate>
+                            </TreeView>
                         </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
-                            <TextBlock Text="head2" FontSize="36" VerticalAlignment="Center"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
-                            <TextBlock Text="head3" FontSize="36" VerticalAlignment="Center"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
-                            <TextBlock Text="head4" FontSize="36" VerticalAlignment="Center"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
-                            <TextBlock Text="head5" FontSize="36" VerticalAlignment="Center"/>
-                        </StackPanel>
-                    </StackPanel>
+                    </ScrollViewer>
                 </SplitView.Pane>
             </SplitView>
-            <SplitView x:Name="abdomenTestSplit" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="400" Margin="0,0,10,0" FontSize="36" d:IsHidden="True">
+            <SplitView x:Name="abdomenSplit" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="400" Margin="0,0,10,0" FontSize="36" d:IsHidden="True">
                 <SplitView.Pane>
-                    <StackPanel Background="gray">
-
-                        <StackPanel Orientation="Horizontal">
-                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
-                            <TextBlock Text="abdomen1" FontSize="36" VerticalAlignment="Center"/>
+                    <ScrollViewer>
+                        <StackPanel Background="GhostWhite">
+                            <TreeView Name="abdomenTree" CanDragItems="False" ItemsSource="{x:Bind DataSourceAbdomen}" ItemInvoked="Tree_ItemInvoked">
+                                <x1:TreeView.ItemTemplate>
+                                    <DataTemplate x:Name="ItemTemplate" d:DataType="local:Symptom">
+                                        <TreeViewItem ItemsSource="{x1:Binding Children}" Content="{x1:Binding Name}"/>
+                                    </DataTemplate>
+                                </x1:TreeView.ItemTemplate>
+                            </TreeView>
                         </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
-                            <TextBlock Text="abdomen2" FontSize="36" VerticalAlignment="Center"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
-                            <TextBlock Text="abdomen3" FontSize="36" VerticalAlignment="Center"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
-                            <TextBlock Text="abdomen4" FontSize="36" VerticalAlignment="Center"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal">
-                            <Button  Height="100" Width="100" Content="" Background="Transparent" />
-                            <TextBlock Text="abdomen5" FontSize="36" VerticalAlignment="Center"/>
-                        </StackPanel>
-                    </StackPanel>
+                    </ScrollViewer>
                 </SplitView.Pane>
             </SplitView>
             <!--

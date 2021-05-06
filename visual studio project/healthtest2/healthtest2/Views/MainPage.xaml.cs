@@ -20,6 +20,12 @@ namespace healthtest2.Views
     public sealed partial class MainPage : Page, INotifyPropertyChanged
     {
         private ObservableCollection<Symptom> DataSource = new ObservableCollection<Symptom>();
+        private ObservableCollection<Symptom> DataSourceChest = new ObservableCollection<Symptom>();
+        private ObservableCollection<Symptom> DataSourceLeg = new ObservableCollection<Symptom>();
+        private ObservableCollection<Symptom> DataSourcePelvis = new ObservableCollection<Symptom>();
+        private ObservableCollection<Symptom> DataSourceNeck = new ObservableCollection<Symptom>();
+        private ObservableCollection<Symptom> DataSourceHead = new ObservableCollection<Symptom>();
+        private ObservableCollection<Symptom> DataSourceAbdomen = new ObservableCollection<Symptom>();
         public MainPage()
         {
             InitializeComponent();
@@ -27,6 +33,7 @@ namespace healthtest2.Views
             Dictionary<String, string> colors = new Dictionary<string, string>();
 
             DataSource = GetSymptomData();
+            DataSourceChest = GetSymptomDataChest();
             // Put some key value pairs into the dictionary
             colors.Add("SILVER", "#C0C0C0");
             colors.Add("RED", "#FF0000");
@@ -34,13 +41,6 @@ namespace healthtest2.Views
             colors.Add("AQUA", "#00FFFF");
             colors.Add("PURPLE", "#800080");
             colors.Add("LIME", "#00FF00");
-
-            // Finally, Specify the ComboBox items source
-            ComboBox1.ItemsSource = colors;
-
-            // Specify the ComboBox items text and value
-            ComboBox1.SelectedValuePath = "Value";
-            ComboBox1.DisplayMemberPath = "Key";
 
             Items = new List<ItemVM>
                 {
@@ -94,79 +94,79 @@ namespace healthtest2.Views
 
         private void Button_Clickarm(object sender, RoutedEventArgs e)
         {
-            if (handsTestSplit.IsPaneOpen == false)
+            if (handsSplit.IsPaneOpen == false)
             {
-                handsTestSplit.IsPaneOpen = true;
+                handsSplit.IsPaneOpen = true;
             }
             else
             {
-                handsTestSplit.IsPaneOpen = false;
+                handsSplit.IsPaneOpen = false;
             }
         }
         private void Button_Clickchest(object sender, RoutedEventArgs e)
         {
-            if (chestTestSplit.IsPaneOpen == false)
+            if (chestSplit.IsPaneOpen == false)
             {
-                chestTestSplit.IsPaneOpen = true;
+                chestSplit.IsPaneOpen = true;
             }
             else
             {
-                chestTestSplit.IsPaneOpen = false;
+                chestSplit.IsPaneOpen = false;
             }
         }
         private void Button_Clicklegs(object sender, RoutedEventArgs e)
         {
-            if (legsTestSplit.IsPaneOpen == false)
+            if (legsSplit.IsPaneOpen == false)
             {
-                legsTestSplit.IsPaneOpen = true;
+                legsSplit.IsPaneOpen = true;
             }
             else
             {
-                legsTestSplit.IsPaneOpen = false;
+                legsSplit.IsPaneOpen = false;
             }
         }
         private void Button_Clickneck(object sender, RoutedEventArgs e)
         {
-            if (neckTestSplit.IsPaneOpen == false)
+            if (neckSplit.IsPaneOpen == false)
             {
-                neckTestSplit.IsPaneOpen = true;
+                neckSplit.IsPaneOpen = true;
             }
             else
             {
-                neckTestSplit.IsPaneOpen = false;
+                neckSplit.IsPaneOpen = false;
             }
         }
         private void Button_Clickhead(object sender, RoutedEventArgs e)
         {
-            if (headTestSplit.IsPaneOpen == false)
+            if (headSplit.IsPaneOpen == false)
             {
-                headTestSplit.IsPaneOpen = true;
+                headSplit.IsPaneOpen = true;
             }
             else
             {
-                headTestSplit.IsPaneOpen = false;
+                headSplit.IsPaneOpen = false;
             }
         }
         private void Button_Clickpelvis(object sender, RoutedEventArgs e)
         {
-            if (pelvisTestSplit.IsPaneOpen == false)
+            if (pelvisSplit.IsPaneOpen == false)
             {
-                pelvisTestSplit.IsPaneOpen = true;
+                pelvisSplit.IsPaneOpen = true;
             }
             else
             {
-                pelvisTestSplit.IsPaneOpen = false;
+                pelvisSplit.IsPaneOpen = false;
             }
         }
         private void Button_Clickabdomen(object sender, RoutedEventArgs e)
         {
-            if (abdomenTestSplit.IsPaneOpen == false)
+            if (abdomenSplit.IsPaneOpen == false)
             {
-                abdomenTestSplit.IsPaneOpen = true;
+                abdomenSplit.IsPaneOpen = true;
             }
             else
             {
-                abdomenTestSplit.IsPaneOpen = false;
+                abdomenSplit.IsPaneOpen = false;
             }
         }
         public string test { get; set; }
@@ -327,8 +327,21 @@ namespace healthtest2.Views
             list.Add(WristCategory);
             return list;
         }
+        private ObservableCollection<Symptom> GetSymptomDataChest()
+        {
+            var list = new ObservableCollection<Symptom>();
+            Symptom HeartCategory = new Symptom()
+            {
+                Name = "Heart Symptoms",
+                Children = {
+                    new Symptom() { Name = "Heart pains" }
+            }
+            };
+            list.Add(HeartCategory);
+            return list;
+        }
 
-        private void ArmsTree_ItemInvoked(TreeView sender, TreeViewItemInvokedEventArgs args)
+        private void Tree_ItemInvoked(TreeView sender, TreeViewItemInvokedEventArgs args)
         {
                 illnesslist.Items.Add(args.InvokedItem);
                 Debug.WriteLine(args.InvokedItem);
