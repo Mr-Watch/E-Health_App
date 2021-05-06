@@ -32,6 +32,11 @@
                     <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xEA8A;"/>
                 </winui:NavigationViewItem.Icon>
             </winui:NavigationViewItem>
+            <winui:NavigationViewItem x:Uid="Shell_illnessSearch" Content="Illness Search" helpers:NavHelper.NavigateTo="views:illness_search">
+                <winui:NavigationViewItem.Icon>
+                    <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE946;"/>
+                </winui:NavigationViewItem.Icon>
+            </winui:NavigationViewItem>
             <winui:NavigationViewItem x:Uid="Shell_login" Content="login" helpers:NavHelper.NavigateTo="views:login">
                 <winui:NavigationViewItem.Icon>
                     <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE909;"/>
