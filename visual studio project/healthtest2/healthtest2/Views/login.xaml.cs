@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Newtonsoft.Json;
+using System.Text;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -29,7 +30,35 @@ namespace healthtest2.Views
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Person person = new Person();
+            string path = @"c:\tmp\MyTest.txt";
+
+            try
+            {
+                // Create the file, or overwrite if the file exists.
+                using (FileStream fs = File.Create(path))
+                {
+                    byte[] info = new UTF8Encoding(true).GetBytes("This is some text in the file.");
+                    // Add some information to the file.
+                    fs.Write(info, 0, info.Length);
+                }
+
+                // Open the stream and read it back.
+                using (StreamReader sr = File.OpenText(path))
+                {
+                    string s = "";
+                    while ((s = sr.ReadLine()) != null)
+                    {
+                        Console.WriteLine(s);
+                    }
+                }
+            }
+
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+        
+      /*  Person person = new Person();
             person.Name = name.Text;
             person.age = age.Text;
             person.gender = gender.Text;
@@ -52,9 +81,9 @@ namespace healthtest2.Views
                     throw;
                 }
             }
-
+ */
         }
-
+     
         public class Person
         {
             public string Name { get; set; }
