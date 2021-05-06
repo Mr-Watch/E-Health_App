@@ -271,8 +271,60 @@ namespace healthtest2.Views
                     new Symptom() { Name = "very little armpit hair" }
             }
             };
+            Symptom UpperArmCategory = new Symptom()
+            {
+                Name = "Upper Arm Symptoms",
+                Children = {
+                    new Symptom() { Name = "bicep shaking" },
+                    new Symptom() { Name = "biceps and triceps hyperreflexia" },
+                    new Symptom() { Name = "biceps hyporeflexia" },
+                    new Symptom() { Name = "humeral swelling, lower" },
+                    new Symptom() { Name = "triceps hyporeflexia" },
+                    new Symptom() { Name = "upper arm pain" }
+            }
+            };
+            Symptom ElbowCategory = new Symptom()
+            {
+                Name = "Elbow Symptoms",
+                Children = {
+                    new Symptom() { Name = "darkened skin on elbow" },
+                    new Symptom() { Name = "elbow bones out of place" },
+                    new Symptom() { Name = "elbow pain" },
+                    new Symptom() { Name = "flaky bump(s) limited to elbows or knees" },
+                    new Symptom() { Name = "red bump(s) on elbow" },
+                    new Symptom() { Name = "single flaky raised skin patch on elbows or knees" },
+                    new Symptom() { Name = "stiff elbow" },
+                    new Symptom() { Name = "tenderness lateral epicondyle" }
+            }
+            };
+            Symptom ForearmCategory = new Symptom()
+            {
+                Name = "Forearm Symptoms",
+                Children = {
+                    new Symptom() { Name = "forearm feels more sensitive" },
+                    new Symptom() { Name = "forearm hurts" },
+                    new Symptom() { Name = "forearm itches" },
+                    new Symptom() { Name = "lump on forearm" },
+                    new Symptom() { Name = "tingling or prickling in forearm" }
+            }
+            };
+            Symptom WristCategory = new Symptom()
+            {
+                Name = "Wrist Symptoms",
+                Children = {
+                    new Symptom() { Name = "crackling sound when moving wrist" },
+                    new Symptom() { Name = "wrist hurts when moved" },
+                    new Symptom() { Name = "wrist pain" },
+                    new Symptom() { Name = "wrist stiffness" },
+                    new Symptom() { Name = "wrist swelling" }
+            }
+            };
             list.Add(ShoulderCategory);
             list.Add(ArmpitCategory);
+            list.Add(UpperArmCategory);
+            list.Add(ElbowCategory);
+            list.Add(ForearmCategory);
+            list.Add(WristCategory);
             return list;
         }
 
