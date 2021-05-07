@@ -1,32 +1,20 @@
-from selenium.common.exceptions import TimeoutException
-from selenium import webdriver
-from selenium.webdriver.firefox.options import Options
-from selenium.webdriver.support.ui import WebDriverWait
-from requests import get
+from bs4 import BeautifulSoup
+import requests
 
-print('Starting Webdriver...')
-options = Options()
-options.headless = True
-options.page_load_strategy = 'none'
-driver = webdriver.Firefox(options=options)
+headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:69.0),john@doe.com",
+    "Referer": "https://www.google.com/",
+}
+url = "https://www.mayoclinic.org/search/search-results?q=hiv"
 
-search_argument = input('What do you want to search ? :')
+response = requests.get(url, headers=headers)
 
-driver.get('https://www.mayoclinic.org/search/search-results?q=' + search_argument)
-try:
-    first_result = WebDriverWait(driver, timeout=1).until(lambda a: a.find_element_by_css_selector('.noimg:nth-child(1) a'))
-    first_result.click()
-except TimeoutException:
-    print('No results for ' + search_argument)
-finally:
-    driver.quit()
+response_soup = BeautifulSoup(response.content, "lxml")
 
-#page_source = get(driver.current_url).text
+links = response_soup.select_one(".navlist")
 
-print(driver.current_url)
-print(driver.page_source)
+link = links.find('a', href = True)
 
+page = requests.get(link['href'] + '?p=1', headers=headers)
 
-
-driver.quit()
-
+print(page.content)
