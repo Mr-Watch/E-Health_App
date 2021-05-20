@@ -258,6 +258,7 @@
     <Compile Include="Helpers\ResourceExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\6sl9lc9a-900.jpg" />
     <Content Include="Assets\DefaultIcon.png" />
     <Content Include="Assets\map.png" />
     <Content Include="Properties\Default.rd.xml" />

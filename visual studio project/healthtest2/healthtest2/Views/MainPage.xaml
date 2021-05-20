@@ -11,39 +11,40 @@
     Style="{StaticResource PageStyle}"
     mc:Ignorable="d">
     <Page.Resources>
-        
+
     </Page.Resources>
     <Grid x:Name="ContentArea" Margin="0,0,5,0">
         <Grid Background="White">
-            <ListView x:Name="illnesslist" DisplayMemberPath="Name" Background="Red" Margin="91,240,0,130" BorderThickness="2" BorderBrush="Black" HorizontalAlignment="left" Width="383">
-                
+            <ListView x:Name="illnesslist" DisplayMemberPath="Name" Background="WhiteSmoke" Margin="0,0,1021,130" BorderThickness="2" BorderBrush="Black" HorizontalAlignment="Right" Width="383" Height="630" VerticalAlignment="Bottom">
+
             </ListView>
 
-            <Border BorderThickness="1" BorderBrush="Black" Margin="541,240,0,50" HorizontalAlignment="Left" Width="623">
-                <Grid HorizontalAlignment="Left" Margin="3,-1,0,-1" Width="618">
-                    <Button x:Name="abdomen" Content="" Margin="250,265,0,0" VerticalAlignment="Top" Height="70" Width="95" Click="Button_Clickabdomen"/>
-                    <Button x:Name="arm_r" Content="" Margin="360,210,0,0" VerticalAlignment="Top" Width="195" Height="30" Click="Button_Clickarm"/>
-                    <Button x:Name="arm_l" Content="" Margin="45,208,0,0" VerticalAlignment="Top" Height="32" Width="195" Click="Button_Clickarm"/>
-                    <Button x:Name="chest" Content="" Margin="240,190,0,0" VerticalAlignment="Top" Height="75" Width="120" Click="Button_Clickchest"/>
-                    <Button x:Name="neck" Content="" Margin="280,155,0,0" VerticalAlignment="Top" Width="40" Height="35" Click="Button_Clickneck"/>
-                    <Button x:Name="head" Content="" Margin="270,93,0,0" VerticalAlignment="Top" Height="62" Width="60" Click="Button_Clickhead"/>
-                    <Button Content="" Margin="10,208,0,0" VerticalAlignment="Top" Height="32" Width="35"/>
-                    <Button Content="" Margin="555,210,0,0" VerticalAlignment="Top" Height="32" Width="35"/>
-                    <Button x:Name="pelvis" Content="" Margin="245,0,0,0" Height="40" Width="105" Click="Button_Clickpelvis"/>
-                    <Button x:Name="leg_l" Content="" Margin="235,375,0,0" VerticalAlignment="Top" Height="280" Width="50" Click="Button_Clicklegs"/>
-                    <Button x:Name="leg_r" Content="" Margin="315,375,0,0" VerticalAlignment="Top" Height="275" Width="50" Click="Button_Clicklegs"/>
+            <Border BorderThickness="1" BorderBrush="Black" Margin="0,0,377,130" HorizontalAlignment="Right" Width="618" Height="651" VerticalAlignment="Bottom">
+                <Grid Margin="-2,-1,0,0" FocusVisualPrimaryBrush="{x:Null}" Height="651" VerticalAlignment="Top">
+                    <x1:Image FocusVisualPrimaryBrush="{x:Null}" Source="/Assets/6sl9lc9a-900.jpg" NineGrid="0,0,0,0" Stretch="Fill" Margin="1,0,1,-4" />
+                    <x1:Button x:Name="abdomen" Content="" Margin="278,230,0,0" VerticalAlignment="Top" Height="70" Width="95" Click="Button_Clickabdomen"/>
+                    <x1:Button x:Name="arm_r" Content="" Margin="385,155,0,0" VerticalAlignment="Top" Width="145" Height="37" Click="Button_Clickarm"/>
+                    <x1:Button x:Name="arm_l" Content="" Margin="110,155,0,0" VerticalAlignment="Top" Height="37" Width="155" Click="Button_Clickarm"/>
+                    <x1:Button x:Name="chest" Content="" Margin="265,150,0,0" VerticalAlignment="Top" Height="75" Width="120" Click="Button_Clickchest"/>
+                    <x1:Button x:Name="neck" Content="" Margin="305,115,0,0" VerticalAlignment="Top" Width="40" Height="35" Click="Button_Clickneck"/>
+                    <x1:Button x:Name="head" Content="" Margin="295,53,0,0" VerticalAlignment="Top" Height="62" Width="60" Click="Button_Clickhead"/>
+                    <x1:Button Content="" Margin="60,160,0,0" VerticalAlignment="Top" Height="32" Width="50"/>
+                    <x1:Button Content="" Margin="530,160,0,0" VerticalAlignment="Top" Height="32" Width="65"/>
+                    <x1:Button x:Name="pelvis" Content="" Margin="273,300,0,0" Height="60" Width="105" Click="Button_Clickpelvis" VerticalAlignment="Top"/>
+                    <x1:Button x:Name="leg_l" Content="" Margin="273,360,0,0" VerticalAlignment="Top" Height="251" Width="50" Click="Button_Clicklegs"/>
+                    <x1:Button x:Name="leg_r" Content="" Margin="335,360,0,0" VerticalAlignment="Top" Height="251" Width="50" Click="Button_Clicklegs"/>
                 </Grid>
             </Border>
-            <TextBlock HorizontalAlignment="Center" Height="65" Text="What are your symptoms?" TextWrapping="Wrap" VerticalAlignment="Top" Width="569" Margin="0,45,0,0" FontSize="48"/>
-            <TextBox x:Name="searchbar1" HorizontalAlignment="Left" Height="45" Margin="446,155,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="510" FontSize="24" BorderThickness="4"/>
-            <Button Content="Search" Height="80" Margin="0,835,50,0" VerticalAlignment="Top" FontSize="24" HorizontalAlignment="Right" Width="240" Click="searchbutton_click"/>
-            <TextBox x:Name="testtext" HorizontalAlignment="Left" Margin="1175,235,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="245"/>
-            <TextBlock x:Name="testblock" HorizontalAlignment="Left" Margin="1270,350,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
-            <Button Content="Button" Margin="1260,705,0,0" VerticalAlignment="Top" Width="175" Height="72" Click="navigatebutton"/>
+            <TextBlock HorizontalAlignment="Left" Height="65" Text="What are your symptoms?" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="569" Margin="465,0,0,874" FontSize="48"/>
+            <TextBox x:Name="searchbar1" HorizontalAlignment="Left" Height="45" Margin="500,0,0,810" Text="" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="510" FontSize="24" BorderThickness="4"/>
+            <Button Content="Search" Height="80" Margin="0,0,50,100" VerticalAlignment="Bottom" FontSize="24" HorizontalAlignment="Right" Width="240" Click="searchbutton_click"/>
+            <TextBox x:Name="testtext" HorizontalAlignment="Right" Margin="0,235,75,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="245"/>
+            <TextBlock x:Name="testblock" HorizontalAlignment="Right" Margin="0,350,167,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <Button Content="Button" Margin="0,0,50,203" VerticalAlignment="Bottom" Width="240" Height="72" Click="navigatebutton" HorizontalAlignment="Right"/>
             <SplitView x:Name="handsSplit" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="600" Margin="0,0,10,0" FontSize="36" d:IsHidden="True">
                 <SplitView.Pane>
                     <ScrollViewer>
-                    <StackPanel Background="GhostWhite">
+                        <StackPanel Background="GhostWhite">
                             <TreeView Name="ArmsTree" CanDragItems="False" ItemsSource="{x:Bind DataSource}" ItemInvoked="Tree_ItemInvoked">
                                 <x1:TreeView.ItemTemplate>
                                     <DataTemplate d:DataType="local:Symptom">
@@ -56,12 +57,12 @@
                             <TextBlock Text="Palm Symptoms" FontSize="42" VerticalAlignment="Center"/>
                         </StackPanel>-->
 
-                        
-                    </StackPanel> 
+
+                        </StackPanel>
                     </ScrollViewer>
                 </SplitView.Pane>
             </SplitView>
-            <SplitView x:Name="chestSplit" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="500" Margin="0,0,10,0" FontSize="36">
+            <SplitView x:Name="chestSplit" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="500" Margin="0,-1,0,1" FontSize="36" Height="1000">
                 <SplitView.Pane>
                     <ScrollViewer>
                         <StackPanel Background="GhostWhite">
