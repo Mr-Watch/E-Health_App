@@ -10,7 +10,12 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <TextBox x:Name="testtext2" HorizontalAlignment="Left" Margin="520,405,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="115" Width="455"/>
+        <TextBox x:Name="testtext2" HorizontalAlignment="Left" Margin="130,285,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="570" Width="810"/>
+        <ListView x:Name="doctor_list" BorderThickness="2" Margin="1040,285,55,110" BorderBrush="Black"/>
+        <TextBlock x:Name="illness_name" HorizontalAlignment="Left" Margin="374,128,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="301" FontSize="24"/>
+        <TextBlock x:Name="doctror_text" HorizontalAlignment="Left" Margin="1040,232,0,0" Text="Doctor List" TextWrapping="Wrap" VerticalAlignment="Top" Height="46" Width="402" FontSize="36" TextAlignment="Center"/>
+        <TextBlock x:Name="doctror_text_Copy" HorizontalAlignment="Left" Margin="333,232,0,0" Text="Description" TextWrapping="Wrap" VerticalAlignment="Top" Height="46" Width="402" FontSize="36" TextAlignment="Center"/>
+        <Button Content="Near Pharmacies" Margin="1111,144,0,0" VerticalAlignment="Top" Height="46" Width="264" FontSize="22"/>
 
     </Grid>
 </Page>
