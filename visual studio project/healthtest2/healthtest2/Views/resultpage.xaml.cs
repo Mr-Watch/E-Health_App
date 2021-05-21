@@ -29,7 +29,7 @@ namespace healthtest2.Views
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             MainPage ma = (MainPage) e.Parameter;
-            testtext2.Text = "illness:" + ma.test;
+            info.Text = "illness:" + ma.test;
         }
     }
 }
