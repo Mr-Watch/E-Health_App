@@ -18,3 +18,9 @@ def get_pharmacies_based_on_geoId(geo_id: str):
         'Accept-Language': 'el-GR',
     })
     return response.json()
+
+def get_geoIds():
+    response = session.get('https://healthatlas.gov.gr/api/PrefectureGeos', headers={
+        'Accept-Language': 'el-GR',
+    })
+    return response.json()

@@ -42,6 +42,3 @@ def get_body_part_url(body_section: str, section_part: str):
     # part_id = list(filter(lambda x:x['section-parts']==section_part,body_section_list[0]['part']))
     # print(body_section_list[0]['section-parts'][0])
     # # url = f'https://symptoms.webmd.com/search/2/api/scbodytypeahead?q=&cache_2=true&gender=M&part={body_part}{part_id}&count=1000'
-
-
-get_body_part_url('legs', 'lower-abdomen')
