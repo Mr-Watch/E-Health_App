@@ -4,4 +4,4 @@ visual studio project/healthtest2/.vs/healthtest2/v16/.suo
 *.cache
 ._pycache_/
 ./scrapers/_pycache_/
-_pycache_
+_pycache_/**
