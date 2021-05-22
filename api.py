@@ -1,4 +1,6 @@
 from biomedlexicon import search_biomedlexicon
+from scrapers.doctoranytime import get_doctors_list
+from healthatlas import get_hospitals_based_on_geoId,get_pharmacies_based_on_geoId
 import symptom_api
 from farmakeia import get_pharmacies, get_url
 from flask import Flask
@@ -26,6 +28,24 @@ def _():
 @app.route(api_version+'symptoms/get', methods=['GET'])
 def __():
     return jsonify(symptom_api.get_body_url())
+
+@app.route(api_version+'doctoranytime/', methods=['GET'])
+def get_doctors():
+    return jsonify(get_doctors_list('https://www.doctoranytime.gr/s/Aimatologos/attiki'))
+
+
+# Healthatlas api entry points
+
+@app.route(api_version+'healthatlas/hospitals/<string:geo_id>', methods=['GET'])
+def get_hospitals_based_on_geoId_flask(geo_id:str):
+    return jsonify(get_hospitals_based_on_geoId(geo_id))
+
+
+@app.route(api_version+'healthatlas/pharmacies/<string:geo_id>', methods=['GET'])
+def get_pharmacies_based_on_geoId_flask(geo_id:str):
+    return jsonify(get_pharmacies_based_on_geoId(geo_id))
+
+
 
 
 @app.route('/', methods=['GET'])

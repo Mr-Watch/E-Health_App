@@ -35,6 +35,7 @@ def extract_doctor_info(container: Tag):
 
 
 def get_doctors_list(url: str):
+    
     page = requests.get(url).text
     page_soup = BeautifulSoup(page, 'lxml')
 
@@ -42,7 +43,4 @@ def get_doctors_list(url: str):
     doctor_dict = {}
     for i,container in enumerate(page_containers):
         doctor_dict[i] = extract_doctor_info(container)
-    print(doctor_dict)
-
-
-get_doctors_list('https://www.doctoranytime.gr/s/Velonistis/eksarxeia')
+    return doctor_dict
