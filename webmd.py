@@ -44,6 +44,7 @@ except TimeoutException:
 driver.find_element_by_id('age').send_keys('22')
 driver.find_element_by_id('male').click()
 driver.find_element_by_css_selector('button.webmd-button:nth-child(3)').click()
+driver.get_cookies
 
 symptoms = ['cough',
 'itchy throat',

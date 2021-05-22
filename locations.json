@@ -1,0 +1,15 @@
+[
+  {
+    "prefecture-name": "Αιτωλοακαρνανίας",
+    "prefecture-locations": {}
+  },
+  {
+    "prefecture-name": "Αρτας",
+    "prefecture-locations": [
+        { "location-name": "Άρτα" },
+        { "location-name" :"Κομπότι"},
+        { "location-name" :"Άγναντα"},
+        { "location-name" :"Πέτα"}
+    ]
+  }
+]
