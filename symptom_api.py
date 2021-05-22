@@ -1,5 +1,6 @@
 from webmd_enc_data import client_id, get_webmd_enc_data
 import requests
+from pathlib import Path
 import json
 """ enc_data_digest, gmt_time = get_webmd_enc_data()
 
@@ -19,7 +20,8 @@ print(response.text) """
 
 
 def get_body_part_list():
-    with open('./webmd_body_urls.json', 'r') as file:
+    data_path = Path('./')
+    with open(data_path / 'webmd_body_urls.json', 'r') as file:
         json_data = json.load(file)
         file.close()
         return json_data
@@ -42,4 +44,4 @@ def get_body_part_url(body_section: str, section_part: str):
     # # url = f'https://symptoms.webmd.com/search/2/api/scbodytypeahead?q=&cache_2=true&gender=M&part={body_part}{part_id}&count=1000'
 
 
-get_body_part_url('legs','lower-abdomen')
+get_body_part_url('legs', 'lower-abdomen')
