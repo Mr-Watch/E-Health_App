@@ -4,6 +4,9 @@ using Windows.UI.Xaml.Navigation;
 using Windows.Devices.Geolocation;
 using System;
 using System.Globalization;
+using System.Net;
+using System.IO;
+using Newtonsoft.Json;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -23,9 +26,9 @@ namespace AllThingsHealth.Views
             items1.Add(new Medicine("Medicine_name3"));
             medicine_list.ItemsSource = items1;
             List<Pharmacy> items2 = new List<Pharmacy>();
-            items2.Add(new Pharmacy("Pharmacy_name1","Address", 38.048091, 23.719676));
-            items2.Add(new Pharmacy("Pharmacy_name2", "Address", 38.04800, 23.719600));
-            items2.Add(new Pharmacy("Pharmacy_name3", "Address", 8.048091, 3.719676));
+            items2.Add(new Pharmacy("Pharmacy_name1","Address"));
+            items2.Add(new Pharmacy("Pharmacy_name2", "Address"));
+            items2.Add(new Pharmacy("Pharmacy_name3", "Address"));
             pharmacy_list.ItemsSource = items2;
             List<Doctor> items3 = new List<Doctor>();
             items3.Add(new Doctor("Doctor_name1", "Address", 38.048091, 23.719676,"Medic"));
@@ -37,6 +40,13 @@ namespace AllThingsHealth.Views
         {
             MainPage ma = (MainPage) e.Parameter;
             info.Text = "illness:" + ma.test;
+
+            WebRequest request = HttpWebRequest.Create("http://127.0.0.1:5000/ath/api/v0.1/healthatlas/hospitals/9AEB40EC-A2D2-45E5-B0F5-BABC72591495");
+            WebResponse response = request.GetResponse();
+
+            StreamReader reader = new StreamReader(response.GetResponseStream());
+            string hospitaljson = reader.ReadToEnd();
+            var myDeserializedClass = JsonConvert.DeserializeObject<List<Pharmacy>>(hospitaljson);
         }
     }
     public class Medicine
@@ -48,6 +58,32 @@ namespace AllThingsHealth.Views
         }
     }
     public class Pharmacy
+    {
+        public string Address { get; set; }
+        public string City { get; set; }
+        public string Email { get; set; }
+        public string HealthCareSiteCategoryDescription { get; set; }
+        public bool HealthCareSiteCategoryHasContract { get; set; }
+        public bool HealthCareSiteCategoryHasTeleMedicine { get; set; }
+        public string HealthCareSiteCategoryImageUrl { get; set; }
+        public string HealthCareSiteType { get; set; }
+        public string Id { get; set; }
+        public bool IsContracted { get; set; }
+        public object MunicipalityDescription { get; set; }
+        public string PrefectureGeoDescription { get; set; }
+        public object SpecialtyDescription { get; set; }
+        public string Telephone { get; set; }
+        public string Title { get; set; }
+        public string ZipCode { get; set; }
+
+        public Pharmacy(string Title, string Address)
+        {
+            this.Title = Title;
+            this.Address = Address;
+
+        }
+    }
+    /* public class Pharmacy
     {
         string fmt = "00.000000";
         public string Name { get; private set; }
@@ -62,6 +98,7 @@ namespace AllThingsHealth.Views
             Location = new GeoLocation(longitude, latitude);
         }
     }
+    */
     public class Doctor
     {
         string fmt = "00.000000";
