@@ -13,9 +13,12 @@
         </DataTemplate>
         <DataTemplate x:Key="PharmacyTemplate" x:DataType="local:Pharmacy" >
             <RelativePanel Width="300">
-                <TextBlock Name="Title" Text="{x:Bind Title}" x:Phase="1" Margin="0,5,0,5" />
+                <TextBlock Name="Name" Text="{x:Bind Name}" x:Phase="1" Margin="0,5,0,5" />
                 <TextBlock Name="Address" Text="{x:Bind Address}" RelativePanel.Below="Name" x:Phase="1" Margin="0,5,0,5" />
-                
+                <TextBlock Name="Lon" Text="{x:Bind Longitude}" RelativePanel.AlignRightWithPanel="True"  x:Phase="1" Margin="0,5,0,5" />
+                <TextBlock Text="Lon:" RelativePanel.LeftOf="Lon" Margin="0,5,0,5" />
+                <TextBlock Name="Lat" Text="{x:Bind Latitude}" RelativePanel.AlignRightWithPanel="True" x:Phase="1" RelativePanel.AlignVerticalCenterWith="Address" Margin="0,5,0,5" />
+                <TextBlock Text="Lat:" RelativePanel.LeftOf="Lat" RelativePanel.AlignVerticalCenterWith="Lat" Margin="0,5,0,5" />
             </RelativePanel>
         </DataTemplate>
         <DataTemplate x:Key="DoctorTemplate" x:DataType="local:Doctor" >
