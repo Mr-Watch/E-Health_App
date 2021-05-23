@@ -46,6 +46,8 @@ namespace AllThingsHealth.Views
                 {
                     string name = item.GetValue("Title").ToString();
                     string address = item.GetValue("Address").ToString();
+                    string telephone = item.GetValue("Telephone").ToString();
+                    string email = item.GetValue("Email").ToString();
                     if (name.Length > 30) {
                         name = name.Substring(0, 30) + "...";
                     }
@@ -55,7 +57,7 @@ namespace AllThingsHealth.Views
                     }
                     Double lon = 0.0;
                     Double lat = 0.0;
-                    items.Add(new Hospital(name, address, lat, lon));
+                    items.Add(new Hospital(name, address, telephone, email, lat, lon));
                 }
                 Hospital_list.ItemsSource = items;
             }
@@ -83,11 +85,15 @@ namespace AllThingsHealth.Views
         string fmt = "00.000000";
         public string Name { get; set; }
         public string Address { get; set; }
+        public string Telephone { get; set; }
+        public string Email { get; set; }
         public GeoLocation Location { get; set; }
         public string Longitude => Location.Longitude.ToString(fmt);
         public string Latitude => Location.Latitude.ToString(fmt);
-        public Hospital(string Name,string Address,double latitude, double longitude)
+        public Hospital(string Name,string Address,string Telephone, string Email, double latitude, double longitude)
         {
+            this.Email = Email;
+            this.Telephone = Telephone;
             this.Name = Name;
             this.Address = Address;
             Location = new GeoLocation(longitude, latitude);
