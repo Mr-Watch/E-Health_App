@@ -37,11 +37,14 @@ namespace AllThingsHealth.Views
         }
         public async void Fetch() {
             HttpDataService url = new HttpDataService("http://127.0.0.1:5000");
-            String uri = "/ath/api/v0.1/healthatlas/hospitals/9AEB40EC-A2D2-45E5-B0F5-BABC72591495";
+            String uri = "/ath/api/v0.1/healthatlas/hospitals/"+ perioxi_id.Text ;
+            String uri2 = "/ath/api/v0.1/healthatlas/hospitals/9AEB40EC-A2D2-45E5-B0F5-BABC72591495";
             List<Hospital> items = new List<Hospital>();
+            List<Pharmacy> items2 = new List<Pharmacy>();
             try
             {
                 JArray json = await url.GetAsync<JArray>(uri);
+                JArray json2 = await url.GetAsync<JArray>(uri2);
                 foreach (JObject item in json)
                 {
                     string name = item.GetValue("Title").ToString();
@@ -60,6 +63,25 @@ namespace AllThingsHealth.Views
                     items.Add(new Hospital(name, address, telephone, email, lat, lon));
                 }
                 Hospital_list.ItemsSource = items;
+                foreach (JObject item2 in json2)
+                {
+                    string name = item2.GetValue("Title").ToString();
+                    string address = item2.GetValue("Address").ToString();
+                    string telephone = item2.GetValue("Telephone").ToString();
+                    string email = item2.GetValue("Email").ToString();
+                    if (name.Length > 30)
+                    {
+                        name = name.Substring(0, 30) + "...";
+                    }
+                    if (address.Length > 30)
+                    {
+                        address = address.Substring(0, 30) + "...";
+                    }
+                    Double lon = 0.0;
+                    Double lat = 0.0;
+                    items2.Add(new Pharmacy(name, address, telephone, email, lat, lon));
+                }
+                pharmacy_list.ItemsSource = items2;
             }
             catch (Exception ex)
             {
@@ -70,6 +92,8 @@ namespace AllThingsHealth.Views
         {
             MainPage ma = (MainPage) e.Parameter;
             info.Text = "illness:" + ma.test;
+             perioxi_id.Text = ma.test;
+
         }
     }
     public class Medicine
@@ -114,6 +138,25 @@ namespace AllThingsHealth.Views
             this.Address = Address;
             Location = new GeoLocation(longitude, latitude);
             this.Spec = Spec;
+        }
+    }
+    public class Pharmacy
+    {
+        string fmt = "00.000000";
+        public string Name { get; set; }
+        public string Address { get; set; }
+        public string Telephone { get; set; }
+        public string Email { get; set; }
+        public GeoLocation Location { get; set; }
+        public string Longitude => Location.Longitude.ToString(fmt);
+        public string Latitude => Location.Latitude.ToString(fmt);
+        public Pharmacy(string Name, string Address, string Telephone, string Email, double latitude, double longitude)
+        {
+            this.Email = Email;
+            this.Telephone = Telephone;
+            this.Name = Name;
+            this.Address = Address;
+            Location = new GeoLocation(longitude, latitude);
         }
     }
     public class GeoLocation

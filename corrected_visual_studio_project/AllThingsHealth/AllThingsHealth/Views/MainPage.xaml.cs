@@ -41,12 +41,13 @@ namespace AllThingsHealth.Views
             DataSourceAbdomen = GetSymptomDataAbdomen();
 
             // Put some key value pairs into the dictionary
-            colors.Add("SILVER", "#C0C0C0");
-            colors.Add("RED", "#FF0000");
-            colors.Add("GREEN", "#008000");
-            colors.Add("AQUA", "#00FFFF");
-            colors.Add("PURPLE", "#800080");
-            colors.Add("LIME", "#00FF00");
+            colors.Add("THESSALONIKI", "9AEB40EC-A2D2-45E5-B0F5-BABC72591495");
+            colors.Add("ATTIKI", "E641ED9D-2A70-409F-948A-AEB07682F977");
+            ComboBox1.ItemsSource = colors;
+
+            // Specify the ComboBox items text and value
+            ComboBox1.SelectedValuePath = "Value";
+            ComboBox1.DisplayMemberPath = "Key";
 
             Items = new List<ItemVM>
                 {
@@ -234,7 +235,7 @@ namespace AllThingsHealth.Views
         }
         private void navigatebutton(object sender, RoutedEventArgs args)
         {
-            MainPage ma = new MainPage() {test = testtext.Text };
+            MainPage ma = new MainPage() {test = (string)ComboBox1.SelectedValue };
            Frame.Navigate(typeof(resultpage), ma);
 
         }

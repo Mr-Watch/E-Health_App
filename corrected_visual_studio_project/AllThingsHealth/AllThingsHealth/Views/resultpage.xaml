@@ -34,10 +34,22 @@
                 <TextBlock Name="Spec" Text="{x:Bind Spec}" RelativePanel.Below="Address" x:Phase="1" Margin="0,5,0,5" />
             </RelativePanel>
         </DataTemplate>
+        <DataTemplate x:Key="PharmacyTemplate" x:DataType="local:Pharmacy" >
+            <RelativePanel Width="300">
+                <TextBlock Name="Name" Text="{x:Bind Name}" x:Phase="1" Margin="0,5,0,5" />
+                <TextBlock Name="Address" Text="{x:Bind Address}" RelativePanel.Below="Name" x:Phase="1" Margin="0,5,0,5" />
+                <TextBlock Name="Email" Text="{x:Bind Email}" RelativePanel.Below="Telephone" x:Phase="1" Margin="0,5,0,5" />
+                <TextBlock Name="Telephone" Text="{x:Bind Telephone}" RelativePanel.Below="Address" x:Phase="1" Margin="0,5,0,5" />
+                <TextBlock Name="Lon" Text="{x:Bind Longitude}" RelativePanel.AlignRightWithPanel="True"  x:Phase="1" Margin="0,5,0,5" />
+                <TextBlock Text="Lon:" RelativePanel.LeftOf="Lon" Margin="0,5,0,5" />
+                <TextBlock Name="Lat" Text="{x:Bind Latitude}" RelativePanel.AlignRightWithPanel="True" x:Phase="1" RelativePanel.AlignVerticalCenterWith="Address" Margin="0,5,0,5" />
+                <TextBlock Text="Lat:" RelativePanel.LeftOf="Lat" RelativePanel.AlignVerticalCenterWith="Lat" Margin="0,5,0,5" />
+            </RelativePanel>
+        </DataTemplate>
     </Page.Resources>
     <Pivot Title="Results" Margin="0,0,0,0">
         <PivotItem Header="Disease Info">
-            <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Vertical" Margin="0,10,0,0">
                 <TextBlock x:Name="illness_name"  Text="illness_name" TextWrapping="Wrap" Height="40" Width="301" FontSize="24" />
                 <TextBlock x:Name="doctror_text_Copy"  Text="Description" TextWrapping="Wrap" Height="46" Width="402" FontSize="36" TextAlignment="Center"/>
                 <TextBlock x:Name="info" Text="info" TextWrapping="Wrap" />
@@ -53,6 +65,7 @@
         <PivotItem Header="Hospitals">
             <StackPanel HorizontalAlignment="Left" Width="700">
                 <TextBlock HorizontalAlignment="Center" Text="Hospital list" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" TextAlignment="Center"/>
+                <TextBlock x:Name="perioxi_id" Text="perioxi_id" TextWrapping="Wrap" Height="23" Width="694" d:IsHidden="True"/>
                 <ListView x:Name="Hospital_list" ItemTemplate="{StaticResource HospitalTemplate}" BorderThickness="2" Margin="0,0,0,0" BorderBrush="Black" Height="500" Width="650" />
                 <Button Content="Near Hospitals" Margin="0,10,0,0" VerticalAlignment="Top" Height="46" Width="260" FontSize="22"/>
             </StackPanel>
@@ -62,6 +75,13 @@
                 <TextBlock HorizontalAlignment="Center" Text="Doctor list" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" TextAlignment="Center"/>
                 <ListView x:Name="doctor_list" ItemTemplate="{StaticResource DoctorTemplate}" BorderThickness="2" Margin="0,0,0,0" BorderBrush="Black" Height="500"/>
                 <Button Content="Near doctors" Margin="0,10,0,0" VerticalAlignment="Top" Height="46" Width="260" FontSize="22"/>
+            </StackPanel>
+        </PivotItem>
+        <PivotItem Header="Pharmacies" Margin="12,0,12,0">
+            <StackPanel HorizontalAlignment="Left">
+                <TextBlock HorizontalAlignment="Center" Text="Pharmacy list" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" TextAlignment="Center"/>
+                <ListView x:Name="pharmacy_list" ItemTemplate="{StaticResource PharmacyTemplate}" BorderThickness="2" Margin="0,0,0,0" BorderBrush="Black" Height="500"/>
+                <Button Content="Near pharmacy" Margin="0,10,0,0" VerticalAlignment="Top" Height="46" Width="260" FontSize="22"/>
             </StackPanel>
         </PivotItem>
     </Pivot>
