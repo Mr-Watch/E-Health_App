@@ -7,6 +7,7 @@ using System.Globalization;
 using AllThingsHealth.Core.Services;
 using Newtonsoft.Json.Linq;
 using System.Diagnostics;
+using System.Threading.Tasks;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -17,6 +18,14 @@ namespace AllThingsHealth.Views
     /// </summary>
     public sealed partial class resultpage : Page
     {
+        String uritest = null;
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            info.Text = "illness:" + e.Parameter;
+            uritest = (string)e.Parameter;
+
+        }
         public resultpage()
         {
             this.InitializeComponent();
@@ -37,14 +46,15 @@ namespace AllThingsHealth.Views
         }
         public async void Fetch() {
             HttpDataService url = new HttpDataService("http://127.0.0.1:5000");
-            String uri = "/ath/api/v0.1/healthatlas/hospitals/"+ perioxi_id.Text ;
+            await Task.Delay(10);
+            String uri = "/ath/api/v0.1/healthatlas/hospitals/"+ uritest;
             String uri2 = "/ath/api/v0.1/healthatlas/hospitals/9AEB40EC-A2D2-45E5-B0F5-BABC72591495";
             List<Hospital> items = new List<Hospital>();
             List<Pharmacy> items2 = new List<Pharmacy>();
             try
             {
                 JArray json = await url.GetAsync<JArray>(uri);
-                JArray json2 = await url.GetAsync<JArray>(uri2);
+                Debug.WriteLine(uri);
                 foreach (JObject item in json)
                 {
                     string name = item.GetValue("Title").ToString();
@@ -63,6 +73,7 @@ namespace AllThingsHealth.Views
                     items.Add(new Hospital(name, address, telephone, email, lat, lon));
                 }
                 Hospital_list.ItemsSource = items;
+                JArray json2 = await url.GetAsync<JArray>(uri2);
                 foreach (JObject item2 in json2)
                 {
                     string name = item2.GetValue("Title").ToString();
@@ -88,13 +99,7 @@ namespace AllThingsHealth.Views
                 Debug.WriteLine(ex);
             }
         }
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-            MainPage ma = (MainPage) e.Parameter;
-            info.Text = "illness:" + ma.test;
-             perioxi_id.Text = ma.test;
-
-        }
+        
     }
     public class Medicine
     {

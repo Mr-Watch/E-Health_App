@@ -44,10 +44,12 @@ namespace AllThingsHealth.Views
             colors.Add("THESSALONIKI", "9AEB40EC-A2D2-45E5-B0F5-BABC72591495");
             colors.Add("ATTIKI", "E641ED9D-2A70-409F-948A-AEB07682F977");
             ComboBox1.ItemsSource = colors;
+            
 
             // Specify the ComboBox items text and value
             ComboBox1.SelectedValuePath = "Value";
             ComboBox1.DisplayMemberPath = "Key";
+            ComboBox1.SelectedIndex = 1;
 
             Items = new List<ItemVM>
                 {
@@ -63,11 +65,7 @@ namespace AllThingsHealth.Views
             ComboBox comboBox = sender as ComboBox;
 
             // Get the ComboBox selected item value and display on TextBlock
-            testblock.Text += "Value : " + comboBox.SelectedValue.ToString();
-            string help1 = comboBox.SelectedValue.ToString();
-            foreach (var help2 in help1) {
-                illnesslist.Items.Add(help2);
-            }
+            testblock.Text = "Value : " + comboBox.SelectedValue.ToString();
         }
 
 
@@ -235,8 +233,8 @@ namespace AllThingsHealth.Views
         }
         private void navigatebutton(object sender, RoutedEventArgs args)
         {
-            MainPage ma = new MainPage() {test = (string)ComboBox1.SelectedValue };
-           Frame.Navigate(typeof(resultpage), ma);
+           String area = (string)ComboBox1.SelectedValue ;
+           Frame.Navigate(typeof(resultpage), area);
 
         }
 

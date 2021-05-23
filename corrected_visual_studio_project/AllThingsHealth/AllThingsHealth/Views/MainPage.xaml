@@ -38,7 +38,7 @@
             <TextBlock HorizontalAlignment="Left" Height="65" Text="What are your symptoms?" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="569" Margin="465,0,0,874" FontSize="48"/>
             <TextBox x:Name="searchbar1" HorizontalAlignment="Left" Height="45" Margin="500,0,0,810" Text="" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="510" FontSize="24" BorderThickness="4"/>
             <Button Content="Search" Height="80" Margin="0,0,50,100" VerticalAlignment="Bottom" FontSize="24" HorizontalAlignment="Right" Width="240" Click="searchbutton_click"/>
-            <ComboBox x:Name="ComboBox1"  Header="Select A " SelectionChanged="ComboBox1_SelectionChanged" Margin="0,374,105,0" Width="149" Height="57" HorizontalAlignment="Right" >
+            <ComboBox x:Name="ComboBox1" SelectedIndex="1"  Header="Select A " SelectionChanged="ComboBox1_SelectionChanged" Margin="0,374,105,0" Width="149" Height="57" HorizontalAlignment="Right" >
             </ComboBox>
 
             <TextBox x:Name="testtext" HorizontalAlignment="Right" Margin="0,235,75,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="245"/>
