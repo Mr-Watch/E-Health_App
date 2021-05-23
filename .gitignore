@@ -6,3 +6,10 @@ visual studio project/healthtest2/.vs/healthtest2/v16/.suo
 ./scrapers/_pycache_/
 _pycache_/**
 __pycache__/biomedlexicon.cpython-39.pyc
+__pycache__/symptom_api.cpython-39.pyc
+__pycache__/farmakeia.cpython-39.pyc
+__pycache__/healthatlas.cpython-39.pyc
+__pycache__/healthatlas_url_builder.cpython-39.pyc
+__pycache__/webmd_enc_data.cpython-39.pyc
+scrapers/__pycache__/doctoranytime.cpython-39.pyc
+scrapers/__pycache__/doctoranytime.cpython-39.pyc

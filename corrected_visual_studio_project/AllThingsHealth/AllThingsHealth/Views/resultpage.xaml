@@ -11,8 +11,8 @@
         <DataTemplate x:Key="MedicineTemplate" x:DataType="local:Medicine" >
             <TextBlock Text="{x:Bind Name}" x:Phase="1" Margin="0,5,0,5" />
         </DataTemplate>
-        <DataTemplate x:Key="PharmacyTemplate" x:DataType="local:Pharmacy" >
-            <RelativePanel Width="300">
+        <DataTemplate x:Key="HospitalTemplate" x:DataType="local:Hospital" >
+            <RelativePanel Width="400">
                 <TextBlock Name="Name" Text="{x:Bind Name}" x:Phase="1" Margin="0,5,0,5" />
                 <TextBlock Name="Address" Text="{x:Bind Address}" RelativePanel.Below="Name" x:Phase="1" Margin="0,5,0,5" />
                 <TextBlock Name="Lon" Text="{x:Bind Longitude}" RelativePanel.AlignRightWithPanel="True"  x:Phase="1" Margin="0,5,0,5" />
@@ -48,11 +48,11 @@
                 <Button Content="Near medicine(?)" Margin="0,10,0,0" VerticalAlignment="Top" Height="46" Width="260" FontSize="22"/>
             </StackPanel>
         </PivotItem>
-        <PivotItem Header="Pharmacies">
+        <PivotItem Header="Hospitals">
             <StackPanel HorizontalAlignment="Left">
-                <TextBlock HorizontalAlignment="Center" Text="Pharmacy list" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" TextAlignment="Center"/>
-                <ListView x:Name="pharmacy_list" ItemTemplate="{StaticResource PharmacyTemplate}" BorderThickness="2" Margin="0,0,0,0" BorderBrush="Black" Height="500" />
-                <Button Content="Near Pharmacies" Margin="0,10,0,0" VerticalAlignment="Top" Height="46" Width="260" FontSize="22"/>
+                <TextBlock HorizontalAlignment="Center" Text="Hospital list" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" TextAlignment="Center"/>
+                <ListView x:Name="Hospital_list" ItemTemplate="{StaticResource HospitalTemplate}" BorderThickness="2" Margin="0,0,0,0" BorderBrush="Black" Height="500" />
+                <Button Content="Near Hospitals" Margin="0,10,0,0" VerticalAlignment="Top" Height="46" Width="260" FontSize="22"/>
             </StackPanel>
         </PivotItem>
         <PivotItem Header="Doctors">
