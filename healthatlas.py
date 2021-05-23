@@ -14,7 +14,7 @@ def get_hospitals_based_on_geoId(geo_id: str):
 
 
 def get_pharmacies_based_on_geoId(geo_id: str):
-    response = session.get(f'https://healthatlas.gov.gr/api/HealthCareSitesLight?prefectureGeoId={geo_id}&healthCareSiteType=&contract=true&teleMedDocPat=undefined&teleMedConsDoc=undefined&specialtyId=&medicalActs=&clinics=&searchTerm=', headers={
+    response = session.get(f'https://healthatlas.gov.gr/api/HealthCareSitesLight?prefectureGeoId={geo_id}&healthCareSiteCategoryId=530577D9-DD7A-4954-95F7-F9E46B5478BC&healthCareSiteType=&contract=&teleMedDocPat=undefined&teleMedConsDoc=undefined&specialtyId=&medicalActs=&clinics=&searchTerm=', headers={
         'Accept-Language': 'el-GR',
     })
     return response.json()
