@@ -49,7 +49,7 @@ def get_body_part_list():
 data = get_body_part_list()
 
 
-def get_body_part_ids():
+def get_all_body_part_ids():
     return data
 
 

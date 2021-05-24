@@ -1,0 +1,207 @@
+[
+  {
+    "specialty-id": "B2E40957-AAB8-43D1-8CEB-882387384594",
+    "specialty": "ΑΓΓΕΙΟΧΕΙΡΟΥΡΓΙΚΗ",
+    "OrderAA": 1
+  },
+  {
+    "specialty-id": "DFDDB47E-F96B-45DC-A0E0-1CAE2B181BA3",
+    "specialty": "ΑΙΜΑΤΟΛΟΓΙΑ",
+    "OrderAA": 2
+  },
+  {
+    "specialty-id": "BB0F9ECE-ED2E-4B7A-87E0-1A4A4724CBBA",
+    "specialty": "ΑΚΤΙΝΟΔΙΑΓΝΩΣΤΙΚΗ",
+    "OrderAA": 3
+  },
+  {
+    "specialty-id": "06F6C801-1270-4239-9D25-30404685680D",
+    "specialty": "ΑΚΤΙΝΟΘΕΡΑΠΕΥΤΙΚΗ - ΟΓΚΟΛΟΓΙΑ",
+    "OrderAA": 4
+  },
+  {
+    "specialty-id": "E285FB1A-7981-4F88-8EF2-507091A7DDDA",
+    "specialty": "ΑΛΛΕΡΓΙΟΛΟΓΙΑ",
+    "OrderAA": 5
+  },
+  {
+    "specialty-id": "AF615AB1-E0A4-4539-8500-5C5C47ECCFFD",
+    "specialty": "ΑΝΑΙΣΘΗΣΙΟΛΟΓΙΑ",
+    "OrderAA": 6
+  },
+  {
+    "specialty-id": "66B7D3EA-BD17-4450-8830-3FD359C71B5F",
+    "specialty": "ΑΝΕΥ ΕΙΔΙΚΟΤΗΤΑΣ",
+    "OrderAA": 39
+  },
+  {
+    "specialty-id": "30D6F10D-377A-4D30-B80E-0D05D80B4AD1",
+    "specialty": "ΓΑΣΤΡΕΝΤΕΡΟΛΟΓΙΑ",
+    "OrderAA": 7
+  },
+  {
+    "specialty-id": "7229B4DE-99F0-4D04-BBF9-54D98A2B7A52",
+    "specialty": "ΓΕΝΙΚΗ ΙΑΤΡΙΚΗ",
+    "OrderAA": 8
+  },
+  {
+    "specialty-id": "B647C5E5-1907-48CB-8EBD-B91874DDBF14",
+    "specialty": "ΔΕΡΜΑΤΟΛΟΓΙΑ - ΑΦΡΟΔΙΣΙΟΛΟΓΙΑ",
+    "OrderAA": 9
+  },
+  {
+    "specialty-id": "D2632715-4445-4242-8AC1-954864454E68",
+    "specialty": "ΕΝΔΟΚΡΙΝΟΛΟΓΙΑ",
+    "OrderAA": 10
+  },
+  {
+    "specialty-id": "697BC90A-1DA1-4241-85AC-0394C05B7C4F",
+    "specialty": "ΙΑΤΡΙΚΗ ΒΙΟΠΑΘΟΛΟΓΙΑ (ΜΙΚΡΟΒΙΟΛΟΓΙΑ)",
+    "OrderAA": 17
+  },
+  {
+    "specialty-id": "CC2D053D-4D39-452A-9575-6D87D8074EE0",
+    "specialty": "ΙΑΤΡΙΚΗ ΤΗΣ ΔΗΜΟΣΙΑΣ ΥΓΕΙΑΣ",
+    "OrderAA": 14
+  },
+  {
+    "specialty-id": "794B0AF9-63C3-48CF-8774-73ACEE119A16",
+    "specialty": "ΙΑΤΡΙΚΗ ΤΗΣ ΕΡΓΑΣΙΑΣ",
+    "OrderAA": 11
+  },
+  {
+    "specialty-id": "AB43A7E5-A825-4A93-974D-B4295B7BB4D3",
+    "specialty": "ΙΑΤΡΟΔΙΚΑΣΤΙΚΗ",
+    "OrderAA": 12
+  },
+  {
+    "specialty-id": "D2667DAB-7CAC-4B0B-972A-9728FB283172",
+    "specialty": "ΚΑΡΔΙΟΛΟΓΙΑ",
+    "OrderAA": 13
+  },
+  {
+    "specialty-id": "0F9D6A8E-A3D6-4E36-B38B-637F23E07B72",
+    "specialty": "ΚΥΤΤΑΡΟΛΟΓΙΑ",
+    "OrderAA": 15
+  },
+  {
+    "specialty-id": "2C11C51B-C50F-4CF8-8D91-A20851894F2B",
+    "specialty": "ΜΑΙΕΥΤΙΚΗ - ΓΥΝΑΙΚΟΛΟΓΙΑ",
+    "OrderAA": 16
+  },
+  {
+    "specialty-id": "E66A35EC-D3EB-409E-AF30-610BA1E8E9B9",
+    "specialty": "Με πιστοπ. ιδιότητας Γενικής Ιατρικής (Αρ. 9 Π.Δ. 38/04)",
+    "OrderAA": 40
+  },
+  {
+    "specialty-id": "DC9EE159-8909-4BA2-A83B-D39D8D1C8986",
+    "specialty": "ΝΕΥΡΟΛΟΓΙΑ",
+    "OrderAA": 18
+  },
+  {
+    "specialty-id": "13D01077-59A8-4F17-A701-CC765F3DD02A",
+    "specialty": "ΝΕΥΡΟΛΟΓΙΑ - ΨΥΧΙΑΤΡΙΚΗ",
+    "OrderAA": 41
+  },
+  {
+    "specialty-id": "4CA7C06D-DAC7-435D-A3CD-B76291D87B80",
+    "specialty": "ΝΕΥΡΟΧΕΙΡΟΥΡΓΙΚΗ",
+    "OrderAA": 19
+  },
+  {
+    "specialty-id": "986FB123-CC72-4122-87AA-04B039A81582",
+    "specialty": "ΝΕΦΡΟΛΟΓΙΑ",
+    "OrderAA": 20
+  },
+  {
+    "specialty-id": "E71218D3-8282-46EB-9497-C1D20C695C44",
+    "specialty": "ΟΡΘΟΠΕΔΙΚΗ",
+    "OrderAA": 21
+  },
+  {
+    "specialty-id": "49FCD2B1-1992-4A05-8C34-07CA2D249F53",
+    "specialty": "ΟΥΡΟΛΟΓΙΑ",
+    "OrderAA": 22
+  },
+  {
+    "specialty-id": "5C056A5E-2755-459A-B7FE-8BC7DC855F8C",
+    "specialty": "ΟΦΘΑΛΜΟΛΟΓΙΑ",
+    "OrderAA": 23
+  },
+  {
+    "specialty-id": "DDB5111F-B2CA-4487-9E67-21149DBE49D3",
+    "specialty": "ΠΑΘΟΛΟΓΙΑ",
+    "OrderAA": 24
+  },
+  {
+    "specialty-id": "058C5067-90C8-445B-9650-CDF9B6644D68",
+    "specialty": "ΠΑΘΟΛΟΓΙΚΗ ΑΝΑΤΟΜΙΚΗ",
+    "OrderAA": 25
+  },
+  {
+    "specialty-id": "BACF1CC6-3C61-4179-802C-B2F311AA9376",
+    "specialty": "ΠΑΘΟΛΟΓΙΚΗ ΟΓΚΟΛΟΓΙΑ",
+    "OrderAA": 26
+  },
+  {
+    "specialty-id": "9004ED51-AA2A-4A4D-A48F-3E4A969766E7",
+    "specialty": "ΠΑΙΔΙΑΤΡΙΚΗ",
+    "OrderAA": 27
+  },
+  {
+    "specialty-id": "688BE0C1-D940-4613-A40D-D35F50ADBCEC",
+    "specialty": "ΠΑΙΔΟΨΥΧΙΑΤΡΙΚΗ",
+    "OrderAA": 28
+  },
+  {
+    "specialty-id": "66414C66-A4AD-4D92-8D61-103F8C1F0546",
+    "specialty": "ΠΛΑΣΤΙΚΗ ΧΕΙΡΟΥΡΓΙΚΗ",
+    "OrderAA": 29
+  },
+  {
+    "specialty-id": "05239141-21BD-46EE-8497-68AC2D1F36DA",
+    "specialty": "ΠΝΕΥΜΟΝΟΛΟΓΙΑ - ΦΥΜΑΤΟΛΟΓΙΑ",
+    "OrderAA": 30
+  },
+  {
+    "specialty-id": "8FB90F4E-FDB0-4604-B171-C09ECE555F8D",
+    "specialty": "ΠΥΡΗΝΙΚΗ ΙΑΤΡΙΚΗ",
+    "OrderAA": 31
+  },
+  {
+    "specialty-id": "5CBF5EDC-DE94-4BFD-B811-31F92AAF0DD0",
+    "specialty": "ΡΕΥΜΑΤΟΛΟΓΙΑ",
+    "OrderAA": 32
+  },
+  {
+    "specialty-id": "6E185EBF-71EB-44BC-A757-BA0E6E3EDC10",
+    "specialty": "ΦΥΣΙΚΗ ΙΑΤΡΙΚΗ ΚΑΙ ΑΠΟΚΑΤΑΣΤΑΣΗ",
+    "OrderAA": 33
+  },
+  {
+    "specialty-id": "1E1A142A-C19B-430E-B4CD-9B202ECFC10F",
+    "specialty": "ΧΕΙΡΟΥΡΓΙΚΗ",
+    "OrderAA": 34
+  },
+  {
+    "specialty-id": "A4553F09-9136-4E0F-9E4C-6DB6655DBEF6",
+    "specialty": "ΧΕΙΡΟΥΡΓΙΚΗ ΘΩΡΑΚΟΣ",
+    "OrderAA": 35
+  },
+  {
+    "specialty-id": "61F060BA-5C87-480F-8EC2-2D14EADF97C7",
+    "specialty": "ΧΕΙΡΟΥΡΓΙΚΗ ΠΑΙΔΩΝ",
+    "OrderAA": 36
+  },
+  {
+    "specialty-id": "0EADC54D-42BC-415D-B386-DC4FA12B56F1",
+    "specialty": "ΨΥΧΙΑΤΡΙΚΗ",
+    "OrderAA": 37
+  },
+  {
+    "specialty-id": "FC1DDE7D-CD55-444D-96DD-0DAC9456AA24",
+    "specialty": "ΩΤΟΡΙΝΟΛΑΡΥΓΓΟΛΟΓΙΑ",
+    "OrderAA": 38
+  }
+]

@@ -1,0 +1,461 @@
+[
+  {
+    "prefecture-id": "AC86D62D-278B-4551-AD4E-4E6F914E9749",
+    "prefecture-name": "Αιτωλοακαρνανία",
+    "Regionprefecture-id": "57E9C98F-4C7E-4E2F-B86D-4DF24CA5525C",
+    "LatitudeCenter": 38.7352461,
+    "LongitudeCenter": 21.3725855,
+    "LatitudeMarker": 38.3690552,
+    "LongitudeMarker": 21.4305073
+  },
+  {
+    "prefecture-id": "17A63D34-D6FC-404D-AF68-12942577EDFA",
+    "prefecture-name": "Αργολίδα",
+    "Regionprefecture-id": "3DFB51DE-F515-4575-92FF-D33B5043C39B",
+    "LatitudeCenter": 37.5729659,
+    "LongitudeCenter": 22.9228563,
+    "LatitudeMarker": 37.5731366,
+    "LongitudeMarker": 22.8056359
+  },
+  {
+    "prefecture-id": "9364B0B8-50AA-4DF0-8940-9B746F7C820A",
+    "prefecture-name": "Αρκαδία",
+    "Regionprefecture-id": "3DFB51DE-F515-4575-92FF-D33B5043C39B",
+    "LatitudeCenter": 37.4293866,
+    "LongitudeCenter": 22.3880744,
+    "LatitudeMarker": 37.5131468,
+    "LongitudeMarker": 22.3763259
+  },
+  {
+    "prefecture-id": "8EA43B05-9D36-4287-A96F-00F89B56DD97",
+    "prefecture-name": "Άρτα",
+    "Regionprefecture-id": "43C15148-57E3-4F80-A79A-5BAB79909082",
+    "LatitudeCenter": 39.2721599,
+    "LongitudeCenter": 21.0962917,
+    "LatitudeMarker": 39.1363562,
+    "LongitudeMarker": 20.9946851
+  },
+  {
+    "prefecture-id": "E641ED9D-2A70-409F-948A-AEB07682F977",
+    "prefecture-name": "Αττική",
+    "Regionprefecture-id": "6B5988FB-B03F-42BE-B4AF-C2AB7388B6A2",
+    "LatitudeCenter": 37.7780537,
+    "LongitudeCenter": 23.5982358,
+    "LatitudeMarker": 37.9841443,
+    "LongitudeMarker": 23.7281356
+  },
+  {
+    "prefecture-id": "42F1D9D8-FDDB-40CC-B993-D31E80D291EB",
+    "prefecture-name": "Αχαΐα",
+    "Regionprefecture-id": "57E9C98F-4C7E-4E2F-B86D-4DF24CA5525C",
+    "LatitudeCenter": 38.0605505,
+    "LongitudeCenter": 21.8653885,
+    "LatitudeMarker": 38.2490144,
+    "LongitudeMarker": 21.7456058
+  },
+  {
+    "prefecture-id": "375C3D79-D270-470F-A685-1BD1B455E2F4",
+    "prefecture-name": "Βοιωτία",
+    "Regionprefecture-id": "686DEF60-272D-489B-AFD5-CF748310D32D",
+    "LatitudeCenter": 38.3655544,
+    "LongitudeCenter": 23.0900275,
+    "LatitudeMarker": 38.4388888,
+    "LongitudeMarker": 22.8767427
+  },
+  {
+    "prefecture-id": "487214FA-1DBF-4568-A5A2-1C242BA4C4C0",
+    "prefecture-name": "Γρεβενά",
+    "Regionprefecture-id": "5FB32DE8-B73E-45A4-BEDD-3D35AF0F4825",
+    "LatitudeCenter": 40.0339481,
+    "LongitudeCenter": 21.438219,
+    "LatitudeMarker": 40.0827046,
+    "LongitudeMarker": 21.4300501
+  },
+  {
+    "prefecture-id": "008449C9-DC80-4081-B986-5B4421E4088A",
+    "prefecture-name": "Δράμα",
+    "Regionprefecture-id": "8993FE1F-7BD8-460D-9EDF-67EF4B7B4BA3",
+    "LatitudeCenter": 41.1478935,
+    "LongitudeCenter": 24.1423037,
+    "LatitudeMarker": 41.1501071,
+    "LongitudeMarker": 24.1466918
+  },
+  {
+    "prefecture-id": "828356B3-91BD-4F66-BC23-732AC8087A04",
+    "prefecture-name": "Δωδεκάνησα",
+    "Regionprefecture-id": "ED3D33E2-2F14-4440-8A4E-0F9C73831330",
+    "LatitudeCenter": 36.1414796,
+    "LongitudeCenter": 27.6779659,
+    "LatitudeMarker": 36.4355951,
+    "LongitudeMarker": 28.2
+  },
+  {
+    "prefecture-id": "9CAAAE2E-1C0B-4C23-B9F5-B3FFBF432779",
+    "prefecture-name": "Έβρος",
+    "Regionprefecture-id": "8993FE1F-7BD8-460D-9EDF-67EF4B7B4BA3",
+    "LatitudeCenter": 41.2379284,
+    "LongitudeCenter": 26.1268577,
+    "LatitudeMarker": 40.8513627,
+    "LongitudeMarker": 25.8753312
+  },
+  {
+    "prefecture-id": "041451F5-C51F-4540-A30A-9626D661278B",
+    "prefecture-name": "Εύβοια",
+    "Regionprefecture-id": "686DEF60-272D-489B-AFD5-CF748310D32D",
+    "LatitudeCenter": 38.4908342,
+    "LongitudeCenter": 23.7485272,
+    "LatitudeMarker": 38.4623153,
+    "LongitudeMarker": 23.6116995
+  },
+  {
+    "prefecture-id": "794FDA6C-AB08-497E-A275-1144E5C4B8A7",
+    "prefecture-name": "Ευρυτανία",
+    "Regionprefecture-id": "686DEF60-272D-489B-AFD5-CF748310D32D",
+    "LatitudeCenter": 38.9658958,
+    "LongitudeCenter": 21.6603681,
+    "LatitudeMarker": 38.9162974,
+    "LongitudeMarker": 21.7950768
+  },
+  {
+    "prefecture-id": "FB5A5D0A-4356-4C79-A246-8DD738BC8CD7",
+    "prefecture-name": "Ζάκυνθος",
+    "Regionprefecture-id": "EDC76588-838C-49FB-B76A-3946DADDF75E",
+    "LatitudeCenter": 37.7572987,
+    "LongitudeCenter": 20.9226743,
+    "LatitudeMarker": 37.787584,
+    "LongitudeMarker": 20.8979283
+  },
+  {
+    "prefecture-id": "44A35EEB-DC3F-447C-BCC1-F36B768B9253",
+    "prefecture-name": "Ηλεία",
+    "Regionprefecture-id": "57E9C98F-4C7E-4E2F-B86D-4DF24CA5525C",
+    "LatitudeCenter": 37.7396278,
+    "LongitudeCenter": 21.5522204,
+    "LatitudeMarker": 37.6719964,
+    "LongitudeMarker": 21.4443562
+  },
+  {
+    "prefecture-id": "FE34E3AF-765D-4C31-8C9A-5676D05E9609",
+    "prefecture-name": "Ημαθία",
+    "Regionprefecture-id": "9BC65BF0-2380-47B9-B4D9-3A7D8CB0DFFB",
+    "LatitudeCenter": 40.5172396,
+    "LongitudeCenter": 22.2817614,
+    "LatitudeMarker": 40.520687,
+    "LongitudeMarker": 22.205503
+  },
+  {
+    "prefecture-id": "5FA51BC0-3C63-4C37-98D3-793F735D837C",
+    "prefecture-name": "Ηράκλειο",
+    "Regionprefecture-id": "689AEDB7-CBEE-4787-9EA7-0FF6ABC5AA4E",
+    "LatitudeCenter": 35.1931851,
+    "LongitudeCenter": 25.1364312,
+    "LatitudeMarker": 35.3220164,
+    "LongitudeMarker": 25.1350708
+  },
+  {
+    "prefecture-id": "529A1F90-3881-48D3-9743-AEF6D5F17FF9",
+    "prefecture-name": "Θεσπρωτία",
+    "Regionprefecture-id": "43C15148-57E3-4F80-A79A-5BAB79909082",
+    "LatitudeCenter": 39.5448606,
+    "LongitudeCenter": 20.3455056,
+    "LatitudeMarker": 39.5049992,
+    "LongitudeMarker": 20.2649678
+  },
+  {
+    "prefecture-id": "9AEB40EC-A2D2-45E5-B0F5-BABC72591495",
+    "prefecture-name": "Θεσσαλονίκη",
+    "Regionprefecture-id": "9BC65BF0-2380-47B9-B4D9-3A7D8CB0DFFB",
+    "LatitudeCenter": 40.6780479,
+    "LongitudeCenter": 23.1272306,
+    "LatitudeMarker": 40.632808,
+    "LongitudeMarker": 22.9413683
+  },
+  {
+    "prefecture-id": "DB20F13F-099B-4179-A247-6731F97E59E8",
+    "prefecture-name": "Ιωάννινα",
+    "Regionprefecture-id": "43C15148-57E3-4F80-A79A-5BAB79909082",
+    "LatitudeCenter": 39.829322,
+    "LongitudeCenter": 20.8043545,
+    "LatitudeMarker": 39.6633622,
+    "LongitudeMarker": 20.8517822
+  },
+  {
+    "prefecture-id": "B2308C4D-3F41-48AD-9174-8F4DDA41502C",
+    "prefecture-name": "Καβάλα",
+    "Regionprefecture-id": "8993FE1F-7BD8-460D-9EDF-67EF4B7B4BA3",
+    "LatitudeCenter": 40.9626889,
+    "LongitudeCenter": 24.3318669,
+    "LatitudeMarker": 40.9368878,
+    "LongitudeMarker": 24.4075721
+  },
+  {
+    "prefecture-id": "29221369-ADC2-44AB-9952-1E3F75AEEE19",
+    "prefecture-name": "Καρδίτσα",
+    "Regionprefecture-id": "F60EB0F7-C7F1-47A2-86BA-2522FD303F0B",
+    "LatitudeCenter": 39.2908822,
+    "LongitudeCenter": 21.8061511,
+    "LatitudeMarker": 39.3647093,
+    "LongitudeMarker": 21.9196711
+  },
+  {
+    "prefecture-id": "351C3758-897E-4BBB-B95A-E4F5D92A3793",
+    "prefecture-name": "Καστοριά",
+    "Regionprefecture-id": "5FB32DE8-B73E-45A4-BEDD-3D35AF0F4825",
+    "LatitudeCenter": 40.447624,
+    "LongitudeCenter": 21.1465484,
+    "LatitudeMarker": 40.5216922,
+    "LongitudeMarker": 21.2636077
+  },
+  {
+    "prefecture-id": "D562F9BA-60A5-49D5-ABB9-6D00689F1A58",
+    "prefecture-name": "Κέρκυρα",
+    "Regionprefecture-id": "EDC76588-838C-49FB-B76A-3946DADDF75E",
+    "LatitudeCenter": 39.6295913,
+    "LongitudeCenter": 19.747933,
+    "LatitudeMarker": 39.6227323,
+    "LongitudeMarker": 19.9244236
+  },
+  {
+    "prefecture-id": "CB16DE64-350C-4161-97C8-2F4037A9811B",
+    "prefecture-name": "Κεφαλλονία",
+    "Regionprefecture-id": "EDC76588-838C-49FB-B76A-3946DADDF75E",
+    "LatitudeCenter": 38.2660968,
+    "LongitudeCenter": 20.576406,
+    "LatitudeMarker": 38.171762,
+    "LongitudeMarker": 20.4892775
+  },
+  {
+    "prefecture-id": "A8A1FC94-2596-4BAA-9310-E827B1BF521D",
+    "prefecture-name": "Κιλκίς",
+    "Regionprefecture-id": "9BC65BF0-2380-47B9-B4D9-3A7D8CB0DFFB",
+    "LatitudeCenter": 41.0668979,
+    "LongitudeCenter": 22.7517001,
+    "LatitudeMarker": 40.9929133,
+    "LongitudeMarker": 22.8749677
+  },
+  {
+    "prefecture-id": "6474B12F-6755-41CA-880B-7AF22D3CC359",
+    "prefecture-name": "Κοζάνη",
+    "Regionprefecture-id": "5FB32DE8-B73E-45A4-BEDD-3D35AF0F4825",
+    "LatitudeCenter": 40.3310233,
+    "LongitudeCenter": 21.6294593,
+    "LatitudeMarker": 40.301366,
+    "LongitudeMarker": 21.787956
+  },
+  {
+    "prefecture-id": "297C1BA6-869E-4360-9324-B9230A5D776A",
+    "prefecture-name": "Κόρινθος",
+    "Regionprefecture-id": "3DFB51DE-F515-4575-92FF-D33B5043C39B",
+    "LatitudeCenter": 37.9224826,
+    "LongitudeCenter": 22.6989913,
+    "LatitudeMarker": 37.9359488,
+    "LongitudeMarker": 22.9305693
+  },
+  {
+    "prefecture-id": "5C86DCA5-73D2-443C-A070-4DB375D10A7E",
+    "prefecture-name": "Κυκλάδες",
+    "Regionprefecture-id": "ED3D33E2-2F14-4440-8A4E-0F9C73831330",
+    "LatitudeCenter": 37.0600664,
+    "LongitudeCenter": 25.3108741,
+    "LatitudeMarker": 37.4396411,
+    "LongitudeMarker": 24.9381991
+  },
+  {
+    "prefecture-id": "E725E6D9-6CC8-404C-AE58-723F12DD28A4",
+    "prefecture-name": "Λακωνία",
+    "Regionprefecture-id": "3DFB51DE-F515-4575-92FF-D33B5043C39B",
+    "LatitudeCenter": 36.8605791,
+    "LongitudeCenter": 22.7114455,
+    "LatitudeMarker": 37.0744491,
+    "LongitudeMarker": 22.4301809
+  },
+  {
+    "prefecture-id": "F2EFCB2F-EA71-49DE-B04A-E8E4E0E7969C",
+    "prefecture-name": "Λάρισα",
+    "Regionprefecture-id": "F60EB0F7-C7F1-47A2-86BA-2522FD303F0B",
+    "LatitudeCenter": 39.663246,
+    "LongitudeCenter": 22.3898753,
+    "LatitudeMarker": 39.6309919,
+    "LongitudeMarker": 22.4194422
+  },
+  {
+    "prefecture-id": "D578E11D-6FF4-4608-861A-CF4F597DA907",
+    "prefecture-name": "Λασίθι",
+    "Regionprefecture-id": "689AEDB7-CBEE-4787-9EA7-0FF6ABC5AA4E",
+    "LatitudeCenter": 35.1245863,
+    "LongitudeCenter": 25.8754722,
+    "LatitudeMarker": 35.1951085,
+    "LongitudeMarker": 25.7130669
+  },
+  {
+    "prefecture-id": "529F0533-546E-401E-899C-ACC14888B1D7",
+    "prefecture-name": "Λέσβος",
+    "Regionprefecture-id": "D4860B1A-5F33-48E7-A229-A8C872F80DED",
+    "LatitudeCenter": 39.1759958,
+    "LongitudeCenter": 26.2179139,
+    "LatitudeMarker": 39.0994788,
+    "LongitudeMarker": 26.5566528
+  },
+  {
+    "prefecture-id": "3C215864-364C-4C7C-9C24-E795478A107B",
+    "prefecture-name": "Λευκάδα",
+    "Regionprefecture-id": "EDC76588-838C-49FB-B76A-3946DADDF75E",
+    "LatitudeCenter": 38.7065901,
+    "LongitudeCenter": 20.6762585,
+    "LatitudeMarker": 38.8291232,
+    "LongitudeMarker": 20.6967586
+  },
+  {
+    "prefecture-id": "EA240653-5245-4E96-ACF3-6F5FA4DECD8A",
+    "prefecture-name": "Μαγνησία",
+    "Regionprefecture-id": "F60EB0F7-C7F1-47A2-86BA-2522FD303F0B",
+    "LatitudeCenter": 39.2862951,
+    "LongitudeCenter": 22.9209288,
+    "LatitudeMarker": 39.3630543,
+    "LongitudeMarker": 22.9400291
+  },
+  {
+    "prefecture-id": "EC043F07-E7B5-472B-990A-6A712812FE45",
+    "prefecture-name": "Μεσσηνία",
+    "Regionprefecture-id": "3DFB51DE-F515-4575-92FF-D33B5043C39B",
+    "LatitudeCenter": 37.0785747,
+    "LongitudeCenter": 21.9704393,
+    "LatitudeMarker": 37.0394782,
+    "LongitudeMarker": 22.1113032
+  },
+  {
+    "prefecture-id": "E483E350-0E33-4B1C-A1ED-D75E376CE008",
+    "prefecture-name": "Ξάνθη",
+    "Regionprefecture-id": "8993FE1F-7BD8-460D-9EDF-67EF4B7B4BA3",
+    "LatitudeCenter": 41.1276812,
+    "LongitudeCenter": 24.8428583,
+    "LatitudeMarker": 41.1395298,
+    "LongitudeMarker": 24.8877582
+  },
+  {
+    "prefecture-id": "CD0D0C47-4249-43EF-B378-47FE6EED1D00",
+    "prefecture-name": "Πέλλα",
+    "Regionprefecture-id": "9BC65BF0-2380-47B9-B4D9-3A7D8CB0DFFB",
+    "LatitudeCenter": 40.9052357,
+    "LongitudeCenter": 22.1746481,
+    "LatitudeMarker": 40.8018708,
+    "LongitudeMarker": 22.0449143
+  },
+  {
+    "prefecture-id": "6D81FC55-8D0E-4E4B-9583-AFF2C12C94D5",
+    "prefecture-name": "Πιερία",
+    "Regionprefecture-id": "9BC65BF0-2380-47B9-B4D9-3A7D8CB0DFFB",
+    "LatitudeCenter": 40.2474836,
+    "LongitudeCenter": 22.3909181,
+    "LatitudeMarker": 40.2711913,
+    "LongitudeMarker": 22.5105272
+  },
+  {
+    "prefecture-id": "2A859B96-64A7-4B65-860D-A0A72FA3BE0F",
+    "prefecture-name": "Πρέβεζα",
+    "Regionprefecture-id": "43C15148-57E3-4F80-A79A-5BAB79909082",
+    "LatitudeCenter": 39.1756705,
+    "LongitudeCenter": 20.6464577,
+    "LatitudeMarker": 38.9623248,
+    "LongitudeMarker": 20.7497245
+  },
+  {
+    "prefecture-id": "8F5111F4-5BA9-4FA8-B856-3BE51B1D1986",
+    "prefecture-name": "Ρέθυμνο",
+    "Regionprefecture-id": "689AEDB7-CBEE-4787-9EA7-0FF6ABC5AA4E",
+    "LatitudeCenter": 35.2599651,
+    "LongitudeCenter": 24.6010726,
+    "LatitudeMarker": 35.366141,
+    "LongitudeMarker": 24.473314
+  },
+  {
+    "prefecture-id": "55B02B27-2404-491F-9203-5CFFF0430C6E",
+    "prefecture-name": "Ροδόπη",
+    "Regionprefecture-id": "8993FE1F-7BD8-460D-9EDF-67EF4B7B4BA3",
+    "LatitudeCenter": 41.1025123,
+    "LongitudeCenter": 25.5045509,
+    "LatitudeMarker": 41.1180967,
+    "LongitudeMarker": 25.4069291
+  },
+  {
+    "prefecture-id": "E50773D5-FCDB-44E6-BC8A-51C59374F3B3",
+    "prefecture-name": "Σάμος",
+    "Regionprefecture-id": "D4860B1A-5F33-48E7-A229-A8C872F80DED",
+    "LatitudeCenter": 37.7183875,
+    "LongitudeCenter": 26.8179122,
+    "LatitudeMarker": 37.7548239,
+    "LongitudeMarker": 26.9777946
+  },
+  {
+    "prefecture-id": "6440B8DB-563C-43E5-B71A-C68461211551",
+    "prefecture-name": "Σέρρες",
+    "Regionprefecture-id": "9BC65BF0-2380-47B9-B4D9-3A7D8CB0DFFB",
+    "LatitudeCenter": 41.0825041,
+    "LongitudeCenter": 23.4934769,
+    "LatitudeMarker": 41.0865861,
+    "LongitudeMarker": 23.5480545
+  },
+  {
+    "prefecture-id": "FBA06FFC-BEFA-405A-938F-264A880CC107",
+    "prefecture-name": "Τρίκαλα",
+    "Regionprefecture-id": "F60EB0F7-C7F1-47A2-86BA-2522FD303F0B",
+    "LatitudeCenter": 39.6282765,
+    "LongitudeCenter": 21.6729392,
+    "LatitudeMarker": 39.5561484,
+    "LongitudeMarker": 21.7679888
+  },
+  {
+    "prefecture-id": "B89422F4-7950-4E8C-AE54-84AB4377FA36",
+    "prefecture-name": "Φθιώτιδα",
+    "Regionprefecture-id": "686DEF60-272D-489B-AFD5-CF748310D32D",
+    "LatitudeCenter": 38.8862739,
+    "LongitudeCenter": 22.6019648,
+    "LatitudeMarker": 38.9017064,
+    "LongitudeMarker": 22.4319612
+  },
+  {
+    "prefecture-id": "97008953-FBE2-4384-BD93-4F9D3DB8DC79",
+    "prefecture-name": "Φλώρινα",
+    "Regionprefecture-id": "5FB32DE8-B73E-45A4-BEDD-3D35AF0F4825",
+    "LatitudeCenter": 40.7330289,
+    "LongitudeCenter": 21.3934671,
+    "LatitudeMarker": 40.7839035,
+    "LongitudeMarker": 21.4052394
+  },
+  {
+    "prefecture-id": "36001A06-A872-40EF-9E8D-994AD95EC19A",
+    "prefecture-name": "Φωκίδα",
+    "Regionprefecture-id": "686DEF60-272D-489B-AFD5-CF748310D32D",
+    "LatitudeCenter": 38.5428835,
+    "LongitudeCenter": 22.2412596,
+    "LatitudeMarker": 38.5280861,
+    "LongitudeMarker": 22.3797126
+  },
+  {
+    "prefecture-id": "30C69A49-360B-4F4A-99F9-FB0991E5042A",
+    "prefecture-name": "Χαλκιδική",
+    "Regionprefecture-id": "9BC65BF0-2380-47B9-B4D9-3A7D8CB0DFFB",
+    "LatitudeCenter": 40.2751122,
+    "LongitudeCenter": 23.6679768,
+    "LatitudeMarker": 40.3793799,
+    "LongitudeMarker": 23.4441799
+  },
+  {
+    "prefecture-id": "DEBAE93E-E55E-44CB-90AA-EB22DE027DF6",
+    "prefecture-name": "Χανιά",
+    "Regionprefecture-id": "689AEDB7-CBEE-4787-9EA7-0FF6ABC5AA4E",
+    "LatitudeCenter": 35.4352217,
+    "LongitudeCenter": 23.9033926,
+    "LatitudeMarker": 35.5114726,
+    "LongitudeMarker": 24.0257297
+  },
+  {
+    "prefecture-id": "C6967DFC-8E6E-40E6-889D-EBC82D8EFD61",
+    "prefecture-name": "Χίος",
+    "Regionprefecture-id": "D4860B1A-5F33-48E7-A229-A8C872F80DED",
+    "LatitudeCenter": 38.3654642,
+    "LongitudeCenter": 26.0634541,
+    "LatitudeMarker": 38.3716761,
+    "LongitudeMarker": 26.1343733
+  }
+]
