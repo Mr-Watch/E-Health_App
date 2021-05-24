@@ -14,6 +14,8 @@ using Windows.UI.Xaml.Navigation;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using AllThingsHealth.Core.Services;
+using System.Threading.Tasks;
 
 namespace AllThingsHealth.Views
 {
@@ -39,7 +41,6 @@ namespace AllThingsHealth.Views
             DataSourcePelvis = GetSymptomDataPelvis();
             DataSourceNeck = GetSymptomDataNeck();
             DataSourceHead = GetSymptomDataHead();
-            DataSourceAbdomen = GetSymptomDataAbdomen();
             DataSourceHand = GetSymptomDataHand();
 
             // Put some key value pairs into the dictionary
@@ -52,7 +53,8 @@ namespace AllThingsHealth.Views
             ComboBox1.SelectedValuePath = "Value";
             ComboBox1.DisplayMemberPath = "Key";
             ComboBox1.SelectedIndex = 1;
-
+            SetData();
+            Task.Delay(500);
         }
 
         private void ComboBox1_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -1926,111 +1928,7 @@ namespace AllThingsHealth.Views
         }
         private ObservableCollection<Symptom> GetSymptomDataAbdomen()
         {
-            var list = new ObservableCollection<Symptom>();
-            Symptom UpperAbdomenCategory = new Symptom()
-            {
-                Name = "Upper Abdomen Symptoms",
-                Children = {
-                    new Symptom { Name = "abdominal mass, movable, upper"},
-                    new Symptom { Name = "abdominal mass, right upper quadrant"},
-                    new Symptom { Name = "abdominal mass, upper"},
-                    new Symptom { Name = "abdominal tenderness, left upper quadrant"},
-                    new Symptom { Name = "burping"},
-                    new Symptom { Name = "can't digest fatty foods"},
-                    new Symptom { Name = "courvoisier sign"},
-                    new Symptom { Name = "diarrhea after meals"},
-                    new Symptom { Name = "fatty liver"},
-                    new Symptom { Name = "gall bladder distention"},
-                    new Symptom { Name = "gallbladder inflammation"},
-                    new Symptom { Name = "gallstones"},
-                    new Symptom { Name = "hepatic friction rub"},
-                    new Symptom { Name = "hepatosplenomegaly"},
-                    new Symptom { Name = "inflammation of stomach and intestines"},
-                    new Symptom { Name = "liver border irregularity"},
-                    new Symptom { Name = "liver bruit"},
-                    new Symptom { Name = "liver disease"},
-                    new Symptom { Name = "liver displacement"},
-                    new Symptom { Name = "liver enlargement"},
-                    new Symptom { Name = "liver hard"},
-                    new Symptom { Name = "liver mass"},
-                    new Symptom { Name = "liver pulsation"},
-                    new Symptom { Name = "liver tenderness"},
-                    new Symptom { Name = "murphy sign positive"},
-                    new Symptom { Name = "nausea"},
-                    new Symptom { Name = "open sore in stomach or esophagus"},
-                    new Symptom { Name = "pain in diaphragm"},
-                    new Symptom { Name = "pancreas inflammation"},
-                    new Symptom { Name = "past gallbladder removal"},
-                    new Symptom { Name = "reflux"},
-                    new Symptom { Name = "scarring of the liver"},
-                    new Symptom { Name = "spleen enlargement"},
-                    new Symptom { Name = "spleen friction rub"},
-                    new Symptom { Name = "spleen palpable"},
-                    new Symptom { Name = "spleen tenderness"},
-                    new Symptom { Name = "stomach pain upper left side"},
-                    new Symptom { Name = "stomach pain upper right side"},
-                    new Symptom { Name = "ulcer in muscle connecting stomach to duodenum"},
-                    new Symptom { Name = "upper abdominal wound"},
-                    new Symptom { Name = "upper belly bloating"},
-                    new Symptom { Name = "upper stomach pain"}
-            }
-            };
-            Symptom EpigastricCategory = new Symptom()
-            {
-                Name = "Epigastric Symptoms",
-                Children = {
-                    new Symptom { Name = "burping"},
-                    new Symptom { Name = "epigastric abdominal tenderness"},
-                    new Symptom { Name = "heartburn"},
-                    new Symptom { Name = "hernia in belly button"},
-                    new Symptom { Name = "indigestion"},
-                    new Symptom { Name = "nausea"},
-                    new Symptom { Name = "pain around belly button"},
-                    new Symptom { Name = "pain in middle of belly"},
-                    new Symptom { Name = "pain near belly button spreading to lower right side of stomach"},
-                    new Symptom { Name = "reflux"},
-                    new Symptom { Name = "stomach inflammation"},
-                    new Symptom { Name = "stomach pushes through diaphragm"},
-                    new Symptom { Name = "urine leaking from belly button"},
-                    new Symptom { Name = "vomiting blood"}
-            }
-            };
-            Symptom LowerAbdomenCategory = new Symptom()
-            {
-                Name = "Lower Abdomen Symptoms",
-                Children = {
-                    new Symptom { Name = "abdominal mass, left lower quadrant"},
-                    new Symptom { Name = "abdominal mass, lower"},
-                    new Symptom { Name = "abdominal mass, right lower quadrant"},
-                    new Symptom { Name = "abdominal tenderness, left lower quadrant"},
-                    new Symptom { Name = "abdominal tenderness, lower"},
-                    new Symptom { Name = "bladder distention"},
-                    new Symptom { Name = "bladder feels full"},
-                    new Symptom { Name = "c-section"},
-                    new Symptom { Name = "change in bowel habits"},
-                    new Symptom { Name = "diarrhea"},
-                    new Symptom { Name = "feels like need to pee all the time"},
-                    new Symptom { Name = "frequent bowel movements"},
-                    new Symptom { Name = "gassy"},
-                    new Symptom { Name = "hurts when ovulating"},
-                    new Symptom { Name = "indirect tenderness right lower quadrant"},
-                    new Symptom { Name = "inflammation of colon"},
-                    new Symptom { Name = "inflammation of stomach and intestines"},
-                    new Symptom { Name = "lower belly bloating"},
-                    new Symptom { Name = "lower stomach pain"},
-                    new Symptom { Name = "ovarian mass"},
-                    new Symptom { Name = "ovarian mass, irregular"},
-                    new Symptom { Name = "ovarian swelling"},
-                    new Symptom { Name = "ovary palpable"},
-                    new Symptom { Name = "past appendix removal"},
-                    new Symptom { Name = "stomach pain lower left side"},
-                    new Symptom { Name = "stomach pain lower right side"}
-                }
-            };
-            list.Add(UpperAbdomenCategory);
-            list.Add(EpigastricCategory);
-            list.Add(LowerAbdomenCategory);
-            return list;
+            return null;
         }
         private ObservableCollection<Symptom> GetSymptomDataHand()
         {
@@ -2315,6 +2213,51 @@ namespace AllThingsHealth.Views
             {
                 maintree.ItemsSource = DataSourceHead;
             }
+        }
+        public async void SetData()
+        {
+            var list = new ObservableCollection<Symptom>();
+
+            Symptom UpperAbdomenCategory = new Symptom()
+            {
+                Name = "Upper Abdomen Symptoms",
+                Children = await FetchSymptoms("abdomen", "upper-abdomen")
+            };
+            Symptom EpigastricCategory = new Symptom()
+            {
+                Name = "Epigastric Symptoms",
+                Children = await FetchSymptoms("abdomen", "epigastric")
+            };
+            Symptom LowerAbdomenCategory = new Symptom()
+            {
+                Name = "Lower Abdomen Symptoms",
+                Children = await FetchSymptoms("abdomen", "lower-abdomen")
+            };
+            list.Add(UpperAbdomenCategory);
+            list.Add(EpigastricCategory);
+            list.Add(LowerAbdomenCategory);
+            DataSourceAbdomen = list;
+
+        }
+        public async Task<ObservableCollection<Symptom>> FetchSymptoms(string type,string subtype)
+        {
+            HttpDataService url = new HttpDataService("http://127.0.0.1:5000");
+            String uri = "/ath/api/v0.1/webmd/symptoms/"+type+"/"+subtype;
+            ObservableCollection<Symptom> sympt = new ObservableCollection<Symptom>();
+            try
+            {
+                JObject json = await url.GetAsync<JObject>(uri);
+                JArray jar = (JArray)json.GetValue("data");
+                foreach (JObject item in jar)
+                {
+                    sympt.Add(new Symptom { Name = item.GetValue("Name").ToString() }); ;
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+            }
+            return sympt;
         }
     }
     public class Symptom

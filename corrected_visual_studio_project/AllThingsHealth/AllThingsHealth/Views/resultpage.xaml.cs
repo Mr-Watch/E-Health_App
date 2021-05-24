@@ -54,7 +54,6 @@ namespace AllThingsHealth.Views
             try
             {
                 JArray json = await url.GetAsync<JArray>(uri);
-                Debug.WriteLine(uri);
                 foreach (JObject item in json)
                 {
                     string name = item.GetValue("Title").ToString();
