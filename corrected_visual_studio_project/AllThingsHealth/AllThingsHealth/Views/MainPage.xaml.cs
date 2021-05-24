@@ -26,6 +26,7 @@ namespace AllThingsHealth.Views
         private ObservableCollection<Symptom> DataSourceNeck = new ObservableCollection<Symptom>();
         private ObservableCollection<Symptom> DataSourceHead = new ObservableCollection<Symptom>();
         private ObservableCollection<Symptom> DataSourceAbdomen = new ObservableCollection<Symptom>();
+        private ObservableCollection<Symptom> DataSourceHand = new ObservableCollection<Symptom>();
         public MainPage()
         {
             InitializeComponent();
@@ -39,6 +40,7 @@ namespace AllThingsHealth.Views
             DataSourceNeck = GetSymptomDataNeck();
             DataSourceHead = GetSymptomDataHead();
             DataSourceAbdomen = GetSymptomDataAbdomen();
+            DataSourceHand = GetSymptomDataHand();
 
             // Put some key value pairs into the dictionary
             colors.Add("THESSALONIKI", "9AEB40EC-A2D2-45E5-B0F5-BABC72591495");
@@ -87,86 +89,6 @@ namespace AllThingsHealth.Views
 
             SelectedItems = Items.Where(item => item.IsSelected);
             
-        }
-
-      
-
-        private void Button_Clickarm(object sender, RoutedEventArgs e)
-        {
-            if (handsSplit.IsPaneOpen == false)
-            {
-                handsSplit.IsPaneOpen = true;
-            }
-            else
-            {
-                handsSplit.IsPaneOpen = false;
-            }
-        }
-        private void Button_Clickchest(object sender, RoutedEventArgs e)
-        {
-            if (chestSplit.IsPaneOpen == false)
-            {
-                chestSplit.IsPaneOpen = true;
-            }
-            else
-            {
-                chestSplit.IsPaneOpen = false;
-            }
-        }
-        private void Button_Clicklegs(object sender, RoutedEventArgs e)
-        {
-            if (legsSplit.IsPaneOpen == false)
-            {
-                legsSplit.IsPaneOpen = true;
-            }
-            else
-            {
-                legsSplit.IsPaneOpen = false;
-            }
-        }
-        private void Button_Clickneck(object sender, RoutedEventArgs e)
-        {
-            if (neckSplit.IsPaneOpen == false)
-            {
-                neckSplit.IsPaneOpen = true;
-            }
-            else
-            {
-                neckSplit.IsPaneOpen = false;
-            }
-        }
-        private void Button_Clickhead(object sender, RoutedEventArgs e)
-        {
-            if (headSplit.IsPaneOpen == false)
-            {
-                headSplit.IsPaneOpen = true;
-            }
-            else
-            {
-                headSplit.IsPaneOpen = false;
-            }
-        }
-        private void Button_Clickpelvis(object sender, RoutedEventArgs e)
-        {
-            if (pelvisSplit.IsPaneOpen == false)
-            {
-                pelvisSplit.IsPaneOpen = true;
-            }
-            else
-            {
-                pelvisSplit.IsPaneOpen = false;
-            }
-        }
-        private void Button_Clickabdomen(object sender, RoutedEventArgs e)
-        {
-            if (abdomenSplit.IsPaneOpen == false)
-            {
-                abdomenSplit.IsPaneOpen = true;
-            }
-            else
-            {
-                abdomenSplit.IsPaneOpen = false;
-            }
         }
         public string test { get; set; }
 
@@ -2110,11 +2032,289 @@ namespace AllThingsHealth.Views
             list.Add(LowerAbdomenCategory);
             return list;
         }
+        private ObservableCollection<Symptom> GetSymptomDataHand()
+        {
+            var list = new ObservableCollection<Symptom>();
+            Symptom ThighCategory = new Symptom()
+            {
+                Name = "Thigh Symptoms",
+                Children = {
+                    new Symptom { Name = "burning feeling on thigh"},
+                    new Symptom { Name = "can't feel hot or cold on thigh"},
+                    new Symptom { Name = "cramp in thigh muscle"},
+                    new Symptom { Name = "dahl's sign positive"},
+                    new Symptom { Name = "fat thigh"},
+                    new Symptom { Name = "itching thigh"},
+                    new Symptom { Name = "large thigh muscle"},
+                    new Symptom { Name = "movement of upper leg outward"},
+                    new Symptom { Name = "numb thigh muscle"},
+                    new Symptom { Name = "pain in thigh"},
+                    new Symptom { Name = "popping sound when turn thigh outward"},
+                    new Symptom { Name = "red thigh"},
+                    new Symptom { Name = "thigh muscle feels firm"},
+                    new Symptom { Name = "thigh muscle mass"},
+                    new Symptom { Name = "thigh twitching"},
+                    new Symptom { Name = "weak thigh muscle"}
+                }
+            };
+            Symptom HamstringCategory = new Symptom()
+            {
+                Name = "Hamstring Symptoms",
+                Children = {
+                    new Symptom { Name = "back of upper leg is weak"}
+                }
+            };
+            Symptom KneeCategory = new Symptom()
+            {
+                Name = "Knee Symptoms",
+                Children = {
+                    new Symptom { Name = " back of knee hurts"},
+                    new Symptom { Name = "can feel small lump in knee"},
+                    new Symptom { Name = "clutton joints"},
+                    new Symptom { Name = "darkened skin on knee"},
+                    new Symptom { Name = "dislocated knee"},
+                    new Symptom { Name = "flaky bump(s) limited to elbows or knees"},
+                    new Symptom { Name = "front of knee hurts"},
+                    new Symptom { Name = "front of knee is swollen"},
+                    new Symptom { Name = "genu valgum"},
+                    new Symptom { Name = "genu varum"},
+                    new Symptom { Name = "hurts to kneel"},
+                    new Symptom { Name = "hurts to walk"},
+                    new Symptom { Name = "inflamed fluid sac in knee"},
+                    new Symptom { Name = "inside edge of knee is swollen"},
+                    new Symptom { Name = "knee cracking when moving"},
+                    new Symptom { Name = "knee feels like it is slipping"},
+                    new Symptom { Name = "knee gets stuck when moving"},
+                    new Symptom { Name = "knee hurts"},
+                    new Symptom { Name = "knee instability"},
+                    new Symptom { Name = "knee is able to bend"},
+                    new Symptom { Name = "knee joint inflammation"},
+                    new Symptom { Name = "knee joint makes popping sounds"},
+                    new Symptom { Name = "knee tender to touch"},
+                    new Symptom { Name = "lump on knee"},
+                    new Symptom { Name = "mcmurray test positive"},
+                    new Symptom { Name = "outer side of knee hurts"},
+                    new Symptom { Name = "pain on inside edge of knee"},
+                    new Symptom { Name = "patellar tendon reflex absent"},
+                    new Symptom { Name = "patellar tendon reflex decreased"},
+                    new Symptom { Name = "patellar tendon reflex increased"},
+                    new Symptom { Name = "pulsating lump around knee"},
+                    new Symptom { Name = "single flaky raised skin patch on elbows or knees"},
+                    new Symptom { Name = "stiff knee"},
+                    new Symptom { Name = "swollen knee"},
+                    new Symptom { Name = "tibial tuberosity tenderness"},
+                    new Symptom { Name = "trouble moving knee"},
+                    new Symptom { Name = "weak knee muscle"}
+                }
+            };
+            Symptom PoplitealCategory = new Symptom()
+            {
+                Name = "Popliteal Symptoms",
+                Children = {
+                    new Symptom() { Name = "back of knee is swollen" },
+                    new Symptom() { Name = "joint fluid swelling of back off knee joint" },
+                    new Symptom() { Name = "lachman test positive" }
+                }
+            };
+            Symptom ShinCategory = new Symptom()
+            {
+                Name = "Shin Symptoms",
+                Children = {
+                    new Symptom() { Name = "ridges on shin bone" },
+                    new Symptom() { Name = "sharp forward bowing of shin" },
+                    new Symptom() { Name = "tibial bone mass" },
+                    new Symptom() { Name = "tibial deformity" },
+                    new Symptom() { Name = "tibial pulse absence" }
+                }
+            };
+            Symptom CalfCategory = new Symptom()
+            {
+                Name = "Calf Symptoms",
+                Children = {
+                    new Symptom { Name = "calf muscle cramp"},
+                    new Symptom { Name = "calf muscle feels hard"},
+                    new Symptom { Name = "calf muscle is larger than normal"},
+                    new Symptom { Name = "calf pain"},
+                    new Symptom { Name = "calf swelling"},
+                    new Symptom { Name = "hurts to walk"},
+                    new Symptom { Name = "peroneal sign positive"},
+                    new Symptom { Name = "tender calf muscle"},
+                    new Symptom { Name = "weakness in lower legs"}
+                }
+            };
+            Symptom AnkleCategory = new Symptom()
+            {
+                Name = "Ankle Symptoms",
+                Children = {
+                    new Symptom { Name = "achilles areflexia"},
+                    new Symptom { Name = "ankle pain"},
+                    new Symptom { Name = "ankle redness"},
+                    new Symptom { Name = "ankle reflex decreased"},
+                    new Symptom { Name = "ankle swollen"},
+                    new Symptom { Name = "arthritis in ankle"},
+                    new Symptom { Name = "bruise on ankle"},
+                    new Symptom { Name = "lump on ankle"}
+                }
+            };
+            Symptom FootCategory = new Symptom()
+            {
+                Name = "Foot Symptoms",
+                Children = {
+                    new Symptom { Name = "ankle is overly flexible"},
+                    new Symptom { Name = "arthritis in big toe joint"},
+                    new Symptom { Name = "arthritis in the arch of foot"},
+                    new Symptom { Name = "ball of foot joint hurts when move"},
+                    new Symptom { Name = "big toe joint is stiff"},
+                    new Symptom { Name = "big toe joint is swollen"},
+                    new Symptom { Name = "big toe joint is tender to touch"},
+                    new Symptom { Name = "bottom of foot pain"},
+                    new Symptom { Name = "bottom of foot peeling"},
+                    new Symptom { Name = "bottom of foot red"},
+                    new Symptom { Name = "bottom of foot sweats more"},
+                    new Symptom { Name = "bottom of foot swelling"},
+                    new Symptom { Name = "bottom of foot yellow"},
+                    new Symptom { Name = "can't hold foot up"},
+                    new Symptom { Name = "charcot joint"},
+                    new Symptom { Name = "clubfoot"},
+                    new Symptom { Name = "enlarged rounded toe"},
+                    new Symptom { Name = "extreme arch in foot"},
+                    new Symptom { Name = "feels like toe is burning"},
+                    new Symptom { Name = "flat feet"},
+                    new Symptom { Name = "foot changing color"},
+                    new Symptom { Name = "foot deformity"},
+                    new Symptom { Name = "foot feels cold"},
+                    new Symptom { Name = "foot feels hot or warm"},
+                    new Symptom { Name = "foot feels stiff"},
+                    new Symptom { Name = "foot feels weak"},
+                    new Symptom { Name = "foot hurts"},
+                    new Symptom { Name = "foot is numb"},
+                    new Symptom { Name = "foot is turned out"},
+                    new Symptom { Name = "foot is turned up"},
+                    new Symptom { Name = "foot muscle is thinning"},
+                    new Symptom { Name = "foot peeling"},
+                    new Symptom { Name = "foot pulse absence"},
+                    new Symptom { Name = "foot smallness"},
+                    new Symptom { Name = "foot turning blue"},
+                    new Symptom { Name = "foot turning red"},
+                    new Symptom { Name = "heel hurts"},
+                    new Symptom { Name = "heel is swollen"},
+                    new Symptom { Name = "heel is turning in"},
+                    new Symptom { Name = "heel is turning out"},
+                    new Symptom { Name = "heel spur"},
+                    new Symptom { Name = "heel tenderness"},
+                    new Symptom { Name = "hives on foot"},
+                    new Symptom { Name = "infected lump or sore on foot"},
+                    new Symptom { Name = "itchy foot"},
+                    new Symptom { Name = "large feet"},
+                    new Symptom { Name = "matles test positive"},
+                    new Symptom { Name = "metacarpal shortness"},
+                    new Symptom { Name = "open sore(s) on foot"},
+                    new Symptom { Name = "open sore(s) on soles of feet"},
+                    new Symptom { Name = "pain in the arch of foot"},
+                    new Symptom { Name = "pale toe"},
+                    new Symptom { Name = "pes cavus"},
+                    new Symptom { Name = "pigeon toed"},
+                    new Symptom { Name = "plantar reflex, absent"},
+                    new Symptom { Name = "rash limited to feet"},
+                    new Symptom { Name = "rash limited to soles of feet"},
+                    new Symptom { Name = "rocker bottom feet"},
+                    new Symptom { Name = "stiff big toe"},
+                    new Symptom { Name = "swelling in the arch of foot"},
+                    new Symptom { Name = "swollen foot"},
+                    new Symptom { Name = "tingling and prickling in toe"},
+                    new Symptom { Name = "tingling or prickling in foot"},
+                    new Symptom { Name = "toe angle cleft"},
+                    new Symptom { Name = "toe deformity"},
+                    new Symptom { Name = "toe pulse absence"},
+                    new Symptom { Name = "toe pulse weakness"},
+                    new Symptom { Name = "toe shortness"},
+                    new Symptom { Name = "tripping"},
+                    new Symptom { Name = "trouble moving foot"}
+                }
+            };
+            Symptom ToesCategory = new Symptom()
+            {
+                Name = "Toes Symptoms",
+                Children = {
+                    new Symptom { Name = "arthritis in big toe"},
+                    new Symptom { Name = "big toe bends too far up"},
+                    new Symptom { Name = "big toe hurts"},
+                    new Symptom { Name = "big toe hurts when moving"},
+                    new Symptom { Name = "big toe is under the second toe"},
+                    new Symptom { Name = "big toe joint is swollen"},
+                    new Symptom { Name = "big toe joint is tender to touch"},
+                    new Symptom { Name = "great toe metatarsophalangeal prominence"},
+                    new Symptom { Name = "great toe microdactyly"},
+                    new Symptom { Name = "great toe synostosis"},
+                    new Symptom { Name = "nail loss"},
+                    new Symptom { Name = "nail not growing the way it should"},
+                    new Symptom { Name = "nail pulling away from cuticle"},
+                    new Symptom { Name = "rash limited to between toes"},
+                    new Symptom { Name = "stiff knuckles in hands or toes"},
+                    new Symptom { Name = "toe pain"},
+                    new Symptom { Name = "up-going toe"}
+                }
+            };
+            list.Add(ThighCategory);
+            list.Add(HamstringCategory);
+            list.Add(KneeCategory);
+            list.Add(PoplitealCategory);
+            list.Add(ShinCategory);
+            list.Add(CalfCategory);
+            list.Add(AnkleCategory);
+            list.Add(FootCategory);
+            list.Add(ToesCategory);
+            return list;
+        }
 
         private void Tree_ItemInvoked(TreeView sender, TreeViewItemInvokedEventArgs args)
         {
                 illnesslist.Items.Add(args.InvokedItem);
                 Debug.WriteLine(args.InvokedItem);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Button btn = (Button)e.OriginalSource;
+            string selected = btn.Name.ToString();
+            if (mainsplit.IsPaneOpen == false)
+            {
+                mainsplit.IsPaneOpen = true;
+            }
+            else
+            {
+                mainsplit.IsPaneOpen = false;
+            }
+            if (selected.Equals("abdomen")){
+                maintree.ItemsSource = DataSourceAbdomen;
+            }else if(selected.Equals("arm_r") || selected.Equals("arm_r"))
+            {
+                maintree.ItemsSource = DataSource;
+            }
+            else if (selected.Equals("hand_l") || selected.Equals("hand_r"))
+            {
+                maintree.ItemsSource = DataSourceHand;
+            }
+            else if (selected.Equals("leg_l") || selected.Equals("leg_r"))
+            {
+                maintree.ItemsSource = DataSourceLeg;
+            }
+            else if (selected.Equals("pelvis"))
+            {
+                maintree.ItemsSource = DataSourcePelvis;
+            }
+            else if (selected.Equals("chest"))
+            {
+                maintree.ItemsSource = DataSourceChest;
+            }
+            else if (selected.Equals("neck"))
+            {
+                maintree.ItemsSource = DataSourceNeck;
+            }
+            else if (selected.Equals("head"))
+            {
+                maintree.ItemsSource = DataSourceHead;
+            }
         }
     }
     public class Symptom
