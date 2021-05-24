@@ -37,13 +37,13 @@
             </Border>
             <TextBlock HorizontalAlignment="Left" Height="65" Text="What are your symptoms?" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="569" Margin="465,0,0,874" FontSize="48"/>
             <TextBox x:Name="searchbar1" HorizontalAlignment="Left" Height="45" Margin="500,0,0,810" Text="" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="510" FontSize="24" BorderThickness="4"/>
-            <Button Content="Search" Height="80" Margin="0,0,50,100" VerticalAlignment="Bottom" FontSize="24" HorizontalAlignment="Right" Width="240" Click="searchbutton_click"/>
+            <Button Content="test" Height="80" Margin="0,0,50,303" VerticalAlignment="Bottom" FontSize="24" HorizontalAlignment="Right" Width="240" Click="searchbutton_click" Visibility="Collapsed"/>
             <ComboBox x:Name="ComboBox1" SelectedIndex="1"  Header="Select A " SelectionChanged="ComboBox1_SelectionChanged" Margin="0,374,105,0" Width="149" Height="57" HorizontalAlignment="Right" >
             </ComboBox>
 
             <TextBox x:Name="testtext" HorizontalAlignment="Right" Margin="0,235,75,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="245"/>
             <TextBlock x:Name="testblock" HorizontalAlignment="Right" Margin="0,350,167,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
-            <Button Content="Button" Margin="0,0,50,203" VerticalAlignment="Bottom" Width="240" Height="72" Click="navigatebutton" HorizontalAlignment="Right"/>
+            <Button x:Name="search" Content="Search" Margin="0,0,50,99" VerticalAlignment="Bottom" Width="240" Height="72" Click="navigatebutton" HorizontalAlignment="Right" FontSize="22"/>
             <SplitView x:Name="handsSplit" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="600" Margin="0,0,10,0" FontSize="36" d:IsHidden="True">
                 <SplitView.Pane>
                     <ScrollViewer>

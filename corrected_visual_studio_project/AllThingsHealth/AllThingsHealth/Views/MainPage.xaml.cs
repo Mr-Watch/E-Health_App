@@ -51,12 +51,6 @@ namespace AllThingsHealth.Views
             ComboBox1.DisplayMemberPath = "Key";
             ComboBox1.SelectedIndex = 1;
 
-            Items = new List<ItemVM>
-                {
-                    new ItemVM {IsSelected = false, Name = "Firefox"},
-                    new ItemVM {IsSelected = false, Name = "Chrome"},
-                    new ItemVM {IsSelected = false, Name = "IE"}
-                };
         }
 
         private void ComboBox1_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -65,7 +59,7 @@ namespace AllThingsHealth.Views
             ComboBox comboBox = sender as ComboBox;
 
             // Get the ComboBox selected item value and display on TextBlock
-            testblock.Text = "Value : " + comboBox.SelectedValue.ToString();
+           // testblock.Text = "Value : " + comboBox.SelectedValue.ToString();
         }
 
 

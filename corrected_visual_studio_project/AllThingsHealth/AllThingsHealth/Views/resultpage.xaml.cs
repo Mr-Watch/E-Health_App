@@ -22,7 +22,7 @@ namespace AllThingsHealth.Views
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            info.Text = "illness:" + e.Parameter;
+            
             uritest = (string)e.Parameter;
 
         }
@@ -48,7 +48,7 @@ namespace AllThingsHealth.Views
             HttpDataService url = new HttpDataService("http://127.0.0.1:5000");
             await Task.Delay(10);
             String uri = "/ath/api/v0.1/healthatlas/hospitals/"+ uritest;
-            String uri2 = "/ath/api/v0.1/healthatlas/hospitals/9AEB40EC-A2D2-45E5-B0F5-BABC72591495";
+            String uri2 = "/ath/api/v0.1/healthatlas/pharmacies/"+ uritest;
             List<Hospital> items = new List<Hospital>();
             List<Pharmacy> items2 = new List<Pharmacy>();
             try
@@ -61,10 +61,10 @@ namespace AllThingsHealth.Views
                     string address = item.GetValue("Address").ToString();
                     string telephone = item.GetValue("Telephone").ToString();
                     string email = item.GetValue("Email").ToString();
-                    if (name.Length > 30) {
+                    if (name.Length > 40) {
                         name = name.Substring(0, 30) + "...";
                     }
-                    if (address.Length > 30)
+                    if (address.Length > 40)
                     {
                         address = address.Substring(0, 30)+"...";
                     }
@@ -80,11 +80,11 @@ namespace AllThingsHealth.Views
                     string address = item2.GetValue("Address").ToString();
                     string telephone = item2.GetValue("Telephone").ToString();
                     string email = item2.GetValue("Email").ToString();
-                    if (name.Length > 30)
+                    if (name.Length > 40)
                     {
                         name = name.Substring(0, 30) + "...";
                     }
-                    if (address.Length > 30)
+                    if (address.Length > 40)
                     {
                         address = address.Substring(0, 30) + "...";
                     }
