@@ -53,7 +53,7 @@ def get_body_part_ids():
     return data
 
 
-def get_body_part_url(body_section: str, section_part: str):
+def get_body_part_ids(body_section: str, section_part: str):
     body_section_list = list(
         filter(lambda x: x['body-section'] == body_section, data['data']))
     body_section_id = body_section_list[0]['body-section-id']
@@ -61,6 +61,19 @@ def get_body_part_url(body_section: str, section_part: str):
     section_parts_list = body_section_list[0]['section-parts']
     part_id = list(filter(lambda x: x['part'] == section_part, section_parts_list))[
         0]['part-id']
+    return body_section_id, part_id
+
+
+def get_body_part_id(body_section: str):
+    body_section_list = list(
+        filter(lambda x: x['body-section'] == body_section, data['data']))
+    body_section_id = body_section_list[0]['body-section-id']
+
+    return body_section_id
+
+
+def get_body_part_url(body_section: str, section_part: str):
+    body_section_id, part_id = get_body_part_ids(body_section, section_part)
 
     url = f'https://symptoms.webmd.com/search/2/api/scbodytypeahead?q=&cache_2=true&gender=M&part={body_section_id}{part_id}&count=1000'
 
@@ -68,9 +81,7 @@ def get_body_part_url(body_section: str, section_part: str):
 
 
 def get_single_body_part_url(body_section: str):
-    body_section_list = list(
-        filter(lambda x: x['body-section'] == body_section, data['data']))
-    body_section_id = body_section_list[0]['body-section-id']
+    body_section_id = get_body_part_id(body_section)
 
     url = f'https://symptoms.webmd.com/search/2/api/scbodytypeahead?q=&cache_2=true&gender=M&part={body_section_id}&count=1000'
 
