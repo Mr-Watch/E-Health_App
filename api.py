@@ -45,6 +45,17 @@ def get_geoIds_flask():
 
 # Webmd api entry points
 
+@app.route(api_version+'webmd/symptoms/id/<string:body_section>/', methods=['GET'])
+def get_body_part_id_flask(body_section: str):
+    return jsonify(symptom_api.get_body_part_id(body_section))
+
+
+@app.route(api_version+'webmd/symptoms/id/<string:body_section>/<string:section_part>', methods=['GET'])
+def get_body_part_ids_flask(body_section: str, section_part: str):
+    id1, id2 = symptom_api.get_body_part_ids(body_section, section_part)
+    return jsonify(id1+id2)
+
+
 @app.route(api_version+'webmd/symptoms/<string:body_section>/', methods=['GET'])
 def make_body_symptoms_single_api_request_flask(body_section: str):
     return jsonify(symptom_api.make_body_symptoms_single_api_request(body_section))
@@ -62,7 +73,7 @@ def make_symptoms_api_request_flask(age: str, gender: str):
 
 
 @app.route(api_version+'webmd/body-part-ids/', methods=['GET'])
-def get_body_part_ids_flask():
+def body_part_ids_flask():
     return jsonify(symptom_api.get_body_part_ids())
 
 # General entry points
