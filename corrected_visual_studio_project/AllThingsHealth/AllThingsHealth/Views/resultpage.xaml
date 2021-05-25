@@ -56,32 +56,28 @@
             </StackPanel>
         </PivotItem>
         <PivotItem Header="Medicine">
-            <StackPanel HorizontalAlignment="Left">
+            <StackPanel HorizontalAlignment="Center">
                 <TextBlock HorizontalAlignment="Center" Text="Medicine list" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" TextAlignment="Center"/>
                 <ListView x:Name="medicine_list" ItemTemplate="{StaticResource MedicineTemplate}" BorderThickness="2" Margin="0,0,0,0" BorderBrush="Black" Height="500" Width="183"/>
-                <Button Content="Near medicine(?)" Margin="0,10,0,0" VerticalAlignment="Top" Height="46" Width="260" FontSize="22"/>
             </StackPanel>
         </PivotItem>
         <PivotItem Header="Hospitals">
-            <StackPanel HorizontalAlignment="Left">
+            <StackPanel HorizontalAlignment="Center">
                 <TextBlock HorizontalAlignment="Center" Text="Hospital list" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" TextAlignment="Center"/>
                 <TextBlock x:Name="perioxi_id" Text="" TextWrapping="Wrap" Height="23" d:IsHidden="True"/>
                 <ListView x:Name="Hospital_list" ItemTemplate="{StaticResource HospitalTemplate}" BorderThickness="2" Margin="0,0,0,0" BorderBrush="Black" Height="500" />
-                <Button Content="Near Hospitals" Margin="0,10,0,0" Height="46" Width="262" FontSize="22"/>
             </StackPanel>
         </PivotItem>
         <PivotItem Header="Doctors">
-            <StackPanel HorizontalAlignment="Left">
+            <StackPanel HorizontalAlignment="Center">
                 <TextBlock HorizontalAlignment="Center" Text="Doctor list" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" TextAlignment="Center"/>
                 <ListView x:Name="doctor_list" ItemTemplate="{StaticResource DoctorTemplate}" BorderThickness="2" Margin="0,0,0,0" BorderBrush="Black" Height="500"/>
-                <Button Content="Near doctors" Margin="0,10,0,0" VerticalAlignment="Top" Height="46" Width="260" FontSize="22"/>
             </StackPanel>
         </PivotItem>
         <PivotItem Header="Pharmacies">
-            <StackPanel HorizontalAlignment="Left">
+            <StackPanel HorizontalAlignment="Center">
                 <TextBlock HorizontalAlignment="Center" Text="Pharmacy list" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" TextAlignment="Center"/>
                 <ListView x:Name="pharmacy_list" ItemTemplate="{StaticResource PharmacyTemplate}" BorderThickness="2" Margin="0,0,0,0" BorderBrush="Black" Height="500" />
-                <Button Content="Near pharmacy" Margin="0,10,0,0" VerticalAlignment="Top" Height="46" Width="260" FontSize="22"/>
             </StackPanel>
         </PivotItem>
     </Pivot>

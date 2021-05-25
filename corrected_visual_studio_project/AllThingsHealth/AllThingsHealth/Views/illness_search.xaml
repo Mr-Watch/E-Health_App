@@ -13,11 +13,11 @@
             <TextBlock HorizontalAlignment="Center" Text="What is your illness?" TextWrapping="Wrap" Width="569" Margin="0,45,0,0" FontSize="48" TextAlignment="Center" Height="65" VerticalAlignment="Top"/>
             <TextBox x:Name="searchbar1" HorizontalAlignment="Right" Margin="0,155,500,0" Text="" TextWrapping="Wrap" Width="510" FontSize="24" BorderThickness="4" Height="45" VerticalAlignment="Top"/>
             <Button Content="Search" Height="45" Margin="0,155,270,0" VerticalAlignment="Top" FontSize="24" HorizontalAlignment="Right" Width="175" />
-            <TextBox x:Name="illnessname" HorizontalAlignment="Center" Margin="0,245,0,0" Text="" TextWrapping="Wrap" Width="245" Height="32" VerticalAlignment="Top"/>
+            <TextBox x:Name="illnessname" HorizontalAlignment="Right" Margin="0,246,818,0" Text="" TextWrapping="Wrap" Width="245" Height="32" VerticalAlignment="Top"/>
             <TextBox x:Name="illnessinfo" BorderThickness="4" HorizontalAlignment="Right" Margin="0,331,506,0" Text="TextBlock" TextWrapping="Wrap" Width="804" IsReadOnly="True" Height="525" VerticalAlignment="Top"/>
-            <Button Content="Button" Margin="0,870,470,0" VerticalAlignment="Top" Width="175" HorizontalAlignment="Right" Height="72" />
+            <Button Content="Button" Margin="0,891,171,0" VerticalAlignment="Top" Width="175" HorizontalAlignment="Right" Height="72" />
             <TextBox x:Name="illnessSymptoms" BorderThickness="2" HorizontalAlignment="Right" Text="TextBlock" TextWrapping="Wrap" Width="325" Margin="0,331,90,0" IsReadOnly="True" Height="525" VerticalAlignment="Top"/>
-            <TextBlock HorizontalAlignment="Right" Margin="0,238,68,0" Text="Illness Symptoms" TextWrapping="Wrap" Width="347" FontSize="36" TextAlignment="Center" Height="50" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Right" Margin="0,238,98,0" Text="Illness Symptoms" TextWrapping="Wrap" Width="347" FontSize="36" TextAlignment="Center" Height="50" VerticalAlignment="Top"/>
             <!--
                 The SystemControlPageBackgroundChromeLowBrush background represents where you should place your content. 
                 Place your content here.
