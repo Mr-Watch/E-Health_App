@@ -168,10 +168,10 @@ namespace AllThingsHealth.Views
         private void Tree_ItemInvoked(TreeView sender, TreeViewItemInvokedEventArgs args)
         {
             illnesslist.Items.Add(args.InvokedItem);
-            Symptom a=new Symptom();
+            Symptom a = new Symptom();
             foreach (Symptom s in DataSourceAbdomen)
             {
-               foreach(Symptom s1 in s.Children)
+                foreach (Symptom s1 in s.Children)
                 {
                     if (s1.Name.Equals(args.InvokedItem.ToString()))
                     {
@@ -476,6 +476,7 @@ namespace AllThingsHealth.Views
             }
             return sympt;
         }
+    }
         public class Symptom
         {
             public string Name { get; set; }
@@ -489,5 +490,5 @@ namespace AllThingsHealth.Views
             }
         }
     }
-}
+
 
