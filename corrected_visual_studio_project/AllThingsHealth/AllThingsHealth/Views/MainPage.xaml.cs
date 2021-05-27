@@ -147,8 +147,12 @@ namespace AllThingsHealth.Views
         }
         private void navigatebutton(object sender, RoutedEventArgs args)
         {
+            IllnessClick(null,null);
             String area = (string)ComboBox1.SelectedValue;
-            Frame.Navigate(typeof(resultpage), area);
+            List<object> pagedata = new List<object>();
+            pagedata.Add(area);
+            pagedata.Add(illnessesJA);
+            Frame.Navigate(typeof(resultpage), pagedata);
             
         }
 
@@ -472,7 +476,7 @@ namespace AllThingsHealth.Views
         {
             HttpDataService url = new HttpDataService("http://127.0.0.1:5000");
             String uri = "/ath/api/v0.1/webmd/symptoms/" + type + "/" + subtype;
-             String uri2 = "/ath/api/v0.1/webmd/symptoms/id/" + type + "/" + subtype;
+            String uri2 = "/ath/api/v0.1/webmd/symptoms/id/" + type + "/" + subtype;
                 
             ObservableCollection<Symptom> sympt = new ObservableCollection<Symptom>();
             try
@@ -503,19 +507,21 @@ namespace AllThingsHealth.Views
 
         private void IllnessClick(object sender, ItemClickEventArgs e)
         {
-            Symptom target = new Symptom();
+            Symptom target = null;
             string outvalue = null;
             ArrayList listvalues = new ArrayList();
             List<ObservableCollection<Symptom>> list = new List<ObservableCollection<Symptom>>() { DataSource, DataSourceAbdomen, DataSourceChest, DataSourceHand, DataSourceHead, DataSourceLeg, DataSourceNeck, DataSourcePelvis };
-            foreach (ObservableCollection<Symptom> col in list)
-            {
-                foreach (Symptom s in col)
+            if (e != null) {
+                foreach (ObservableCollection<Symptom> col in list)
                 {
-                    foreach (Symptom s1 in s.Children)
+                    foreach (Symptom s in col)
                     {
-                        if (s1.Name.Equals(e.ClickedItem.ToString()))
+                        foreach (Symptom s1 in s.Children)
                         {
-                            target = s1;
+                            if (s1.Name.Equals(e.ClickedItem.ToString()))
+                            {
+                                target = s1;
+                            }
                         }
                     }
                 }

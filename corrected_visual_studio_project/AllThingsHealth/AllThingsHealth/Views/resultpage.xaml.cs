@@ -8,6 +8,7 @@ using AllThingsHealth.Core.Services;
 using Newtonsoft.Json.Linq;
 using System.Diagnostics;
 using System.Threading.Tasks;
+using System.Collections.ObjectModel;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -19,12 +20,41 @@ namespace AllThingsHealth.Views
     public sealed partial class resultpage : Page
     {
         String uritest = null;
+        private ObservableCollection<Disease> DataSourceDiseases = new ObservableCollection<Disease>();
+
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            
-            uritest = (string)e.Parameter;
-
+            List<object> pagedata = (List<object>)e.Parameter;
+            uritest = (string)pagedata[0];
+            JArray illnessesJA = new JArray();
+            illnessesJA = (JArray)pagedata[1];
+            foreach (JObject item in illnessesJA)
+            {
+                JObject map = (JObject)item.GetValue("mapping");
+                string name = map.GetValue("dctm_title").ToString();
+                JArray jar = (JArray)item.GetValue("synonyms");
+                string url = map.GetValue("url").ToString();
+                bool b1 = true;
+                if (item.GetValue("urgenttext").ToString().Equals(""))
+                {
+                    b1 = false;
+                }
+                string syn = "";
+                foreach(var item2 in jar)
+                {
+                    syn += item2.ToString()+",";
+                }
+                if (syn.Length > 50)
+                {
+                    syn = syn.Substring(0, 47) + "...";
+                }
+                if (url.Length > 70)
+                {
+                    url = url.Substring(0, 70);
+                }
+                DataSourceDiseases.Add( new Disease(name, b1, url, syn));
+            }
         }
         public resultpage()
         {
@@ -38,11 +68,12 @@ namespace AllThingsHealth.Views
             items1.Add(new Medicine("Medicine_name2"));
             items1.Add(new Medicine("Medicine_name3"));
             medicine_list.ItemsSource = items1;
-            List<Disease> items2 = new List<Disease>();
-            items2.Add(new Disease("illness_name1", true, "url1",  "synonyms1"));
-            items2.Add(new Disease("illness_name2", false, "url2", "synonyms2"));
-            items2.Add(new Disease("illness_name3", false, "url3", "synonyms3"));
-            disease_list.ItemsSource = items2;
+
+            DataSourceDiseases.Add(new Disease("illness_name1", true, "url1",  "synonyms1"));
+            DataSourceDiseases.Add(new Disease("illness_name2", false, "url2", "synonyms2"));
+            DataSourceDiseases.Add(new Disease("illness_name3", false, "url3", "synonyms3"));
+            disease_list.ItemsSource = DataSourceDiseases;
+
             List<Doctor> items3 = new List<Doctor>();
             items3.Add(new Doctor("Doctor_name1", "Address", 38.048091, 23.719676,"Medic"));
             items3.Add(new Doctor("Doctor_name2", "Address", 38.04800, 23.719600, "Medic"));
