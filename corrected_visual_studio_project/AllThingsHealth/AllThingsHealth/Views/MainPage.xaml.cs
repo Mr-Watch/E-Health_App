@@ -32,6 +32,7 @@ namespace AllThingsHealth.Views
         private ObservableCollection<Symptom> DataSourceHead = new ObservableCollection<Symptom>();
         private ObservableCollection<Symptom> DataSourceAbdomen = new ObservableCollection<Symptom>();
         private ObservableCollection<Symptom> DataSourceHand = new ObservableCollection<Symptom>();
+        private JArray illnessesJA = new JArray();
         public MainPage()
         {
             InitializeComponent();
@@ -563,8 +564,11 @@ namespace AllThingsHealth.Views
             var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
             using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
             {
-                var result = streamReader.ReadToEnd();
-                Debug.WriteLine(result);
+                String result = streamReader.ReadToEnd();
+                JObject json = JObject.Parse(result);
+                JObject json1 = (JObject)json.GetValue("data");
+                illnessesJA = (JArray)json1.GetValue("conditions");
+                Debug.WriteLine(illnessesJA.First);
             }
             
         }
