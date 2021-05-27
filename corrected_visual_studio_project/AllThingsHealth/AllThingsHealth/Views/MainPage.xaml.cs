@@ -464,22 +464,18 @@ namespace AllThingsHealth.Views
                 JObject json = await url.GetAsync<JObject>(uri);
                 JArray jar = (JArray)json.GetValue("data");
                 JObject json2 = await url.GetAsync<JObject>(uri2);
-                JArray jar2 = (JArray)json2.GetValue("bodyid");
+                JValue jar2 = (JValue)json2.GetValue("bodyid");
                
                 
                 foreach (JObject item in jar)
                 {
-                    foreach (JObject item2 in jar2)
-                    {
-                   
-                        string name = item.GetValue("Name").ToString();
-                        string id = item.GetValue("id").ToString();
-                        int id1 = int.Parse(id.Substring(3, id.Length - 3));
-                        int wid = int.Parse(item.GetValue("webmdid").ToString());
+                    string name = item.GetValue("Name").ToString();
+                    string id = item.GetValue("id").ToString();
+                    int id1 = int.Parse(id.Substring(3, id.Length - 3));
+                    int wid = int.Parse(item.GetValue("webmdid").ToString());
                     
-                        int bid = int.Parse(item2.GetValue("bodyid").ToString());
-                        sympt.Add(new Symptom { Name = name, ID = id1, Webmdid = wid, Bodyid = bid }); 
-                    }
+                    int bid = int.Parse(jar2.Value.ToString());
+                    sympt.Add(new Symptom { Name = name, ID = id1, Webmdid = wid, Bodyid = bid }); 
                 }
             }
             catch (Exception ex)
