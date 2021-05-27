@@ -45,6 +45,7 @@
 
             <TextBox x:Name="testtext" HorizontalAlignment="Right" Margin="0,235,75,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="245"/>
             <TextBlock x:Name="testblock" HorizontalAlignment="Right" Margin="0,350,167,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            <x1:TextBlock x:Name="values" HorizontalAlignment="Right" Margin="0,326,167,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
             <Button x:Name="search" Content="Search" Margin="0,0,50,99" VerticalAlignment="Bottom" Width="240" Height="72" Click="navigatebutton" HorizontalAlignment="Right" FontSize="22"/>
             <SplitView x:Name="mainsplit" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="0" OpenPaneLength="600" Margin="0,0,10,0" FontSize="36" d:IsHidden="True">
                 <SplitView.Pane>

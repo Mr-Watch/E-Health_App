@@ -16,6 +16,9 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using AllThingsHealth.Core.Services;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+using System.Net.Http;
+using System.Text;
 
 namespace AllThingsHealth.Views
 {
@@ -145,7 +148,7 @@ namespace AllThingsHealth.Views
         {
             String area = (string)ComboBox1.SelectedValue;
             Frame.Navigate(typeof(resultpage), area);
-
+            
         }
 
 
@@ -168,6 +171,7 @@ namespace AllThingsHealth.Views
         private void Tree_ItemInvoked(TreeView sender, TreeViewItemInvokedEventArgs args)
         {
             Symptom target = new Symptom();
+            
             List<ObservableCollection<Symptom>> list= new List<ObservableCollection<Symptom>>() {DataSource,DataSourceAbdomen,DataSourceChest,DataSourceHand,DataSourceHead,DataSourceLeg,DataSourceNeck,DataSourcePelvis };
             foreach (ObservableCollection<Symptom> col in list) {
                 foreach (Symptom s in col)
@@ -180,7 +184,11 @@ namespace AllThingsHealth.Views
                         }
                     }
                 }
+                
             }
+
+              
+ 
         }
 
         private async void Button_Click(object sender, RoutedEventArgs e)
@@ -495,6 +503,8 @@ namespace AllThingsHealth.Views
         private void IllnessClick(object sender, ItemClickEventArgs e)
         {
             Symptom target = new Symptom();
+            string outvalue = null;
+            ArrayList listvalues = new ArrayList();
             List<ObservableCollection<Symptom>> list = new List<ObservableCollection<Symptom>>() { DataSource, DataSourceAbdomen, DataSourceChest, DataSourceHand, DataSourceHead, DataSourceLeg, DataSourceNeck, DataSourcePelvis };
             foreach (ObservableCollection<Symptom> col in list)
             {
@@ -513,8 +523,61 @@ namespace AllThingsHealth.Views
             {
                 Debug.WriteLine("Name:" + target.Name + "\nID:" + target.ID + "\nWID:" + target.Webmdid + "\nbid:" + target.Bodyid);
             }
+            foreach (object item in illnesslist.Items) {
+                foreach (ObservableCollection<Symptom> col in list)
+                {
+                    foreach (Symptom s in col)
+                    {
+                        foreach (Symptom s1 in s.Children)
+                        {
+                            if (s1.Name.Equals(item.ToString()))
+                            {
+                                valuetest val = new valuetest();
+                                val.id = s1.ID.ToString();
+                                val.webmdid = s1.Webmdid.ToString();
+                                val.bodyid = s1.Bodyid;
+                                listvalues.Add(val);
+                            }
+                        }
+                    }
+                }
+            }
+            outvalue  =  "[";
+            foreach (valuetest test1 in listvalues)
+            {
+                outvalue = outvalue + JsonConvert.SerializeObject(test1);
+            }
+            outvalue = outvalue.Replace("}{","},{")+"]";
+            Debug.WriteLine(outvalue);
+
+
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://127.0.0.1:5000/ath/api/v0.1/webmd/conditions/22/male");
+            httpWebRequest.ContentType = "application/json";
+            httpWebRequest.Method = "POST";
+
+            using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
+            {
+                streamWriter.Write(outvalue);
+            }
+
+            var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+            using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+            {
+                var result = streamReader.ReadToEnd();
+                Debug.WriteLine(result);
+            }
+            
         }
     }
+
+  
+    public class valuetest
+    {
+        public string id { get; set; }
+        public string webmdid { get; set; }
+        public int bodyid { get; set; }
+    }
+
     public class Symptom
         {
             public string Name { get; set; }
