@@ -17,7 +17,7 @@
     </Page.Resources>
     <Grid x:Name="ContentArea" Margin="0,0,5,0">
         <Grid Background="White">
-            <ListView x:Name="illnesslist" DisplayMemberPath="Name" Background="WhiteSmoke" Margin="0,0,1021,130" BorderThickness="2" BorderBrush="Black" HorizontalAlignment="Right" Width="383" Height="630" VerticalAlignment="Bottom">
+            <ListView x:Name="illnesslist" DisplayMemberPath="Name" Background="WhiteSmoke" Margin="0,0,1021,130" BorderThickness="2" BorderBrush="Black" HorizontalAlignment="Right" Width="383" Height="630" VerticalAlignment="Bottom" IsItemClickEnabled="True" ItemClick="IllnessClick">
 
             </ListView>
 

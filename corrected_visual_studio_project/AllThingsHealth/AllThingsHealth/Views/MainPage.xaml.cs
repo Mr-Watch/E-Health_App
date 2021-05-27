@@ -167,21 +167,19 @@ namespace AllThingsHealth.Views
 
         private void Tree_ItemInvoked(TreeView sender, TreeViewItemInvokedEventArgs args)
         {
-            illnesslist.Items.Add(args.InvokedItem);
-            Symptom a = new Symptom();
-            foreach (Symptom s in DataSourceAbdomen)
-            {
-                foreach (Symptom s1 in s.Children)
+            Symptom target = new Symptom();
+            List<ObservableCollection<Symptom>> list= new List<ObservableCollection<Symptom>>() {DataSource,DataSourceAbdomen,DataSourceChest,DataSourceHand,DataSourceHead,DataSourceLeg,DataSourceNeck,DataSourcePelvis };
+            foreach (ObservableCollection<Symptom> col in list) {
+                foreach (Symptom s in col)
                 {
-                    if (s1.Name.Equals(args.InvokedItem.ToString()))
+                    foreach (Symptom s1 in s.Children)
                     {
-                        a = s1;
+                        if (s1.Name.Equals(args.InvokedItem.ToString()))
+                        {
+                            illnesslist.Items.Add(args.InvokedItem);
+                        }
                     }
                 }
-            }
-            if (a != null)
-            {
-                Debug.WriteLine("Name:" + a.Name + "\nID:" + a.ID + "\nWID:" + a.Webmdid + "\nbid:" + a.Bodyid);
             }
         }
 
@@ -192,265 +190,274 @@ namespace AllThingsHealth.Views
             if (mainsplit.IsPaneOpen == false)
             {
                 mainsplit.IsPaneOpen = true;
+                if (selected.Equals("abdomen"))
+                {
+                    DataSourceAbdomen = new ObservableCollection<Symptom>();
+                    maintree.ItemsSource = DataSourceAbdomen;
+                    Symptom UpperAbdomenCategory = new Symptom()
+                    {
+                        Name = "Upper Abdomen Symptoms",
+                        Children = await FetchSymptoms("abdomen", "upper-abdomen")
+                    };
+                    DataSourceAbdomen.Add(UpperAbdomenCategory);
+                    Symptom EpigastricCategory = new Symptom()
+                    {
+                        Name = "Epigastric Symptoms",
+                        Children = await FetchSymptoms("abdomen", "epigastric")
+                    };
+                    DataSourceAbdomen.Add(EpigastricCategory);
+                    Symptom LowerAbdomenCategory = new Symptom()
+                    {
+                        Name = "Lower Abdomen Symptoms",
+                        Children = await FetchSymptoms("abdomen", "lower-abdomen")
+                    };
+                    DataSourceAbdomen.Add(LowerAbdomenCategory);
+                }
+                else if (selected.Equals("arm_r") || selected.Equals("arm_l"))
+                {
+                    DataSource = new ObservableCollection<Symptom>();
+                    maintree.ItemsSource = DataSource;
+                    Symptom ShoulderCategory = new Symptom()
+                    {
+                        Name = "Shoulder Symptoms",
+                        Children = await FetchSymptoms("arms", "shoulder")
+                    };
+                    DataSource.Add(ShoulderCategory);
+                    Symptom ArmpitCategory = new Symptom()
+                    {
+                        Name = "Armpit Symptoms",
+                        Children = await FetchSymptoms("arms", "armpit")
+                    };
+                    DataSource.Add(ArmpitCategory);
+                    Symptom UpperArmCategory = new Symptom()
+                    {
+                        Name = "Upper Arm Symptoms",
+                        Children = await FetchSymptoms("arms", "upper-arm")
+                    };
+                    DataSource.Add(UpperArmCategory);
+                    Symptom ElbowCategory = new Symptom()
+                    {
+                        Name = "Elbow Symptoms",
+                        Children = await FetchSymptoms("arms", "elbow")
+                    };
+                    DataSource.Add(ElbowCategory);
+                    Symptom ForearmCategory = new Symptom()
+                    {
+                        Name = "Forearm Symptoms",
+                        Children = await FetchSymptoms("arms", "forearm")
+                    };
+                    DataSource.Add(ForearmCategory);
+                    Symptom WristCategory = new Symptom()
+                    {
+                        Name = "Wrist Symptoms",
+                        Children = await FetchSymptoms("arms", "wrist")
+                    };
+                    DataSource.Add(WristCategory);
+                }
+                else if (selected.Equals("hand_l") || selected.Equals("hand_r"))
+                {
+                    DataSourceHand = new ObservableCollection<Symptom>();
+                    maintree.ItemsSource = DataSourceHand;
+                    Symptom HandCategory = new Symptom()
+                    {
+                        Name = "Hand Symptoms",
+                        Children = await FetchSymptoms("arms", "hand")
+                    };
+                    DataSourceHand.Add(HandCategory);
+                    Symptom FingerCategory = new Symptom()
+                    {
+                        Name = "Finger Symptoms",
+                        Children = await FetchSymptoms("arms", "finger")
+                    };
+                    DataSourceHand.Add(FingerCategory);
+                }
+                else if (selected.Equals("leg_l") || selected.Equals("leg_r"))
+                {
+                    DataSourceLeg = new ObservableCollection<Symptom>();
+                    maintree.ItemsSource = DataSourceLeg;
+                    Symptom ThighCategory = new Symptom()
+                    {
+                        Name = "Thigh Symptoms",
+                        Children = await FetchSymptoms("legs", "thigh")
+                    };
+                    DataSourceLeg.Add(ThighCategory);
+                    Symptom HamstringCategory = new Symptom()
+                    {
+                        Name = "Hamstring Symptoms",
+                        Children = await FetchSymptoms("legs", "hamstring")
+                    };
+                    DataSourceLeg.Add(HamstringCategory);
+                    Symptom KneeCategory = new Symptom()
+                    {
+                        Name = "Knee Symptoms",
+                        Children = await FetchSymptoms("legs", "knee")
+                    };
+                    DataSourceLeg.Add(KneeCategory);
+                    Symptom PoplitealCategory = new Symptom()
+                    {
+                        Name = "Popliteal Symptoms",
+                        Children = await FetchSymptoms("legs", "popliteal")
+                    };
+                    DataSourceLeg.Add(PoplitealCategory);
+                    Symptom ShinCategory = new Symptom()
+                    {
+                        Name = "Shin Symptoms",
+                        Children = await FetchSymptoms("legs", "shin")
+                    };
+                    DataSourceLeg.Add(ShinCategory);
+                    Symptom CalfCategory = new Symptom()
+                    {
+                        Name = "Calf Symptoms",
+                        Children = await FetchSymptoms("legs", "calf")
+                    };
+                    DataSourceLeg.Add(CalfCategory);
+                    Symptom AnkleCategory = new Symptom()
+                    {
+                        Name = "Ankle Symptoms",
+                        Children = await FetchSymptoms("legs", "ankle")
+                    };
+                    DataSourceLeg.Add(AnkleCategory);
+                    Symptom FootCategory = new Symptom()
+                    {
+                        Name = "Foot Symptoms",
+                        Children = await FetchSymptoms("legs", "foot")
+                    };
+                    DataSourceLeg.Add(FootCategory);
+                    Symptom ToesCategory = new Symptom()
+                    {
+                        Name = "Toes Symptoms",
+                        Children = await FetchSymptoms("legs", "toes")
+                    };
+                    DataSourceLeg.Add(ToesCategory);
+                }
+                else if (selected.Equals("pelvis"))
+                {
+                    DataSourcePelvis = new ObservableCollection<Symptom>();
+                    maintree.ItemsSource = DataSourcePelvis;
+                    Symptom HipCategory = new Symptom()
+                    {
+                        Name = "Hip Symptoms",
+                        Children = await FetchSymptoms("pelvis", "hip")
+                    };
+                    DataSourcePelvis.Add(HipCategory);
+                    Symptom GroinCategory = new Symptom()
+                    {
+                        Name = "Groin Symptoms",
+                        Children = await FetchSymptoms("pelvis", "groin")
+                    };
+                    DataSourcePelvis.Add(GroinCategory);
+                    Symptom SuprapubicCategory = new Symptom()
+                    {
+                        Name = "Suprapubic Symptoms",
+                        Children = await FetchSymptoms("pelvis", "suprapubic")
+                    };
+                    DataSourcePelvis.Add(SuprapubicCategory);
+                    Symptom GenitalsCategory = new Symptom()
+                    {
+                        Name = "Genitals Symptoms",
+                        Children = await FetchSymptoms("pelvis", "genital")
+                    };
+                    DataSourcePelvis.Add(GenitalsCategory);
+                }
+                else if (selected.Equals("chest"))
+                {
+                    DataSourceChest = new ObservableCollection<Symptom>();
+                    maintree.ItemsSource = DataSourceChest;
+                    Symptom UpperChestCategory = new Symptom()
+                    {
+                        Name = "Upper Chest Symptoms",
+                        Children = await FetchSymptoms("chest", "upper-chest")
+                    };
+                    DataSourceChest.Add(UpperChestCategory);
+                    Symptom SternumCategory = new Symptom()
+                    {
+                        Name = "Sternum Symptoms",
+                        Children = await FetchSymptoms("chest", "sternum")
+                    };
+                    DataSourceChest.Add(SternumCategory);
+                    Symptom BreastCategory = new Symptom()
+                    {
+                        Name = "Breast Symptoms",
+                        Children = await FetchSymptoms("chest", "breast")
+                    };
+                    DataSourceChest.Add(BreastCategory);
+                }
+                else if (selected.Equals("neck"))
+                {
+                    DataSourceNeck = new ObservableCollection<Symptom>();
+                    maintree.ItemsSource = DataSourceNeck;
+                    Symptom NeckCategory = new Symptom()
+                    {
+                        Name = "Neck Symptoms",
+                        Children = await FetchSymptoms("neck", "")
+                    };
+                    DataSourceNeck.Add(NeckCategory);
+                }
+                else if (selected.Equals("head"))
+                {
+                    DataSourceHead = new ObservableCollection<Symptom>();
+                    maintree.ItemsSource = DataSourceHead;
+                    Symptom ScalpCategory = new Symptom()
+                    {
+                        Name = "Scalp Symptoms",
+                        Children = await FetchSymptoms("head", "scalp")
+                    };
+                    DataSourceHead.Add(ScalpCategory);
+                    Symptom ForeheadCategory = new Symptom()
+                    {
+                        Name = "Forehead Symptoms",
+                        Children = await FetchSymptoms("head", "forehead")
+                    };
+                    DataSourceHead.Add(ForeheadCategory);
+                    Symptom EyesCategory = new Symptom()
+                    {
+                        Name = "Eyes Symptoms",
+                        Children = await FetchSymptoms("head", "eye")
+                    };
+                    DataSourceHead.Add(EyesCategory);
+                    Symptom NoseCategory = new Symptom()
+                    {
+                        Name = "Nose Symptoms",
+                        Children = await FetchSymptoms("head", "nose")
+                    };
+                    DataSourceHead.Add(NoseCategory);
+                    Symptom EarsCategory = new Symptom()
+                    {
+                        Name = "Ears Symptoms",
+                        Children = await FetchSymptoms("head", "ear")
+                    };
+                    DataSourceHead.Add(EarsCategory);
+                    Symptom FaceCategory = new Symptom()
+                    {
+                        Name = "Face Symptoms",
+                        Children = await FetchSymptoms("head", "face")
+                    };
+                    DataSourceHead.Add(FaceCategory);
+                    Symptom MouthCategory = new Symptom()
+                    {
+                        Name = "Mouth Symptoms",
+                        Children = await FetchSymptoms("head", "mouth")
+                    };
+                    DataSourceHead.Add(MouthCategory);
+                    Symptom JawCategory = new Symptom()
+                    {
+                        Name = "Jaw Symptoms",
+                        Children = await FetchSymptoms("head", "jaw")
+                    };
+                    DataSourceHead.Add(JawCategory);
+                    Symptom HeadCategory = new Symptom()
+                    {
+                        Name = "Head Symptoms",
+                        Children = await FetchSymptoms("head", "head")
+                    };
+                    DataSourceHead.Add(HeadCategory);
+                }
             }
             else
             {
                 mainsplit.IsPaneOpen = false;
             }
-            if (selected.Equals("abdomen"))
-            {
-                maintree.ItemsSource = DataSourceAbdomen;
-                Symptom UpperAbdomenCategory = new Symptom()
-                {
-                    Name = "Upper Abdomen Symptoms",
-                    Children = await FetchSymptoms("abdomen", "upper-abdomen")
-                };
-                DataSourceAbdomen.Add(UpperAbdomenCategory);
-                Symptom EpigastricCategory = new Symptom()
-                {
-                    Name = "Epigastric Symptoms",
-                    Children = await FetchSymptoms("abdomen", "epigastric")
-                };
-                DataSourceAbdomen.Add(EpigastricCategory);
-                Symptom LowerAbdomenCategory = new Symptom()
-                {
-                    Name = "Lower Abdomen Symptoms",
-                    Children = await FetchSymptoms("abdomen", "lower-abdomen")
-                };
-                DataSourceAbdomen.Add(LowerAbdomenCategory);
-            }
-            else if (selected.Equals("arm_r") || selected.Equals("arm_l"))
-            {
-                maintree.ItemsSource = DataSource;
-                Symptom ShoulderCategory = new Symptom()
-                {
-                    Name = "Shoulder Symptoms",
-                    Children = await FetchSymptoms("arms", "shoulder")
-                };
-                DataSource.Add(ShoulderCategory);
-                Symptom ArmpitCategory = new Symptom()
-                {
-                    Name = "Armpit Symptoms",
-                    Children = await FetchSymptoms("arms", "armpit")
-                };
-                DataSource.Add(ArmpitCategory);
-                Symptom UpperArmCategory = new Symptom()
-                {
-                    Name = "Upper Arm Symptoms",
-                    Children = await FetchSymptoms("arms", "upper-arm")
-                };
-                DataSource.Add(UpperArmCategory);
-                Symptom ElbowCategory = new Symptom()
-                {
-                    Name = "Elbow Symptoms",
-                    Children = await FetchSymptoms("arms", "elbow")
-                };
-                DataSource.Add(ElbowCategory);
-                Symptom ForearmCategory = new Symptom()
-                {
-                    Name = "Forearm Symptoms",
-                    Children = await FetchSymptoms("arms", "forearm")
-                };
-                DataSource.Add(ForearmCategory);
-                Symptom WristCategory = new Symptom()
-                {
-                    Name = "Wrist Symptoms",
-                    Children = await FetchSymptoms("arms", "wrist")
-                };
-                DataSource.Add(WristCategory);
-            }
-            else if (selected.Equals("hand_l") || selected.Equals("hand_r"))
-            {
-                maintree.ItemsSource = DataSourceHand;
-                Symptom HandCategory = new Symptom()
-                {
-                    Name = "Hand Symptoms",
-                    Children = await FetchSymptoms("arms", "hand")
-                };
-                DataSourceHand.Add(HandCategory);
-                Symptom FingerCategory = new Symptom()
-                {
-                    Name = "Finger Symptoms",
-                    Children = await FetchSymptoms("arms", "finger")
-                };
-                DataSourceHand.Add(FingerCategory);
-            }
-            else if (selected.Equals("leg_l") || selected.Equals("leg_r"))
-            {
-                maintree.ItemsSource = DataSourceLeg;
-                Symptom ThighCategory = new Symptom()
-                {
-                    Name = "Thigh Symptoms",
-                    Children = await FetchSymptoms("legs", "thigh")
-                };
-                DataSourceLeg.Add(ThighCategory);
-                Symptom HamstringCategory = new Symptom()
-                {
-                    Name = "Hamstring Symptoms",
-                    Children = await FetchSymptoms("legs", "hamstring")
-                };
-                DataSourceLeg.Add(HamstringCategory);
-                Symptom KneeCategory = new Symptom()
-                {
-                    Name = "Knee Symptoms",
-                    Children = await FetchSymptoms("legs", "knee")
-                };
-                DataSourceLeg.Add(KneeCategory);
-                Symptom PoplitealCategory = new Symptom()
-                {
-                    Name = "Popliteal Symptoms",
-                    Children = await FetchSymptoms("legs", "popliteal")
-                };
-                DataSourceLeg.Add(PoplitealCategory);
-                Symptom ShinCategory = new Symptom()
-                {
-                    Name = "Shin Symptoms",
-                    Children = await FetchSymptoms("legs", "shin")
-                };
-                DataSourceLeg.Add(ShinCategory);
-                Symptom CalfCategory = new Symptom()
-                {
-                    Name = "Calf Symptoms",
-                    Children = await FetchSymptoms("legs", "calf")
-                };
-                DataSourceLeg.Add(CalfCategory);
-                Symptom AnkleCategory = new Symptom()
-                {
-                    Name = "Ankle Symptoms",
-                    Children = await FetchSymptoms("legs", "ankle")
-                };
-                DataSourceLeg.Add(AnkleCategory);
-                Symptom FootCategory = new Symptom()
-                {
-                    Name = "Foot Symptoms",
-                    Children = await FetchSymptoms("legs", "foot")
-                };
-                DataSourceLeg.Add(FootCategory);
-                Symptom ToesCategory = new Symptom()
-                {
-                    Name = "Toes Symptoms",
-                    Children = await FetchSymptoms("legs", "toes")
-                };
-                DataSourceLeg.Add(ToesCategory);
-            }
-            else if (selected.Equals("pelvis"))
-            {
-                maintree.ItemsSource = DataSourcePelvis;
-                Symptom HipCategory = new Symptom()
-                {
-                    Name = "Hip Symptoms",
-                    Children = await FetchSymptoms("pelvis", "hip")
-                };
-                DataSourcePelvis.Add(HipCategory);
-                Symptom GroinCategory = new Symptom()
-                {
-                    Name = "Groin Symptoms",
-                    Children = await FetchSymptoms("pelvis", "groin")
-                };
-                DataSourcePelvis.Add(GroinCategory);
-                Symptom SuprapubicCategory = new Symptom()
-                {
-                    Name = "Suprapubic Symptoms",
-                    Children = await FetchSymptoms("pelvis", "suprapubic")
-                };
-                DataSourcePelvis.Add(SuprapubicCategory);
-                Symptom GenitalsCategory = new Symptom()
-                {
-                    Name = "Genitals Symptoms",
-                    Children = await FetchSymptoms("pelvis", "genital")
-                };
-                DataSourcePelvis.Add(GenitalsCategory);
-            }
-            else if (selected.Equals("chest"))
-            {
-                maintree.ItemsSource = DataSourceChest;
-                Symptom UpperChestCategory = new Symptom()
-                {
-                    Name = "Upper Chest Symptoms",
-                    Children = await FetchSymptoms("chest", "upper-chest")
-                };
-                DataSourceChest.Add(UpperChestCategory);
-                Symptom SternumCategory = new Symptom()
-                {
-                    Name = "Sternum Symptoms",
-                    Children = await FetchSymptoms("chest", "sternum")
-                };
-                DataSourceChest.Add(SternumCategory);
-                Symptom BreastCategory = new Symptom()
-                {
-                    Name = "Breast Symptoms",
-                    Children = await FetchSymptoms("chest", "breast")
-                };
-                DataSourceChest.Add(BreastCategory);
-            }
-            else if (selected.Equals("neck"))
-            {
-                maintree.ItemsSource = DataSourceNeck;
-                Symptom NeckCategory = new Symptom()
-                {
-                    Name = "Neck Symptoms",
-                    Children = await FetchSymptoms("neck", "")
-                };
-                DataSourceNeck.Add(NeckCategory);
-            }
-            else if (selected.Equals("head"))
-            {
-                maintree.ItemsSource = DataSourceHead;
-                Symptom ScalpCategory = new Symptom()
-                {
-                    Name = "Scalp Symptoms",
-                    Children = await FetchSymptoms("head", "scalp")
-                };
-                DataSourceHead.Add(ScalpCategory);
-                Symptom ForeheadCategory = new Symptom()
-                {
-                    Name = "Forehead Symptoms",
-                    Children = await FetchSymptoms("head", "forehead")
-                };
-                DataSourceHead.Add(ForeheadCategory);
-                Symptom EyesCategory = new Symptom()
-                {
-                    Name = "Eyes Symptoms",
-                    Children = await FetchSymptoms("head", "eye")
-                };
-                DataSourceHead.Add(EyesCategory);
-                Symptom NoseCategory = new Symptom()
-                {
-                    Name = "Nose Symptoms",
-                    Children = await FetchSymptoms("head", "nose")
-                };
-                DataSourceHead.Add(NoseCategory);
-                Symptom EarsCategory = new Symptom()
-                {
-                    Name = "Ears Symptoms",
-                    Children = await FetchSymptoms("head", "ear")
-                };
-                DataSourceHead.Add(EarsCategory);
-                Symptom FaceCategory = new Symptom()
-                {
-                    Name = "Face Symptoms",
-                    Children = await FetchSymptoms("head", "face")
-                };
-                DataSourceHead.Add(FaceCategory);
-                Symptom MouthCategory = new Symptom()
-                {
-                    Name = "Mouth Symptoms",
-                    Children = await FetchSymptoms("head", "mouth")
-                };
-                DataSourceHead.Add(MouthCategory);
-                Symptom JawCategory = new Symptom()
-                {
-                    Name = "Jaw Symptoms",
-                    Children = await FetchSymptoms("head", "jaw")
-                };
-                DataSourceHead.Add(JawCategory);
-                Symptom HeadCategory = new Symptom()
-                {
-                    Name = "Head Symptoms",
-                    Children = await FetchSymptoms("head", "head")
-                };
-                DataSourceHead.Add(HeadCategory);
-            }
+            
         }
         public async Task<ObservableCollection<Symptom>> FetchSymptoms(string type, string subtype)
         {
@@ -484,8 +491,31 @@ namespace AllThingsHealth.Views
             }
             return sympt;
         }
+
+        private void IllnessClick(object sender, ItemClickEventArgs e)
+        {
+            Symptom target = new Symptom();
+            List<ObservableCollection<Symptom>> list = new List<ObservableCollection<Symptom>>() { DataSource, DataSourceAbdomen, DataSourceChest, DataSourceHand, DataSourceHead, DataSourceLeg, DataSourceNeck, DataSourcePelvis };
+            foreach (ObservableCollection<Symptom> col in list)
+            {
+                foreach (Symptom s in col)
+                {
+                    foreach (Symptom s1 in s.Children)
+                    {
+                        if (s1.Name.Equals(e.ClickedItem.ToString()))
+                        {
+                            target = s1;
+                        }
+                    }
+                }
+            }
+            if (target != null)
+            {
+                Debug.WriteLine("Name:" + target.Name + "\nID:" + target.ID + "\nWID:" + target.Webmdid + "\nbid:" + target.Bodyid);
+            }
+        }
     }
-        public class Symptom
+    public class Symptom
         {
             public string Name { get; set; }
             public int ID { get; set; }
