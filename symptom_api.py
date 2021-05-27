@@ -1,5 +1,4 @@
 from time import gmtime, strftime
-from pathlib import Path
 import requests
 import hashlib
 import base64
@@ -40,7 +39,7 @@ def get_request_headers():
 
 
 def get_body_part_list():
-    with open('./webmd_body_part_ids.json', 'r') as file:
+    with open('./webmd_body_part_ids.json', 'r', encoding='utf8') as file:
         json_data = json.load(file)
         file.close()
         return json_data

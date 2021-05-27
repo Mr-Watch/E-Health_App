@@ -19,37 +19,18 @@ healthatlas_specialties = get_healthatlas_file(
     './healthatlas_specialties.json')
 
 
-def create_hospital_url(prefecture: str):
+def create_hospitals_url(prefecture: str):
     item = get_healthatlas_prefecture_item(prefecture)
     prefecture_id = item['prefecture-id']
-    url = f'''https://healthatlas.gov.gr/api/HealthCareSitesLight?
-    prefectureGeoId={prefecture_id}
-    &healthCareSiteCategoryId=565920DF-3A17-4BB1-BD7C-5B6D1FDEEAF1
-    &healthCareSiteType=ΝΟΣΟΚΟΜΕΙΟ
-    &contract=null
-    &teleMedDocPat=undefined
-    &teleMedConsDoc=undefined
-    &specialtyId=
-    &medicalActs=
-    &clinics=
-    &searchTerm='''
+    url = f'https://healthatlas.gov.gr/api/HealthCareSitesLight?prefectureGeoId={prefecture_id}&healthCareSiteCategoryId=565920DF-3A17-4BB1-BD7C-5B6D1FDEEAF1&healthCareSiteType=ΝΟΣΟΚΟΜΕΙΟ&contract=null&teleMedDocPat=undefined&teleMedConsDoc=undefined&specialtyId=&medicalActs=&clinics=&searchTerm='
 
     return url
+
 
 def create_pharmacies_url(prefecture: str):
     item = get_healthatlas_prefecture_item(prefecture)
     prefecture_id = item['prefecture-id']
-    url = f'''https://healthatlas.gov.gr/api/HealthCareSitesLight?
-    prefectureGeoId={prefecture_id}
-    &healthCareSiteCategoryId=530577D9-DD7A-4954-95F7-F9E46B5478BC
-    &healthCareSiteType=
-    &contract=null
-    &teleMedDocPat=undefined
-    &teleMedConsDoc=undefined
-    &specialtyId=
-    &medicalActs=
-    &clinics=
-    &searchTerm='''
+    url = f'https://healthatlas.gov.gr/api/HealthCareSitesLight?prefectureGeoId={prefecture_id}&healthCareSiteCategoryId=530577D9-DD7A-4954-95F7-F9E46B5478BC&healthCareSiteType=&contract=null&teleMedDocPat=undefined&teleMedConsDoc=undefined&specialtyId=&medicalActs=&clinics=&searchTerm='
 
     return url
 
@@ -59,16 +40,7 @@ def create_doctors_url(prefecture: str, specialty: str):
     item_prefecture = get_healthatlas_prefecture_item(prefecture)
     specialty_id = item_specialty['specialty-id']
     prefecture_id = item_prefecture['prefecture-id']
-    url = f'''https://healthatlas.gov.gr/api/HealthCareSitesLight?
-    prefectureGeoId={prefecture_id}
-    &healthCareSiteCategoryId=A15A4873-4B7D-4209-8A25-AFD777BBCA11
-    &healthCareSiteType=
-    &contract=null
-    &teleMedDocPat=undefined
-    &teleMedConsDoc=undefined
-    &specialtyId={specialty_id}
-    &medicalActs=
-    &clinics=&searchTerm='''
+    url = f'https://healthatlas.gov.gr/api/HealthCareSitesLight?prefectureGeoId={prefecture_id}&healthCareSiteCategoryId=A15A4873-4B7D-4209-8A25-AFD777BBCA11&healthCareSiteType=&contract=null&teleMedDocPat=undefined&teleMedConsDoc=undefined&specialtyId={specialty_id}&medicalActs=&clinics=&searchTerm='
     return url
 
 
@@ -77,12 +49,25 @@ def get_healthatlas_prefecture_item(prefecture: str):
 
 
 def get_healthatlas_specialty_item(specialty: str):
-
     return list(filter(lambda x: x["specialty"] == specialty.upper(), healthatlas_specialties))[0]
 
 
 def get_hospitals_based_on_prefecture(prefecture: str):
-    response = session.get(create_hospital_url(prefecture), headers={
+    response = session.get(create_hospitals_url(prefecture), headers={
+        'Accept-Language': 'el-GR',
+    })
+    return response.json()
+
+
+def get_pharmacies_based_on_prefecture(prefecture: str):
+    response = session.get(create_pharmacies_url(prefecture), headers={
+        'Accept-Language': 'el-GR',
+    })
+    return response.json()
+
+
+def get_doctors_based_on_prefecture(prefecture: str, specialty: str):
+    response = session.get(create_doctors_url(prefecture,specialty), headers={
         'Accept-Language': 'el-GR',
     })
     return response.json()
@@ -109,4 +94,10 @@ def get_geoIds():
     return response.json()
 
 
-print(get_hospitals_based_on_prefecture('Αττική'))
+# print(get_hospitals_based_on_prefecture('Αττική'))
+# print(get_pharmacies_based_on_prefecture('Αττική'))
+
+# print(get_doctors_based_on_prefecture('Αττική','Αιματολογια'))
+# print(create_hospitals_url('Θεσσαλονίκη'))
+# print(create_doctors_url('Θεσσαλονίκη','Αιματολογια'))
+# print(create_pharmacies_url('Θεσσαλονίκη'))
