@@ -31,12 +31,18 @@ namespace AllThingsHealth.Views
             this.InitializeComponent();
             medicine_list.Items.Clear();
             Hospital_list.Items.Clear();
+            disease_list.Items.Clear();
             doctor_list.Items.Clear();
             List<Medicine> items1 = new List<Medicine>();
             items1.Add(new Medicine("Medicine_name1"));
             items1.Add(new Medicine("Medicine_name2"));
             items1.Add(new Medicine("Medicine_name3"));
             medicine_list.ItemsSource = items1;
+            List<Disease> items2 = new List<Disease>();
+            items2.Add(new Disease("illness_name1", true, "url1",  "synonyms1"));
+            items2.Add(new Disease("illness_name2", false, "url2", "synonyms2"));
+            items2.Add(new Disease("illness_name3", false, "url3", "synonyms3"));
+            disease_list.ItemsSource = items2;
             List<Doctor> items3 = new List<Doctor>();
             items3.Add(new Doctor("Doctor_name1", "Address", 38.048091, 23.719676,"Medic"));
             items3.Add(new Doctor("Doctor_name2", "Address", 38.04800, 23.719600, "Medic"));
@@ -51,6 +57,7 @@ namespace AllThingsHealth.Views
             String uri2 = "/ath/api/v0.1/healthatlas/pharmacies/"+ uritest;
             List<Hospital> items = new List<Hospital>();
             List<Pharmacy> items2 = new List<Pharmacy>();
+
             try
             {
                 JArray json = await url.GetAsync<JArray>(uri);
@@ -99,6 +106,23 @@ namespace AllThingsHealth.Views
             }
         }
         
+    }
+    public class Disease
+    {
+        
+        public string dctm_title { get; set; }
+        public bool is_urgent { get; set; }
+        public string synonyms { get; set; }
+        public string url { get; set; }
+        
+        public Disease(string dctm_title, bool is_urgent, string url, string synonyms)
+        {
+            this.url = url;
+            this.synonyms = synonyms;
+            this.dctm_title = dctm_title;
+            this.is_urgent = is_urgent;
+           
+        }
     }
     public class Medicine
     {
