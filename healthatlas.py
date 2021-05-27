@@ -7,7 +7,7 @@ session.get('https://healthatlas.gov.gr/#!/')
 
 
 def get_healthatlas_file(path: str):
-    with open(path, 'r') as file:
+    with open(path, 'r' , encoding="utf8") as file:
         json_data = json.load(file)
         file.close()
         return json_data
