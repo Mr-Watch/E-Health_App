@@ -28,20 +28,12 @@
                 <TextBlock Name="Address" Text="{x:Bind Address}" RelativePanel.Below="Name" x:Phase="1" Margin="0,5,0,5" />
                 <TextBlock Name="Email" Text="{x:Bind Email}" RelativePanel.Below="Telephone" x:Phase="1" Margin="0,5,0,5" />
                 <TextBlock Name="Telephone" Text="{x:Bind Telephone}" RelativePanel.Below="Address" x:Phase="1" Margin="0,5,0,5" />
-                <TextBlock Name="Lon" Text="{x:Bind Longitude}" RelativePanel.AlignRightWithPanel="True"  x:Phase="1" Margin="0,5,0,5" />
-                <TextBlock Text="Lon:" RelativePanel.LeftOf="Lon" Margin="0,5,0,5" />
-                <TextBlock Name="Lat" Text="{x:Bind Latitude}" RelativePanel.AlignRightWithPanel="True" x:Phase="1" RelativePanel.AlignVerticalCenterWith="Address" Margin="0,5,0,5" />
-                <TextBlock Text="Lat:" RelativePanel.LeftOf="Lat" RelativePanel.AlignVerticalCenterWith="Lat" Margin="0,5,0,5" />
             </RelativePanel>
         </DataTemplate>
         <DataTemplate x:Key="DoctorTemplate" x:DataType="local:Doctor" >
             <RelativePanel Width="300">
                 <TextBlock Name="Name" Text="{x:Bind Name}" x:Phase="1" Margin="0,5,0,5" />
                 <TextBlock Name="Address" Text="{x:Bind Address}"  RelativePanel.Below="Name" x:Phase="1" Margin="0,5,0,5" />
-                <TextBlock Name="Lon" Text="{x:Bind Longitude}" RelativePanel.AlignRightWithPanel="True"  x:Phase="1" Margin="0,5,0,5" />
-                <TextBlock Text="Lon:" RelativePanel.LeftOf="Lon" Margin="0,5,0,5" />
-                <TextBlock Name="Lat" Text="{x:Bind Latitude}" RelativePanel.AlignRightWithPanel="True" x:Phase="1" RelativePanel.AlignVerticalCenterWith="Address" Margin="0,5,0,5" />
-                <TextBlock Text="Lat:" RelativePanel.LeftOf="Lat" RelativePanel.AlignVerticalCenterWith="Lat" Margin="0,5,0,5" />
                 <TextBlock Name="Spec" Text="{x:Bind Spec}" RelativePanel.Below="Address" x:Phase="1" Margin="0,5,0,5" />
             </RelativePanel>
         </DataTemplate>
@@ -51,10 +43,6 @@
                 <TextBlock Name="Address" Text="{x:Bind Address}" RelativePanel.Below="Name" x:Phase="1" Margin="0,5,0,5" />
                 <TextBlock Name="Email" Text="{x:Bind Email}" RelativePanel.Below="Telephone" x:Phase="1" Margin="0,5,0,5" />
                 <TextBlock Name="Telephone" Text="{x:Bind Telephone}" RelativePanel.Below="Address" x:Phase="1" Margin="0,5,0,5" />
-                <TextBlock Name="Lon" Text="{x:Bind Longitude}" RelativePanel.AlignRightWithPanel="True"  x:Phase="1" Margin="0,5,0,5" />
-                <TextBlock Text="Lon:" RelativePanel.LeftOf="Lon" Margin="0,5,0,5" />
-                <TextBlock Name="Lat" Text="{x:Bind Latitude}" RelativePanel.AlignRightWithPanel="True" x:Phase="1" RelativePanel.AlignVerticalCenterWith="Address" Margin="0,5,0,5" />
-                <TextBlock Text="Lat:" RelativePanel.LeftOf="Lat" RelativePanel.AlignVerticalCenterWith="Lat" Margin="0,5,0,5" />
             </RelativePanel>
         </DataTemplate>
     </Page.Resources>
@@ -77,7 +65,7 @@
             <StackPanel HorizontalAlignment="Center">
                 <TextBlock HorizontalAlignment="Center" Text="Hospital list" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" TextAlignment="Center"/>
                 <TextBlock x:Name="perioxi_id" Text="" TextWrapping="Wrap" Height="23" d:IsHidden="True"/>
-                <ListView x:Name="Hospital_list" ItemTemplate="{StaticResource HospitalTemplate}" BorderThickness="2" Margin="0,0,0,0" BorderBrush="Black" Height="500" />
+                <ListView x:Name="Hospital_list" IsItemClickEnabled="True" ItemTemplate="{StaticResource HospitalTemplate}" BorderThickness="2" Margin="0,0,0,0" BorderBrush="Black" Height="500" ItemClick="Locationsearch" />
             </StackPanel>
         </PivotItem>
         <PivotItem Header="Doctors">
@@ -89,7 +77,7 @@
         <PivotItem Header="Pharmacies">
             <StackPanel HorizontalAlignment="Center">
                 <TextBlock HorizontalAlignment="Center" Text="Pharmacy list" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" TextAlignment="Center"/>
-                <ListView x:Name="pharmacy_list" ItemTemplate="{StaticResource PharmacyTemplate}" BorderThickness="2" Margin="0,0,0,0" BorderBrush="Black" Height="500" />
+                <ListView x:Name="pharmacy_list" IsItemClickEnabled="True" ItemClick="Locationsearch" ItemTemplate="{StaticResource PharmacyTemplate}" BorderThickness="2" Margin="0,0,0,0" BorderBrush="Black" Height="500" />
             </StackPanel>
         </PivotItem>
         <PivotItem Header="Medicine" Margin="12,0,12,0">

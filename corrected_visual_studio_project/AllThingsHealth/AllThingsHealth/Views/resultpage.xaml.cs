@@ -68,16 +68,9 @@ namespace AllThingsHealth.Views
             items1.Add(new Medicine("Medicine_name2"));
             items1.Add(new Medicine("Medicine_name3"));
             medicine_list.ItemsSource = items1;
-
-            DataSourceDiseases.Add(new Disease("illness_name1", true, "url1",  "synonyms1"));
-            DataSourceDiseases.Add(new Disease("illness_name2", false, "url2", "synonyms2"));
-            DataSourceDiseases.Add(new Disease("illness_name3", false, "url3", "synonyms3"));
             disease_list.ItemsSource = DataSourceDiseases;
 
             List<Doctor> items3 = new List<Doctor>();
-            items3.Add(new Doctor("Doctor_name1", "Address", 38.048091, 23.719676,"Medic"));
-            items3.Add(new Doctor("Doctor_name2", "Address", 38.04800, 23.719600, "Medic"));
-            items3.Add(new Doctor("Doctor_name3", "Address", 8.048091, 3.719676, "Medic"));
             doctor_list.ItemsSource = items3;
             Fetch();
         }
@@ -98,13 +91,13 @@ namespace AllThingsHealth.Views
                     string address = item.GetValue("Address").ToString();
                     string telephone = item.GetValue("Telephone").ToString();
                     string email = item.GetValue("Email").ToString();
-                    if (name.Length > 40) {
+                    /*if (name.Length > 40) {
                         name = name.Substring(0, 30) + "...";
                     }
                     if (address.Length > 40)
                     {
                         address = address.Substring(0, 30)+"...";
-                    }
+                    }*/
                     Double lon = 0.0;
                     Double lat = 0.0;
                     items.Add(new Hospital(name, address, telephone, email, lat, lon));
@@ -117,14 +110,14 @@ namespace AllThingsHealth.Views
                     string address = item2.GetValue("Address").ToString();
                     string telephone = item2.GetValue("Telephone").ToString();
                     string email = item2.GetValue("Email").ToString();
-                    if (name.Length > 40)
+                    /*if (name.Length > 40)
                     {
                         name = name.Substring(0, 30) + "...";
                     }
                     if (address.Length > 40)
                     {
                         address = address.Substring(0, 30) + "...";
-                    }
+                    }*/
                     Double lon = 0.0;
                     Double lat = 0.0;
                     items2.Add(new Pharmacy(name, address, telephone, email, lat, lon));
@@ -136,7 +129,25 @@ namespace AllThingsHealth.Views
                 Debug.WriteLine(ex);
             }
         }
-        
+
+        private async void Locationsearch(object sender, ItemClickEventArgs e)
+        {
+            
+            ListView listView = sender as ListView;
+            string uriend = "";
+            if (listView.Name.Equals("Hospital_list")){
+                Hospital hospital = e.ClickedItem as Hospital;
+                uriend = hospital.Name.Replace(" ", "+");
+            }
+            else if(listView.Name.Equals("pharmacy_list"))
+            {
+                Pharmacy pharmacy = e.ClickedItem as Pharmacy;
+                uriend = pharmacy.Name.Replace(" ", "+");
+            }
+            Debug.WriteLine(listView.Name);
+            var uri = new Uri("https://www.google.com/search?q=" + uriend);
+            var success = await Windows.System.Launcher.LaunchUriAsync(uri);
+        }
     }
     public class Disease
     {
