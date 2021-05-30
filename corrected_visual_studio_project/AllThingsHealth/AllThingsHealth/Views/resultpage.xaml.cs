@@ -132,8 +132,13 @@ namespace AllThingsHealth.Views
 
         private async void Locationsearch(object sender, ItemClickEventArgs e)
         {
-            
+            string uriend2 = "";
             ListView listView = sender as ListView;
+            if (listView.Name.Equals("disease_list"))
+            {
+                Disease disease = e.ClickedItem as Disease;
+                uriend2 = disease.url ;
+            }
             string uriend = "";
             if (listView.Name.Equals("Hospital_list")){
                 Hospital hospital = e.ClickedItem as Hospital;
@@ -146,6 +151,21 @@ namespace AllThingsHealth.Views
             }
             Debug.WriteLine(listView.Name);
             var uri = new Uri("https://www.google.com/search?q=" + uriend);
+            var success = await Windows.System.Launcher.LaunchUriAsync(uri);
+        }
+
+        private async void Diseasesearch(object sender, ItemClickEventArgs e)
+        {
+            string uriend2 = "";
+            ListView listView = sender as ListView;
+            if (listView.Name.Equals("disease_list"))
+            {
+                Disease disease = e.ClickedItem as Disease;
+                uriend2 = disease.url;
+            }
+            
+            Debug.WriteLine(listView.Name);
+            var uri = new Uri(uriend2);
             var success = await Windows.System.Launcher.LaunchUriAsync(uri);
         }
     }

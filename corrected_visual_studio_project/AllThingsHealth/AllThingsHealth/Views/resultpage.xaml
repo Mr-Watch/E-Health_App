@@ -51,7 +51,7 @@
             <StackPanel HorizontalAlignment="Center">
                 <TextBlock x:Name="info" Text="info" TextWrapping="Wrap" />
                 <TextBlock HorizontalAlignment="Center" Text="Disease list" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" TextAlignment="Center"/>
-                <ListView x:Name="disease_list" ItemTemplate="{StaticResource DiseaseTemplate}" BorderThickness="2" Margin="0,0,0,0" BorderBrush="Black" Height="500" />
+                <ListView x:Name="disease_list" IsItemClickEnabled="True" ItemClick="Diseasesearch" ItemTemplate="{StaticResource DiseaseTemplate}" BorderThickness="2" Margin="0,0,0,0" BorderBrush="Black" Height="500" />
             </StackPanel>
             
         </PivotItem>
@@ -78,12 +78,6 @@
             <StackPanel HorizontalAlignment="Center">
                 <TextBlock HorizontalAlignment="Center" Text="Pharmacy list" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" TextAlignment="Center"/>
                 <ListView x:Name="pharmacy_list" IsItemClickEnabled="True" ItemClick="Locationsearch" ItemTemplate="{StaticResource PharmacyTemplate}" BorderThickness="2" Margin="0,0,0,0" BorderBrush="Black" Height="500" />
-            </StackPanel>
-        </PivotItem>
-        <PivotItem Header="Medicine" Margin="12,0,12,0">
-            <StackPanel HorizontalAlignment="Center">
-                <TextBlock HorizontalAlignment="Center" Text="Medicine list" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="36" TextAlignment="Center"/>
-                <ListView x:Name="medicine_list1" ItemTemplate="{StaticResource MedicineTemplate}" BorderThickness="2" Margin="0,0,0,0" BorderBrush="Black" Height="500" Width="183"/>
             </StackPanel>
         </PivotItem>
     </Pivot>
