@@ -134,7 +134,7 @@ namespace AllThingsHealth.Views
                 {
                     Debug.WriteLine(pair.Value);
                     illnesslist.Items.Add(pair.Value);
-                    testtext.Text = (string)pair.Value;
+                    
 
 
                 }
