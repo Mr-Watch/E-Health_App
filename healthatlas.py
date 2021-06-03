@@ -7,7 +7,7 @@ session.get('https://healthatlas.gov.gr/#!/')
 
 
 def get_healthatlas_file(path: str):
-    with open(path, 'r' , encoding="utf8") as file:
+    with open(path, 'r', encoding="utf8") as file:
         json_data = json.load(file)
         file.close()
         return json_data
@@ -67,7 +67,7 @@ def get_pharmacies_based_on_prefecture(prefecture: str):
 
 
 def get_doctors_based_on_prefecture(prefecture: str, specialty: str):
-    response = session.get(create_doctors_url(prefecture,specialty), headers={
+    response = session.get(create_doctors_url(prefecture, specialty), headers={
         'Accept-Language': 'el-GR',
     })
     return response.json()
@@ -92,12 +92,3 @@ def get_geoIds():
         'Accept-Language': 'el-GR',
     })
     return response.json()
-
-
-# print(get_hospitals_based_on_prefecture('Αττική'))
-# print(get_pharmacies_based_on_prefecture('Αττική'))
-
-# print(get_doctors_based_on_prefecture('Αττική','Αιματολογια'))
-# print(create_hospitals_url('Θεσσαλονίκη'))
-# print(create_doctors_url('Θεσσαλονίκη','Αιματολογια'))
-# print(create_pharmacies_url('Θεσσαλονίκη'))

@@ -7,7 +7,6 @@ from requests.models import Response
 
 field_names = ['name', 'specialty', 'address','phone', 'url', 'latitude', 'longitude']
 
-
 def get_phone(code: int):
     payload = f"showphones=true&doctorcode={code}"
     response = requests.post(

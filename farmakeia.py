@@ -15,7 +15,8 @@ def create_lookup(url):
     farmakeia_response = requests.get(url)
     farmakeia_response_soup = BeautifulSoup(farmakeia_response.content, "lxml")
 
-    farmakeia_cards = farmakeia_response_soup.select_one(".col-12").select(".card")
+    farmakeia_cards = farmakeia_response_soup.select_one(
+        ".col-12").select(".card")
 
     link_dict = {}
     for card in farmakeia_cards:
@@ -65,7 +66,8 @@ def get_pharmacies(url):
         farmakeio_tel = card.find("div", class_="card-body").find_all("a")[1]
         farmakeio_dir = card.find("div", class_="card-body").find_all("a")[0]
         farmakeio_dir_ = (
-            farmakeio_dir["href"].replace("\n", "").split("&destination=")[1].split(",")
+            farmakeio_dir["href"].replace("\n", "").split(
+                "&destination=")[1].split(",")
         )
         farmakeio_name_ = farmakeio_name.get_text().replace("\n", "")
         farmakeio_tel_ = farmakeio_tel.get_text().replace("\n", "").strip()
@@ -73,7 +75,8 @@ def get_pharmacies(url):
         farmakeio_name.decompose()
         farmakeio_dir.decompose()
         farmakeio_addr = (
-            card.find("div", class_="card-body").get_text().replace("\n", "").strip()
+            card.find(
+                "div", class_="card-body").get_text().replace("\n", "").strip()
         )
 
         card_dict = {
@@ -85,8 +88,3 @@ def get_pharmacies(url):
         farmakeia_dict[step] = card_dict
         step += 1
     return farmakeia_dict
-    """
-create_farmakeia_lookup()
-create_efimereyonta_farmakeia_lookup()
-print(get_url("μη-εφημερεύοντα","Αργολίδας","Ερμιόνη"))
-"""

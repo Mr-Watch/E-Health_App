@@ -5,9 +5,7 @@ session = requests.session()
 
 data = {"mode": "LoadRegionBySpc", "spcVal": "-1"}
 payload = '{\n"category": "Παιδίατροι",\n"region": "Θεσσαλονίκη ΘΕΣΣΑΛΟΝΙΚΗΣ",\n"insuranceFund": null,\n"freeText": null,\n"referer": "doctor.vrisko.gr",\n"fromRedirect": false\n}'
-# get_specialties = session.post('https://doctor.vrisko.gr/AjaxRequests.ashx', data=data)
 
-# print(get_specialties.text)
 headers = {
     "User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:88.0) Gecko/20100101 Firefox/88.0",
     "Accept": "*/*",
@@ -26,10 +24,7 @@ get_specialties = session.post(
     "https://doctor.vrisko.gr/Home.aspx/GetSpecialties", headers=headers
 )
 
-# print(get_specialties.text)
-
 get_doctors = session.post(
     "https://doctor.vrisko.gr/patients/registerappointmentstep1.aspx/GetVriskoObjects",
     data=payload,
 )
-print(get_doctors.text)

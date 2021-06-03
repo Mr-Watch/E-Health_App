@@ -2,7 +2,6 @@ import json
 import re
 from bs4 import BeautifulSoup
 from bs4.element import Tag
-
 import requests
 from requests.models import Response
 from requests.sessions import session
@@ -26,12 +25,15 @@ def extract_pharmacy_info(container: Tag):
     tag_name = container.find('a', class_='ResultName pharmacy-title')
 
     name = tag_name.get_text().lstrip(' ')
-    address = container.find('div', class_='ResultAddr').get_text().strip('\n').lstrip(' ')
+    address = container.find(
+        'div', class_='ResultAddr').get_text().strip('\n').lstrip(' ')
     phone = container.find('span', class_='spPhone').get_text()
     url = tag_name.get('href')
     map_url = container.find('a', class_='pharmacy-map').get('href')
-    available_day = container.find('div', class_='DutyDay').get_text().strip('\n').rstrip(' ')
-    available_time = container.find('span', class_='firstTime').get_text().rstrip(' ')
+    available_day = container.find(
+        'div', class_='DutyDay').get_text().strip('\n').rstrip(' ')
+    available_time = container.find(
+        'span', class_='firstTime').get_text().rstrip(' ')
     cordinates = get_pharmacy_cordinates(map_url)
     latitude = float(cordinates[0])
     longitude = float(cordinates[1])
@@ -54,5 +56,3 @@ def get_pharmacy_list(url: str):
     for i, container in enumerate(page_containers):
         pharmacy_dict[i] = extract_pharmacy_info(container)
     print(pharmacy_dict)
-
-get_pharmacy_list('https://www.vrisko.gr/efimeries-farmakeion/sykies/')

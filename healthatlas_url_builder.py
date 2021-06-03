@@ -45,8 +45,5 @@ def get_healthatlas_prefecture_item(prefecture: str):
 
 
 def get_healthatlas_specialty_item(specialty: str):
-    
+
     return list(filter(lambda x: x["specialty"] == specialty.upper(), healthatlas_specialties))[0]
-
-
-print(create_doctors_url('Αττική','Αιματολογια'))
